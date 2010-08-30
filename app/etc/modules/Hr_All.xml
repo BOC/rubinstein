@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Hr_General>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Hr_General>
+        <Hr_Page>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Hr_Page>
+	</modules>
+</config>

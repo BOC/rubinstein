@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<Hr_General>
+			<version>0.1.0</version>
+		</Hr_General>
+	</modules>
+	<frontend>
+		<layout>
+			<updates>
+				<hr-general>
+					<file>hr-general.xml</file>
+				</hr-general>
+			</updates>
+		</layout>
+	</frontend>
+</config>
