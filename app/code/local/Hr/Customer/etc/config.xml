@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<Hr_Customer>
+			<version>0.1.0</version>
+		</Hr_Customer>
+	</modules>
+	<global>
+        <resources>
+            <hr-customer_setup>
+                <setup>
+                    <module>Hr_Customer</module>
+                </setup>
+            </hr-customer_setup>
+        </resources>
+        <blocks>
+        	<hr-customer>
+        		<class>Hr_Customer_Block</class>
+        	</hr-customer>
+        	<!-- 
+        	<customer>
+        		<rewrite>
+        			<form_login>Hr_Customer_Block_Form_Login</form_login>
+        		</rewrite>
+        	</customer>
+        	 -->
+        </blocks>
+	</global>
+</config>

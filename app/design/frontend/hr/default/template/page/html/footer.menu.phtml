@@ -1,3 +1,36 @@
 <div class="footer-menu">
-	<?php echo $this->getChildHtml(); ?>
+	<?php echo $this->getChildHtml('footer.links'); ?>
+	<div id="account-box">
+		<?php echo $this->getChildHtml('hr.footer.form.login'); ?>
+		<div class="block block-register">
+			<div class="block-content">
+				<span><?php echo $this->__('Are you a new customer ?'); ?></span>
+				<button type="submit" class="button"><span><span><?php echo $this->__('Register'); ?></span></span></button>
+			</div>
+		</div>
+	</div>
+	<?php echo $this->getChildHtml('left.newsletter'); ?>
 </div>
+<script type="text/javascript">
+//<![CDATA[
+	Event.observe(window, 'load', function() {
+		$('account-box').hide();
+	});
+	$('register-box').observe('click', function(event){
+		if($('account-box').visible())
+			$('account-box').hide();
+		else
+			$('account-box').show();
+	});
+	$('login-link').observe('click', function(event){
+		if($('account-box').visible())
+			$('account-box').hide();
+		else
+			$('account-box').show();
+		event.stop();
+	})
+	/*.observe('mouseout', function(event){
+		$('account-box').hide();
+	})*/;
+//]]>
+</script>

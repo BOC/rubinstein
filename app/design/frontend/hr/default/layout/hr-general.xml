@@ -27,13 +27,16 @@
         <reference name="header">
         	<action method="unsetChild"><name>store_language</name></action>
         	<action method="unsetChild"><name>topLinks</name></action>
-        	<block type="page/template_links" name="top.links" as="topLinks">
-        	</block>
         </reference>
         
-        <reference name="footer">
+        <reference name="catalog.topnav">
+        	<block type="page/template_links" name="top.links" as="topLinks" />
+        	<block type="core/template" name="top.search" as="topSearch" template="catalogsearch/form.mini.phtml"/>
+        </reference>
+        
+        <reference name="before_body_end">
 			<block type="page/html_footermenu" name="footer.menu" template="page/html/footer.menu.phtml">
-				n<block type="page/template_links" name="footer.links" />
+				<block type="page/template_links" name="footer.links" />
 				<block type="newsletter/subscribe" name="left.newsletter" template="newsletter/subscribe.phtml" />
 			</block>
         </reference>
@@ -57,8 +60,11 @@
 			<action method="addLink" translate="label"><label>My Cart</label><url helper="checkout/cart/getCartUrl"/></action>
 		</reference>
 		<reference name="footer.links">
-			<action method="addLink" translate="label"><label>Inscrivez-vous</label><url helper="customer/getRegisterUrl"/></action>
-			<action method="addLink" translate="label title" module="customer"><label>Connectez-vous</label><url helper="customer/getLoginUrl"/><title>Connectez-vous</title><prepare/><urlParams/><position>100</position></action>
+			<action method="addLink" translate="label title" module="customer"><label>My Account</label><url helper="customer/getLoginUrl"/><title>Connectez-vous</title><prepare/><urlParams/><position>100</position></action>
+			<action method="addLink" translate="label"><label>Connexion</label><url helper="customer/getRegisterUrl"/><title>Connexion</title><prepare/><urlParams /><position/><liParams>id="register-box"</liParams><aParams>id="login-link"</aParams></action>
+		</reference>
+		<reference name="footer.menu">
+			<block type="hr-customer/form_login" name="hr.footer.form.login" template="customer/form/mini.login.phtml"/>
 		</reference>
 	</customer_logged_out>
     	

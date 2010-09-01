@@ -9,5 +9,9 @@
             <active>true</active>
             <codePool>local</codePool>
         </Hr_Page>
+        <Hr_Customer>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Hr_Customer>
 	</modules>
 </config>

@@ -19,5 +19,8 @@
     <ul id="nav">
         <?php echo $_menu ?>
     </ul>
+    <div class="search-button"><?php echo $this->__('Search'); ?></div>
+    <?php echo $this->getChildHtml('topLinks') ?>
+    <?php echo $this->getChildHtml('topSearch') ?>
 </div>
 <?php endif ?>
