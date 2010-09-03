@@ -19,7 +19,10 @@
         	</hr-page>
         	<page>
         		<rewrite>
-        			<html_footermenu>Hr_Page_Block_Html_FooterMenu</html_footermenu>
+        			<html_footer_menu>Hr_Page_Block_Html_Footer_Menu</html_footer_menu>
+        			<html_footer_box>Hr_Page_Block_Html_Footer_Box</html_footer_box>
+        			<html_header_menu>Hr_Page_Block_Html_Header_Menu</html_header_menu>
+        			<html_header_box>Hr_Page_Block_Html_Header_Box</html_header_box>
         		</rewrite>
         	</page>
         </blocks>

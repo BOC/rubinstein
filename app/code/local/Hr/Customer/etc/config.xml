@@ -17,13 +17,6 @@
         	<hr-customer>
         		<class>Hr_Customer_Block</class>
         	</hr-customer>
-        	<!-- 
-        	<customer>
-        		<rewrite>
-        			<form_login>Hr_Customer_Block_Form_Login</form_login>
-        		</rewrite>
-        	</customer>
-        	 -->
         </blocks>
 	</global>
 </config>

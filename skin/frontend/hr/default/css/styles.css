@@ -434,7 +434,7 @@ tr.summary-details-excluded { font-style:italic; }
 .header {}
 .header .logo { float:left; text-decoration:none !important; }
 .header .logo strong { position:absolute; top:-999em; left:-999em; width:0; height:0; font-size:0; line-height:0; text-indent:-999em; overflow:hidden; }
-.header h1.logo { margin:0; padding:0; }
+.header h1.logo { margin:0; padding-top:10px; }
 .header .welcome-msg { font-weight:bold; text-align:right; }
 .header .links { float:right; padding:5px 0; font-size:13px; }
 .header .links li { border:none; }
@@ -451,7 +451,8 @@ tr.summary-details-excluded { font-style:italic; }
 .header .form-search .search-autocomplete li.selected {}
 .header .form-language { clear:both; text-align:right; }
 .header-container .top-container { clear:both; text-align:right; }
-
+.header .header-box { float:left; cursor:pointer; color:#C6B89D; font-weight:bold; text-transform:uppercase; padding:5px 10px; }
+.header .header-box span { margin:12px 0; }
 /********** < Navigation */
 .nav-container { float:left; position:absolute; left:400px; background-color:#291f1d; }
 #nav { padding:5px 0; font-size:13px; float:left; border-right:1px solid #000; }

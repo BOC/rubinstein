@@ -1,0 +1,19 @@
+<?php
+/**
+ * @see Hr_Page_Block_Html_FooterMenu
+ */
+?>
+<div class="my-account">
+	<?php echo $this->__('My Account'); ?>
+</div>
+<div class="my-customer">
+	<?php if($this->helper('customer')->isLoggedIn()): ?>
+	<p><?php echo $this->__('Hello') ?></p>
+	<p id="login-link"><?php echo $this->helper('customer')->getCustomer()->getFirstname(); ?></p>
+	<?php else: ?>
+	<p id="login-link"><?php echo $this->__('Connection')?></p>
+	<?php endif?>
+	<div id="account-box">
+		<?php echo $this->getChildHtml('hr.footer.customer'); ?>
+	</div>
+</div>
