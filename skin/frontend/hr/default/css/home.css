@@ -1,0 +1,28 @@
+@CHARSET "UTF-8";
+
+/*
+body.cms-home { width: 100%; min-height: 100%; }
+.page { width: 100%; }
+*/
+div.header-container {
+	width: 1000px;
+	position: absolute;
+	z-index: 10;
+}
+
+#home-container {
+	z-index: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+}
+#home-flash {
+	z-index: 1;
+}
+.test-footer {
+	position: absolute;
+	color: white;
+	top:100%;
+	width:1000px;
+}

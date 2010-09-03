@@ -454,7 +454,7 @@ tr.summary-details-excluded { font-style:italic; }
 .header .header-box { float:left; cursor:pointer; color:#C6B89D; font-weight:bold; text-transform:uppercase; padding:5px 10px; }
 .header .header-box span { margin:12px 0; }
 /********** < Navigation */
-.nav-container { float:left; position:absolute; left:400px; background-color:#291f1d; }
+.nav-container { float:left; position:absolute; left:235px; background-color:#291f1d; }
 #nav { padding:5px 0; font-size:13px; float:left; border-right:1px solid #000; }
 
 /* All Levels */

@@ -2,7 +2,7 @@
 <config>
 	<modules>
 		<Hr_Page>
-			<version>0.1.0</version>
+			<version>0.1.1</version>
 		</Hr_Page>
 	</modules>
 	<global>
@@ -11,8 +11,21 @@
                 <setup>
                     <module>Hr_Page</module>
                 </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
             </hr-page_setup>
         </resources>
+		<hr-page_write>
+			<connection>
+				<use>core_write</use>
+			</connection>
+		</hr-page_write>
+		<hr-page_read>
+			<connection>
+				<use>core_read</use>
+			</connection>
+		</hr-page_read>
         <blocks>
         	<hr-page>
         		<class>Hr_Page_Block</class>
