@@ -42,7 +42,7 @@
                 <connection>
                     <host><![CDATA[localhost]]></host>
                     <username><![CDATA[root]]></username>
-                    <password><![CDATA[30011979]]></password>
+                    <password><![CDATA[Uknow4kids]]></password>
                     <dbname><![CDATA[rubinstein]]></dbname>
                     <active>1</active>
                 </connection>
