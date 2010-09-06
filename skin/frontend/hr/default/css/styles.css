@@ -400,11 +400,13 @@ tr.summary-details-excluded { font-style:italic; }
 .links li.last {}
 .links li:hover {}
 .account-box { float:left; }
-.account-box:hover { background-color:#302722; }
-#register-box:hover { background:#2a1f23; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; border-color:#000; }
-.my-account { float:left; padding:10px; text-transform:uppercase; }
-.my-customer { float:left; padding:10px; }
-.my-customer span { float:left; }
+.my-account { float:left; padding:6px; text-transform:uppercase; }
+.my-account:hover { background-color:#302722; }
+.my-account p { float:left; padding:3px; margin:0px; }
+.my-account .my-customer { float:left; }
+.my-account .my-customer:hover { background-color:#302722; }
+.my-account .my-customer p { float:left; margin:0px;}
+.my-account .my-customer p:hover { cursor:pointer; padding:2px; margin:0px; border:1px solid #000; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
 .link-cart { font-weight:bold; color:#f00; }
 .link-wishlist { font-weight:bold; }
 .link-reorder { font-weight:bold; }
@@ -442,8 +444,8 @@ tr.summary-details-excluded { font-style:italic; }
 #search { float:left; font-size:20px; border:none; width:205px; background-color:#b0a9a3; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0; }
 #search-button { float:left; width:100px; padding-left:3px; background-color:#9c9080; margin-top:10px; margin-left:10px; font-size:13px; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
 #search-button:hover { cursor:pointer; }
-.header .form-search { text-align:right; float:left; position:absolute; top:38px; left:375px; background-color:#b0a9a3; padding:5px 2px 0 2px; }
-.header .form-search button { background-color:#b0a9a3; width:25px; height:23px; text-indent:-9999px; }
+.header .form-search { text-align:right; float:left; position:absolute; top:38px; left:400px; background-color:#b0a9a3; padding:5px 2px 0 2px; }
+.header .form-search button { background:#b0a9a3 url('../images/loupe.png') no-repeat scroll 0 0; width:27px; height:23px; text-indent:-9999px; }
 .header .form-search .search-autocomplete { z-index:999; }
 .header .form-search .search-autocomplete ul { border:1px solid #ddd; background-color:#fff; }
 .header .form-search .search-autocomplete li { padding:3px; border-bottom:1px solid #ddd; cursor:pointer; }
@@ -452,9 +454,8 @@ tr.summary-details-excluded { font-style:italic; }
 .header .form-language { clear:both; text-align:right; }
 .header-container .top-container { clear:both; text-align:right; }
 .header .header-box { float:left; cursor:pointer; color:#C6B89D; font-weight:bold; text-transform:uppercase; padding:5px 10px; }
-.header .header-box span { margin:12px 0; }
 /********** < Navigation */
-.nav-container { float:left; position:absolute; left:300px; background-color:#291f1d; }
+.nav-container { float:left; position:absolute; left:400px; background-color:#291f1d; }
 #nav { padding:5px 0; font-size:13px; float:left; border-right:1px solid #000; }
 
 /* All Levels */
@@ -476,7 +477,7 @@ tr.summary-details-excluded { font-style:italic; }
 
 /* 2nd Level */
 #nav ul,
-#nav div { position:absolute; width:150px; top:25px; left:-10000px; background:#fafafa; }
+#nav div { position:absolute; width:150px; top:38px; left:-10000px; background:#fafafa; }
 #nav div ul { position:static; width:auto; border:none; }
 #nav li ul .parent { background:url('../images/puce.gif') no-repeat right center; }
 
@@ -1148,7 +1149,7 @@ tr.summary-details-excluded { font-style:italic; }
 .footer-menu ul { float:left; padding:10px; }
 .footer-menu ul:hover { background-color:#302722; border-right:1px solid #000; }
 .footer-menu ul li { display:inline; padding:6px; }
-#account-box { background-color:#FFFFFF; bottom:38px; left:0; position:absolute; width:212px; opacity:0.8; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
+#account-box { background-color:#FFFFFF; bottom:37px; left:0; position:absolute; width:212px; opacity:0.8; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
 #account-box .block-login .block-content { margin:auto; width:200px; padding:5px; }
 #account-box .block-login .block-content label { text-transform:uppercase; font-size:12px; }
 #account-box .block-login .block-content .actions button { text-transform:uppercase; font-size:12px; background-color:#97897e; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }

@@ -31,11 +31,11 @@
         
         <reference name="catalog.topnav">
         	<block type="core/template" name="top.search" as="topSearch" template="catalogsearch/form.mini.phtml"/>
-        	<block type="page/html_header_menu" name="header.menu" template="page/html/header.menu.phtml"/>
+        	<block type="page/html_header_menu" name="header.menu" template="page/html/header/menu.phtml"/>
         </reference>
         
         <reference name="before_body_end">
-			<block type="page/html_footer_menu" name="footer.menu" template="page/html/footer.menu.phtml">
+			<block type="page/html_footer_menu" name="footer.menu" template="page/html/footer/menu.phtml">
 				<block type="page/html_footer_box" name="footerbox" template="page/template/footerbox.phtml"/>
 				<block type="newsletter/subscribe" name="left.newsletter" template="newsletter/subscribe.phtml" />
 			</block>
