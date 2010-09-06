@@ -46,6 +46,9 @@
 		<reference name="footerbox">
 			<block type="hr-customer/footer_menu" name="hr.footer.customer" template="customer/footer/menu.phtml"/>
 		</reference>
+		<reference name="header.menu">
+			<block type="hr-checkout/header_cart" name="header.cart" as="headerCart" template="checkout/header.cart.phtml" />
+		</reference>
 	</customer_logged_in>
     
 	<customer_logged_out>

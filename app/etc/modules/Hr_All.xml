@@ -13,5 +13,9 @@
             <active>true</active>
             <codePool>local</codePool>
         </Hr_Customer>
+        <Hr_Checkout>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Hr_Checkout>
 	</modules>
 </config>

@@ -1,0 +1,18 @@
+<?php
+/**
+ * Shopping cart template
+ *
+ * @see Hr_Checkout_Block_Cart
+ */
+?>
+<div class="header-cart">
+    <div class="items">
+    	<?php foreach($this->getItems() as $_item): ?>
+			<?php echo $this->getItemHtml($_item) ?>
+		<?php endforeach ?>
+    </div>
+    <div class="cart-url">
+    	<div class="cart"><?php echo $this->__('My Cart'); ?></div>
+    	<div class="header-next">^</div>
+    </div>
+</div>

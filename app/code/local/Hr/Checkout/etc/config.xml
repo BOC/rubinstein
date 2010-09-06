@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<Hr_Checkout>
+			<version>0.1.0</version>
+		</Hr_Checkout>
+	</modules>
+	<global>
+        <resources>
+            <hr-checkout_setup>
+                <setup>
+                    <module>Hr_Checkout</module>
+                </setup>
+            </hr-checkout_setup>
+        </resources>
+        <blocks>
+        	<hr-checkout>
+        		<class>Hr_Checkout_Block</class>
+        	</hr-checkout>
+        </blocks>
+	</global>
+</config>
