@@ -23,34 +23,28 @@
         <remove name="cart_sidebar"></remove>
         <remove name="paypal.partner.right.logo"></remove>
         <remove name="store_switcher"></remove>
+        <remove name="top.links"></remove>
 
         <reference name="header">
         	<action method="unsetChild"><name>store_language</name></action>
-        	<action method="unsetChild"><name>topLinks</name></action>
         </reference>
         
         <reference name="catalog.topnav">
-        	<block type="page/template_links" name="top.links" as="topLinks" />
         	<block type="core/template" name="top.search" as="topSearch" template="catalogsearch/form.mini.phtml"/>
+        	<block type="page/html_header_menu" name="header.menu" template="page/html/header.menu.phtml"/>
         </reference>
         
         <reference name="before_body_end">
-			<block type="page/html_footermenu" name="footer.menu" template="page/html/footer.menu.phtml">
-				<block type="page/template_links" name="footer.links" />
+			<block type="page/html_footer_menu" name="footer.menu" template="page/html/footer.menu.phtml">
+				<block type="page/html_footer_box" name="footerbox" template="page/template/footerbox.phtml"/>
 				<block type="newsletter/subscribe" name="left.newsletter" template="newsletter/subscribe.phtml" />
 			</block>
         </reference>
-
     </default>
     
     <customer_logged_in>
-		<reference name="top.links">
-			<action method="removeLinkByUrl"><url helper="customer/getLogoutUrl"/></action>
-			<action method="addLink" translate="label"><label>My Cart</label><url helper="checkout/cart/getCartUrl"/></action>
-		</reference>
-		<reference name="footer.links">
-			<action method="addLink" translate="label"><label>My Account</label><url helper="customer/getAccountUrl"/></action>
-			<action method="addLink" translate="label title" module="customer"><label>Log Out</label><url helper="customer/getLogoutUrl"/><title>Log Out</title><prepare/><urlParams/><position>100</position></action>
+		<reference name="footerbox">
+			<block type="hr-customer/footer_menu" name="hr.footer.customer" template="customer/footer/menu.phtml"/>
 		</reference>
 	</customer_logged_in>
     
@@ -65,6 +59,9 @@
 		</reference>
 		<reference name="footer.menu">
 			<block type="hr-customer/form_login" name="hr.footer.form.login" template="customer/form/mini.login.phtml"/>
+		</reference>
+		<reference name="footerbox">
+			<block type="hr-customer/form_login" name="hr.footer.customer" template="customer/form/mini.login.phtml"/>
 		</reference>
 	</customer_logged_out>
     	
