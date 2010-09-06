@@ -61,7 +61,7 @@
 		</reference>
 		<reference name="footer.links">
 			<action method="addLink" translate="label title" module="customer"><label>My Account</label><url helper="customer/getLoginUrl"/><title>Connectez-vous</title><prepare/><urlParams/><position>100</position></action>
-			<action method="addLink" translate="label"><label>Connexion</label><url helper="customer/getRegisterUrl"/><title>Connexion</title><prepare/><urlParams /><position/><liParams>id="register-box"</liParams><aParams>id="login-link"</aParams></action>
+			<action method="addLink" translate="label"><label>Connection</label><url helper="customer/getRegisterUrl"/><title>Connexion</title><prepare/><urlParams /><position/><liParams>id="register-box"</liParams><aParams>id="login-link"</aParams></action>
 		</reference>
 		<reference name="footer.menu">
 			<block type="hr-customer/form_login" name="hr.footer.form.login" template="customer/form/mini.login.phtml"/>
