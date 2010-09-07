@@ -19,7 +19,7 @@
         <remove name="checkout.cart.coupon"></remove>
         <remove name="checkout.cart.crosssell"></remove>
         <remove name="checkout.cart.methods.multishipping"></remove>
-        <remove name="footer_links"></remove>
+        <remove name="footer"></remove>
         <remove name="cart_sidebar"></remove>
         <remove name="paypal.partner.right.logo"></remove>
         <remove name="store_switcher"></remove>
@@ -55,10 +55,6 @@
 		<reference name="top.links">
 			<action method="removeLinkByUrl"><url helper="customer/getLoginUrl"/></action>
 			<action method="addLink" translate="label"><label>My Cart</label><url helper="checkout/cart/getCartUrl"/></action>
-		</reference>
-		<reference name="footer.links">
-			<action method="addLink" translate="label title" module="customer"><label>My Account</label><url helper="customer/getLoginUrl"/><title>Connectez-vous</title><prepare/><urlParams/><position>100</position></action>
-			<action method="addLink" translate="label"><label>Connection</label><url helper="customer/getRegisterUrl"/><title>Connexion</title><prepare/><urlParams /><position/><liParams>id="register-box"</liParams><aParams>id="login-link"</aParams></action>
 		</reference>
 		<reference name="footer.menu">
 			<block type="hr-customer/form_login" name="hr.footer.form.login" template="customer/form/mini.login.phtml"/>

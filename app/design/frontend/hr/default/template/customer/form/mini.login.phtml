@@ -10,10 +10,12 @@
     </form>
 </div>
 <div id="register-box" class="block block-register">
-	<div class="block-content">
-		<span><?php echo $this->__('Are you a new customer ?'); ?></span>
-		<button type="submit" class="button"><span><span><?php echo $this->__('Register'); ?></span></span></button>
-	</div>
+	<form action="<?php echo $this->getRegisterUrl() ?>" method="post">
+		<div class="block-content">
+			<span><?php echo $this->__('Are you a new customer ?'); ?></span>
+			<button type="submit" class="button"><span><span><?php echo $this->__('Register'); ?></span></span></button>
+		</div>
+	</form>
 </div>
 <script type="text/javascript">
 //<![CDATA[
