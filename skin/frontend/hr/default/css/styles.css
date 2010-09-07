@@ -93,7 +93,7 @@ ul,ol         { list-style:none; }
 .page-print { background:#fff; padding:20px; text-align:left; }
 .page-empty { background:#fff; padding:20px; text-align:left; }
 .page-popup { padding:20px; text-align:left; }
-.main-container { min-height:300px; }
+.main-container { min-height:300px; margin-bottom:35px; }
 .main { margin:10px 0; }
 
 /* Base Columns */
@@ -163,17 +163,18 @@ p.control input.radio { margin-right:6px; }
 /* Form lists */
 /* Grouped fields */
 /*.form-list { width:535px; margin:0 auto; overflow:hidden; }*/
-.form-list li { margin:0 0 8px; width:392px; }
+.form-list li { width:392px; }
 .form-list label { float:left; color:#111; font-weight:bold; position:relative; z-index:0; text-transform:uppercase; }
 .form-list label.required {}
-.form-list label.required em { float:right; font-style:normal; color:#eb340a; position:absolute; top:0; right:-13px; }
+.form-list label.required em { float:right; font-style:normal; position:absolute; top:0; right:-13px; }
 .form-list li.control label { float:none; }
 .form-list li.control input.radio,
 .form-list li.control input.checkbox { margin-right:6px; }
 .form-list li.control .input-box { clear:none; display:inline; width:auto; }
 /*.form-list li.fields { margin-right:-15px; }*/
 .form-list .input-box { display:inline; width:200px; }
-.form-list .field { float:left; width:392px; }
+.form-list .field { float:left; width:392px; padding-bottom:10px; }
+.form-list .wide { float:left; width:392px; padding-bottom:10px; }
 .form-list input.input-text { width:200px; float:right; }
 .form-list textarea { width:254px; height:10em; }
 .form-list select { width:206px; float:right; }
@@ -253,14 +254,15 @@ p.control input.radio { margin-right:6px; }
 
 .buttons-set-order {}
 
-.fieldset { border:1px solid #ddd; background:#efebe8; position:relative; padding:22px 25px 12px 33px; margin:28px 20px 0 0; float:left; width:400px; height:310px; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
-.fieldset .legend { text-transform:uppercase; }
+.fieldset { border:1px solid #ddd; background:#efebe8; position:relative; padding:22px 25px 12px 33px; margin:28px 20px 0 0; float:left; width:400px; height:460px; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
+.fieldset .legend { text-transform:uppercase; margin-bottom:30px; }
 
 /* Form Validation */
 .validation-advice { clear:both; min-height:13px; margin:3px 0 0; padding-left:17px; font-size:10px; line-height:13px; background:url(../images/validation_advice_bg.gif) 2px 1px no-repeat; color:#f00; }
-.validation-failed { border:1px dashed #f00 !important; background:#faebe7 !important; }
+.validation-failed { border:1px solid #f00 !important; background:#faebe7 !important; }
 .validation-passed {}
 p.required { font-size:10px; color:#000; font-style:italic; position:absolute; bottom:0; }
+p.error-message { position:absolute; bottom:40px; color:#f00; }
 /* Expiration date and CVV number validation fix */
 .v-fix { float:left; }
 .v-fix .validation-advice { display:block; width:12em; margin-right:-12em; position:relative; }
@@ -289,9 +291,10 @@ p.required { font-size:10px; color:#000; font-style:italic; position:absolute; b
 .breadcrumbs li { display:inline; }
 
 /* Page Heading */
-.page-title { border-bottom:1px solid #ddd; padding:0 0 5px; margin:0 0 10px; }
+.page-title { padding:0 0 5px; margin:0 0 10px; }
 .page-title h1,
 .page-title h2 { font-size:18px; color:#FFF; }
+.page-title h6 { color:#FFF; font-weight:normal; }
 .page-title .separator { margin:0 3px; }
 .page-title .link-rss { float:right; }
 .title-buttons { text-align:right; }
@@ -434,7 +437,7 @@ tr.summary-details-excluded { font-style:italic; }
 .logo { float:left; }
 .header-container {}
 .header {}
-.header .logo { float:left; text-decoration:none !important; }
+.header .logo { float:left; text-decoration:none !important; margin-top:15px; }
 .header .logo strong { position:absolute; top:-999em; left:-999em; width:0; height:0; font-size:0; line-height:0; text-indent:-999em; overflow:hidden; }
 .header h1.logo { margin:0; padding-top:10px; }
 .header .welcome-msg { font-weight:bold; text-align:right; }

@@ -34,7 +34,7 @@
 <div class="account-create">
     <div class="page-title">
         <h1><span style="color:#b79c87;"><?php echo $this->__('Create ') ?></span><span style="color:#FFF;"><?php echo $this->__('an account') ?></span></h1>
-        <h2><?php echo $this->__('Create your Helena Rubinstein account by completing the following fields') ?></h2>
+        <h6><?php echo $this->__('Create your Helena Rubinstein account by completing the following fields') ?></h6>
     </div>
     <?php echo $this->getChildHtml('form_fields_before')?>
     <?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
@@ -42,19 +42,11 @@
         <div class="fieldset">
             <input type="hidden" name="success_url" value="<?php echo $this->getSuccessUrl() ?>" />
             <input type="hidden" name="error_url" value="<?php echo $this->getErrorUrl() ?>" />
-            <h2 class="legend"><?php echo $this->__('Personal Information') ?></h2>
+            <h2 class="legend"><?php echo $this->__('Your Informations') ?></h2>
             <ul class="form-list">
                 <li class="fields">
                     <?php echo $this->getLayout()->createBlock('customer/widget_name')->setObject($this->getFormData())->toHtml() ?>
                 </li>
-                <?php if ($this->isNewsletterEnabled()): ?>
-                <li class="control">
-                    <div class="input-box">
-                        <input type="checkbox" name="is_subscribed" title="<?php echo $this->__('Sign Up for Newsletter') ?>" value="1" id="is_subscribed"<?php if($this->getFormData()->getIsSubscribed()): ?> checked="checked"<?php endif; ?> class="checkbox" />
-                    </div>
-                    <label for="is_subscribed"><?php echo $this->__('Sign Up for Newsletter') ?></label>
-                </li>
-                <?php endif ?>
             <?php $_dob = $this->getLayout()->createBlock('customer/widget_dob') ?>
             <?php if ($_dob->isEnabled()): ?>
                 <li><?php echo $_dob->setDate($this->getFormData()->getDob())->toHtml() ?></li>
@@ -70,18 +62,16 @@
             </ul>
             <input type="hidden" name="create_address" value="1" />
             <ul class="form-list">
-                <li class="fields">
-                    <div class="field">
-                        <label for="company"><?php echo $this->__('Company') ?></label>
-                        <div class="input-box">
-                            <input type="text" name="company" id="company" value="<?php echo $this->htmlEscape($this->getFormData()->getCompany()) ?>" title="<?php echo $this->__('Company') ?>" class="input-text" />
-                        </div>
+                <li class="field">
+                    <label for="company"><?php echo $this->__('Company') ?></label>
+                    <div class="input-box">
+                        <input type="text" name="company" id="company" value="<?php echo $this->htmlEscape($this->getFormData()->getCompany()) ?>" title="<?php echo $this->__('Company') ?>" class="input-text" />
                     </div>
-                    <div class="field">
-                        <label for="telephone" class="required"><em>*</em><?php echo $this->__('Telephone') ?></label>
-                        <div class="input-box">
-                            <input type="text" name="telephone" id="telephone" value="<?php echo $this->htmlEscape($this->getFormData()->getTelephone()) ?>" title="<?php echo $this->__('Telephone') ?>" class="input-text required-entry" />
-                        </div>
+                </li>
+                <li class="field">
+                    <label for="telephone" class="required"><em>*</em><?php echo $this->__('Telephone') ?></label>
+                    <div class="input-box">
+                        <input type="text" name="telephone" id="telephone" value="<?php echo $this->htmlEscape($this->getFormData()->getTelephone()) ?>" title="<?php echo $this->__('Telephone') ?>" class="input-text required-entry" />
                     </div>
                 </li>
                 <li class="wide">
@@ -98,27 +88,23 @@
                     </div>
                 </li>
             <?php endfor ?>
-                <li class="fields">
-                    <div class="field">
-                        <label for="city" class="required"><em>*</em><?php echo $this->__('City') ?></label>
-                        <div class="input-box">
-                            <input type="text" name="city" value="<?php echo $this->htmlEscape($this->getFormData()->getCity()) ?>" title="<?php echo $this->__('City') ?>" class="input-text required-entry" id="city" />
-                        </div>
+                <li class="field">
+                    <label for="city" class="required"><em>*</em><?php echo $this->__('City') ?></label>
+                    <div class="input-box">
+                        <input type="text" name="city" value="<?php echo $this->htmlEscape($this->getFormData()->getCity()) ?>" title="<?php echo $this->__('City') ?>" class="input-text required-entry" id="city" />
                     </div>
                 </li>
-                <li class="fields">
-                    <div class="field">
-                        <label for="zip" class="required"><em>*</em><?php echo $this->__('Zip/Postal Code') ?></label>
-                        <div class="input-box">
-                            <input type="text" name="postcode" value="<?php echo $this->htmlEscape($this->getFormData()->getPostcode()) ?>" title="<?php echo $this->__('Zip/Postal Code') ?>" id="zip" class="input-text validate-zip-international required-entry" />
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label for="country" class="required"><em>*</em><?php echo $this->__('Country') ?></label>
-                        <div class="input-box">
-                            <?php echo $this->getCountryHtmlSelect() ?>
-                        </div>
-                    </div>
+                <li class="field">
+					<label for="zip" class="required"><em>*</em><?php echo $this->__('Zip/Postal Code') ?></label>
+					<div class="input-box">
+						<input type="text" name="postcode" value="<?php echo $this->htmlEscape($this->getFormData()->getPostcode()) ?>" title="<?php echo $this->__('Zip/Postal Code') ?>" id="zip" class="input-text validate-zip-international required-entry" />
+					</div>
+				</li>
+                <li class="field">
+                	<label for="country" class="required"><em>*</em><?php echo $this->__('Country') ?></label>
+                	<div class="input-box">
+                    	<?php echo $this->getCountryHtmlSelect() ?>
+                	</div>
                 </li>
             </ul>
             <p class="required"><?php echo $this->__('* Required Fields') ?></p>
@@ -128,30 +114,37 @@
         <div class="fieldset">
             <h2 class="legend"><?php echo $this->__('Login Information') ?></h2>
             <ul class="form-list">
-				<li>
+				<li class="field">
                     <label for="email_address" class="required"><em>*</em><?php echo $this->__('Email Address') ?></label>
                     <div class="input-box">
                         <input type="text" name="email" id="email_address" value="<?php echo $this->htmlEscape($this->getFormData()->getEmail()) ?>" title="<?php echo $this->__('Email Address') ?>" class="input-text validate-email required-entry" />
                     </div>
                 </li>
-                <li class="fields">
-                    <div class="field">
-                        <label for="password" class="required"><em>*</em><?php echo $this->__('Password') ?></label>
-                        <div class="input-box">
-                            <input type="password" name="password" id="password" title="<?php echo $this->__('Password') ?>" class="input-text required-entry validate-password" />
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label for="confirmation" class="required"><em>*</em><?php echo $this->__('Confirm Password') ?></label>
-                        <div class="input-box">
-                            <input type="password" name="confirmation" title="<?php echo $this->__('Confirm Password') ?>" id="confirmation" class="input-text required-entry validate-cpassword" />
-                        </div>
+                <li class="field">
+                    <label for="password" class="required"><em>*</em><?php echo $this->__('Password') ?></label>
+                    <div class="input-box">
+                        <input type="password" name="password" id="password" title="<?php echo $this->__('Password') ?>" class="input-text required-entry validate-password" />
+                	</div>
+                </li>
+                <li class="field">
+                    <label for="confirmation" class="required"><em>*</em><?php echo $this->__('Confirm Password') ?></label>
+                    <div class="input-box">
+                        <input type="password" name="confirmation" title="<?php echo $this->__('Confirm Password') ?>" id="confirmation" class="input-text required-entry validate-cpassword" />
                     </div>
                 </li>
+                <?php if ($this->isNewsletterEnabled()): ?>
+                <li class="control">
+                    <div class="input-box">
+                        <input type="checkbox" name="is_subscribed" title="<?php echo $this->__('Sign Up for Newsletter') ?>" value="1" id="is_subscribed"<?php if($this->getFormData()->getIsSubscribed()): ?> checked="checked"<?php endif; ?> class="checkbox" />
+                    </div>
+                    <label for="is_subscribed"><?php echo $this->__('Sign Up for Newsletter') ?></label>
+                </li>
+                <?php endif ?>
             </ul>
             <div class="buttons-set">
 				<button type="submit" title="<?php echo $this->__('Submit') ?>" class="button"><span><span><?php echo $this->__('Submit') ?></span></span></button>
 			</div>
+			<p id="validation-error" class="error-message" style="display:none;"><?php echo $this->__('Error message : There are missing required fields')?></p>
 			<p class="required"><?php echo $this->__('* Required Fields') ?></p>
         </div>
     </form>
