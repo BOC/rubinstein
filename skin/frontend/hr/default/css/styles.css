@@ -1067,13 +1067,17 @@ tr.summary-details-excluded { font-style:italic; }
 
 /********** < Dashboard */
 .dashboard {}
-.dashboard .welcome-msg {}
+.dashboard .welcome-msg { text-transform:none; color:#FFF; margin-bottom:30px; }
 
 /* Block: Recent Orders */
 .dashboard .box-recent { margin:10px 0; }
 
 /* Block: Account Information */
 .dashboard .box-info {}
+.dashboard .box-info .account-item { float:left; margin:0 10px 65px 0; width:480px; height:172px; position:relative; background:#ebe7e4; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
+.dashboard .box-info .account-item .account-item-image { top:-35px; right:0; position:absolute; width:73px; height:73px; }
+.dashboard .box-info .account-item button { float:right; color:#FFF; font-weight:bold; padding:2px 0; background-color:#9a897f; border:none; font-size:13px; margin-right:5px;-moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
+.dashboard .box-info .account-item button span { margin:6px; }
 
 /* Block: Reviews */
 .dashboard .box-reviews .number { float:left; font-size:10px; font-weight:bold; line-height:1; color:#fff; margin:3px -20px 0 0; padding:2px 3px; background:#ddd; }
