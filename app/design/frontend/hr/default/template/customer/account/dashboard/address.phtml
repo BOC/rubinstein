@@ -1,0 +1,33 @@
+<div class="col2-set">
+    <div class="box">
+        <div class="box-title">
+            <h3><?php echo $this->__('Address Book') ?></h3>
+            <span><?php echo $this->__('Edit, delete or add a new address in your address book.'); ?></span>
+        </div>
+        <div class="box-content">
+            <div class="col-1">
+                <h4><?php echo $this->__('Default Billing Address') ?></h4>
+                <address>
+                    <?php echo $this->getPrimaryBillingAddressHtml() ?><br />
+                    <a href="<?php echo $this->getPrimaryBillingAddressEditUrl() ?>"><?php echo $this->__('Edit Address') ?></a>
+                </address>
+            </div>
+            <div class="col-1">
+                <h4><?php echo $this->__('Default Shipping Address') ?></h4>
+                <address>
+                    <?php echo $this->getPrimaryShippingAddressHtml() ?><br />
+                    <a href="<?php echo $this->getPrimaryShippingAddressEditUrl() ?>"><?php echo $this->__('Edit Address') ?></a>
+                </address>
+            </div>
+            <div class="buttons-set">
+            	<div class="left-buttons">
+            		<a href="<?php echo $this->getAddressBookUrl() ?>"><?php echo $this->__('Edit') ?></a>
+            		<a href="<?php echo $this->getAddressBookUrl() ?>"><?php echo $this->__('Delete') ?></a>
+            	</div>
+            	<div class="right-buttons">
+            		<a href="<?php echo $this->getAddressBookUrl() ?>"><?php echo $this->__('Add an address') ?></a>
+            	</div>
+            </div>
+        </div>
+    </div>
+</div>

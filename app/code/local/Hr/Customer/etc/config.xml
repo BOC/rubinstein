@@ -18,5 +18,28 @@
         		<class>Hr_Customer_Block</class>
         	</hr-customer>
         </blocks>
+        <helpers>
+			<hr-customer>
+				<class>Hr_Customer_Helper</class>
+			</hr-customer>
+		</helpers>
 	</global>
+	<frontend>
+		<routers>
+            <customer>
+                <use>standard</use>
+                <args>
+                    <module>Hr_Customer</module>
+                    <frontName>customer</frontName>
+                </args>
+            </customer>
+        </routers>
+        <layout>
+			<updates>
+				<hr-customer>
+					<file>hr-customer.xml</file>
+				</hr-customer>
+			</updates>
+		</layout>
+	</frontend>
 </config>

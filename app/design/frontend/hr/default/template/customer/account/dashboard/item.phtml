@@ -1,8 +1,8 @@
 <div class="account-item">
-	<div class="account-item-image"><img src="<?php echo $this->getItemImage(); ?>" /></div>
+	<div class="account-item-image"><img src="<?php echo $this->getItemImageFile(); ?>" alt="<?php echo $this->getItemImageAlt() ?>" /></div>
 	<h2><?php echo $this->getItemTitle(); ?></h2>
 	<p class="account-item-content">
 		<?php echo $this->getItemContent(); ?>
 	</p>
-	<button type="button"><span><span><?php echo $this->getItemLink() ?></span></span></button>
+	<a href="<?php echo $this->getItemLinkUrl(); ?>"><span><span><?php echo $this->getItemLinkLabel(); ?></span></span></a>
 </div>

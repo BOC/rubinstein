@@ -1,0 +1,24 @@
+<div class="col2-set">
+    <div class="col-1">
+        <div class="box">
+            <div class="box-title">
+                <h3><?php echo $this->__('Contact Information') ?></h3>
+                <span><?php echo $this->__('If you want, you can edit your informations.'); ?></span>
+            </div>
+            <div class="box-content">
+                <p>
+                    <?php echo $this->htmlEscape($this->getCustomer()->getName()) ?>
+                </p>
+                <label for="email"><?php echo $this->__('Your email :'); ?></label>
+                <p id="email"><?php echo $this->htmlEscape($this->getCustomer()->getEmail()) ?></p>
+                <label for"password"><?php echo $this->__('Your password :'); ?></label>
+                <p id="password"><a href="<?php echo $this->getChangePasswordUrl() ?>"><?php echo $this->__('Change Password') ?></a></p>
+                <div class="buttons-set">
+	            	<div class="right-buttons">
+    	        		<a href="<?php echo $this->getUrl('customer/account/edit') ?>"><span><?php echo $this->__('Edit your informations') ?></span></a>
+        	    	</div>
+           		</div>
+            </div>
+        </div>
+    </div>
+</div>

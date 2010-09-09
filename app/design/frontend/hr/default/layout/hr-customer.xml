@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<layout version="0.1.0">
+	<customer_account>
+    	<reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
+    	<remove name="my.account.wrapper"></remove>
+    </customer_account>
+    
+	<customer_account_index translate="label">
+        <label>Customer My Account Dashboard</label>
+        <update handle="customer_account"/>
+        <!-- Mage_Customer -->
+        <reference name="content">
+		    <block type="page/html_wrapper" name="my.account.dashboard">
+	            <block type="customer/account_dashboard" name="customer_account_dashboard" template="customer/account/dashboard.phtml">
+	                <block type="customer/account_dashboard_hello" name="customer_account_dashboard_hello" as="hello" template="customer/account/dashboard/hello.phtml"/>
+	                <block type="core/template" name="customer_account_dashboard_top" as="top"></block>
+	                <block type="hr-customer/account_dashboard_item" name="dashboard_informations" template="customer/account/dashboard/item.phtml">
+	                	<action method="setItemTitle" translate="title"><title>Your Informations</title></action>
+	                	<action method="setItemImage"><image>informations.png</image><alt>informations</alt></action>
+	                	<action method="setItemContent" translate="text"><text>Manage your informations and your Helena Rubinstein account password</text></action>
+	                	<action method="setItemLink" translate="link"><link>Your Informations</link><url helper="hr-customer/getInfoUrl"></url></action>
+	                </block>
+	                <block type="hr-customer/account_dashboard_item" name="dashboard_orders" template="customer/account/dashboard/item.phtml">
+	                	<action method="setItemTitle" translate="title"><title>Your Orders</title></action>
+	                	<action method="setItemImage"><image>orders.png</image><alt>orders</alt></action>
+	                	<action method="setItemContent" translate="content"><text>Manage your informations and your Helena Rubinstein account password</text></action>
+	                	<action method="setItemLink" translate="link"><link>Your Orders</link></action>
+	                </block>
+	                <block type="hr-customer/account_dashboard_item" name="dashboard_diagnostic" template="customer/account/dashboard/item.phtml">
+	                	<action method="setItemTitle" translate="title"><title>Your Diagnostic</title></action>
+	                	<action method="setItemImage"><image>diagnostic.png</image><alt>diagnostic</alt></action>
+	                	<action method="setItemContent" translate="text"><text>Manage your informations and your Helena Rubinstein account password</text></action>
+	                	<action method="setItemLink" translate="link"><link>Your Diagnostic</link></action>
+	                </block>
+	                <block type="hr-customer/account_dashboard_item" name="dashboard_newsletter" template="customer/account/dashboard/item.phtml">
+	                	<action method="setItemTitle" translate="title"><title>Your Newsletter</title></action>
+	                	<action method="setItemImage"><image>newsletter.png</image><alt>newsletter</alt></action>
+	                	<action method="setItemContent" translate="text"><text>Manage your informations and your Helena Rubinstein account password</text></action>
+	                	<action method="setItemLink" translate="link"><link>Your Newsletter</link></action>
+	                </block>
+	                <block type="hr-customer/account_dashboard_item" name="dashboard_community" template="customer/account/dashboard/item.phtml">
+	                	<action method="setItemTitle" translate="title"><title>The HR Community</title></action>
+	                	<action method="setItemImage"><image>community.png</image><alt>community</alt></action>
+	                	<action method="setItemContent" translate="text"><text>Manage your informations and your Helena Rubinstein account password</text></action>
+	                	<action method="setItemLink" translate="link"><link>Discover</link></action>
+	                </block>
+	            </block>
+	        </block>
+        </reference>
+    </customer_account_index>
+    
+    <customer_account_info>
+    	<update handle="customer_account"/>
+        <reference name="content">
+        	<block type="page/html_wrapper" name="my.account.info">
+            	<block type="hr-customer/account_info" name="customer_account_info" template="customer/account/info.phtml">
+        			<block type="customer/account_dashboard_address" name="customer_account_dashboard_address" as="address" template="customer/account/dashboard/address.phtml"/>
+        			<block type="customer/account_dashboard_info" name="customer_account_dashboard_info" as="info" template="customer/account/dashboard/info.phtml"/>
+        		</block>
+        	</block>
+        </reference>
+    </customer_account_info>
+
+	<customer_address>
+    	<reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
+    </customer_address>
+    
+	<customer_address_edit>
+		<update handle="customer_address"/>
+		<reference name="content">
+        	<block type="page/html_wrapper" name="my.account.address.edit">
+            	<!-- <block type="hr-customer/account_info" name="customer_account_info" template="customer/account/info.phtml">-->
+        			<block type="customer/address_edit" name="customer_address_edit" as="address" template="customer/address/edit.phtml"/>
+        			<block type="customer/account_dashboard_info" name="customer_account_dashboard_info" as="info" template="customer/account/dashboard/info.phtml"/>
+        		<!-- </block>-->
+        	</block>
+        </reference>
+	</customer_address_edit>
+</layout>

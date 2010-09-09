@@ -9,20 +9,11 @@
  
 class Hr_Customer_Block_Account_Dashboard_Item extends Mage_Core_Block_Template
 {
-	protected $_image, $_alt, $_title, $_content, $_link;
+	protected $_title, $_content;
+	protected $_image = array('file' => '', 'alt' => '');
+	protected $_link = array('label' => '', 'url' => '');
 	
-	public function setItemImage($image, $alt)
-	{
-		$this->_image = $this->getSkinUrl('images').'/'.$image;
-		$this->_alt = $alt;
-	}
-	
-	public function getItemImage()
-	{
-		return $this->_image;
-	}
-	
-	public function setItemTitle($title)
+	public function setItemTitle($title='')
 	{
 		$this->_title = $title;
 	}
@@ -32,7 +23,7 @@ class Hr_Customer_Block_Account_Dashboard_Item extends Mage_Core_Block_Template
 		return $this->_title;
 	}	
 	
-	public function setItemContent($text)
+	public function setItemContent($text='')
 	{
 		$this->_content = $text;
 	}
@@ -42,13 +33,35 @@ class Hr_Customer_Block_Account_Dashboard_Item extends Mage_Core_Block_Template
 		return $this->_content;
 	}
 	
-	public function setItemLink($link)
+	public function setItemImage($image='', $alt='')
 	{
-		$this->_link = $link;
+		$this->_image['file'] = $this->getSkinUrl('images').'/'.$image;
+		$this->_image['alt'] = $alt;
 	}
 	
-	public function getItemLink()
+	public function getItemImageFile()
 	{
-		return $this->_link;
+		return $this->_image['file'];
+	}
+	
+	public function getItemImageAlt()
+	{
+		return $this->_image['alt'];
+	}
+	
+	public function setItemLink($link='', $url='')
+	{
+		$this->_link['label'] = $link;
+		$this->_link['url'] = $url;
+	}
+	
+	public function getItemLinkLabel()
+	{
+		return $this->_link['label'];
+	}
+	
+	public function getItemLinkUrl()
+	{
+		return $this->_link['url'];
 	}
 }
