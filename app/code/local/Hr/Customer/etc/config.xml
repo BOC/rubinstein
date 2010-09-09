@@ -26,13 +26,13 @@
 	</global>
 	<frontend>
 		<routers>
-            <customer>
+            <hr-customer>
                 <use>standard</use>
                 <args>
                     <module>Hr_Customer</module>
                     <frontName>customer</frontName>
                 </args>
-            </customer>
+            </hr-customer>
         </routers>
         <layout>
 			<updates>
