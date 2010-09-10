@@ -234,7 +234,6 @@ Customer account home dashboard layout
                 <block type="customer/account_dashboard_address" name="customer_account_dashboard_address" as="address" template="customer/account/dashboard/address.phtml"/>
             </block>
         </reference>
-
     </customer_account_index>
 
 <!--

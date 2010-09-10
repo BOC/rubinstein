@@ -403,13 +403,13 @@ tr.summary-details-excluded { font-style:italic; }
 .links li.last {}
 .links li:hover {}
 .account-box { float:left; }
-.my-account { float:left; padding:6px; text-transform:uppercase; }
-.my-account:hover { background-color:#302722; }
-.my-account p { float:left; padding:3px; margin:0px; }
-.my-account .my-customer { float:left; }
-.my-account .my-customer:hover { background-color:#302722; }
-.my-account .my-customer p { float:left; margin:0px;}
-.my-account .my-customer p:hover { cursor:pointer; padding:2px; margin:0px; border:1px solid #000; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
+.footer-account { float:left; padding:6px; text-transform:uppercase; }
+.footer-account:hover { background-color:#302722; }
+.footer-account p { float:left; padding:3px; margin:0px; }
+.footer-account .my-customer { float:left; }
+.footer-account .my-customer:hover { background-color:#302722; }
+.footer-account .my-customer p { float:left; margin:0px;}
+.footer-account .my-customer p:hover { cursor:pointer; padding:2px; margin:0px; border:1px solid #000; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
 .link-cart { font-weight:bold; color:#f00; }
 .link-wishlist { font-weight:bold; }
 .link-reorder { font-weight:bold; }
@@ -1066,18 +1066,17 @@ tr.summary-details-excluded { font-style:italic; }
 .my-account .title-buttons .link-rss { float:none; margin:0; }
 
 /********** < Dashboard */
-.dashboard {}
-.dashboard .welcome-msg { text-transform:none; color:#FFF; margin-bottom:30px; }
+.my-account .welcome-msg { text-transform:none; color:#FFF; margin-bottom:30px; }
 
 /* Block: Recent Orders */
 .dashboard .box-recent { margin:10px 0; }
 
 /* Block: Account Information */
-.dashboard .box-info {}
-.dashboard .box-info .account-item { float:left; margin:0 10px 65px 0; width:480px; height:172px; position:relative; background:#ebe7e4; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
-.dashboard .box-info .account-item .account-item-image { top:-35px; right:0; position:absolute; width:73px; height:73px; }
-.dashboard .box-info .account-item a { float:right; color:#FFF; font-weight:bold; padding:2px 0; background-color:#9a897f; border:none; font-size:13px; margin-right:5px; text-decoration:none; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
-.dashboard .box-info .account-item a span { margin:6px; }
+.my-account  {}
+.my-account .account-item { float:left; margin:0 10px 65px 0; width:480px; height:172px; position:relative; background:#ebe7e4; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
+.my-account .account-item .account-item-image { top:-35px; right:0; position:absolute; width:73px; height:73px; }
+.my-account .account-item a { float:right; color:#FFF; font-weight:bold; padding:2px 0; background-color:#9a897f; border:none; font-size:13px; margin-right:5px; text-decoration:none; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
+.my-account .account-item a span { margin:6px; }
 
 /* Block: Reviews */
 .dashboard .box-reviews .number { float:left; font-size:10px; font-weight:bold; line-height:1; color:#fff; margin:3px -20px 0 0; padding:2px 3px; background:#ddd; }
@@ -1089,13 +1088,13 @@ tr.summary-details-excluded { font-style:italic; }
 /********** Dashboard > */
 
 /* Customer Informations */
-.my-account-info {}
-.my-account-info .col2-set { position:relative; float:left; margin-bottom:10px; background-color:#ebe7e4; width:480px; height:450px; margin-right:20px; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
-.my-account-info .col2-set .box .box-title h3 { text-transform:uppercase; }
-.my-account-info .buttons-set { position:absolute; bottom:30px; right:auto; width:470px; }
-.my-account-info .buttons-set .left-buttons { float:left; }
-.my-account-info .buttons-set a { color:#FFF; text-decoration:none; padding:3px 12px; font-weight:bold; background:#978980; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
-.my-account-info .buttons-set .right-buttons { float:right; }
+.my-account {}
+.my-account .col2-set { position:relative; float:left; margin-bottom:10px; background-color:#ebe7e4; width:480px; height:450px; margin-right:20px; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
+.my-account .col2-set .box .box-title h3 { text-transform:uppercase; }
+.my-account .buttons-set { position:absolute; bottom:30px; right:auto; width:470px; }
+.my-account .buttons-set .left-buttons { float:left; }
+.my-account .buttons-set a { color:#FFF; text-decoration:none; padding:3px 12px; font-weight:bold; background:#978980; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
+.my-account .buttons-set .right-buttons { float:right; }
 /********** Customer Informations > */
 
 /* Address Book */

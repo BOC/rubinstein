@@ -24,6 +24,7 @@
         <remove name="paypal.partner.right.logo"></remove>
         <remove name="store_switcher"></remove>
         <remove name="top.links"></remove>
+        <remove name="customer_account_dashboard"></remove>
 
         <reference name="header">
         	<action method="unsetChild"><name>store_language</name></action>
