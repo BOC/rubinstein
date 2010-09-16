@@ -6,9 +6,6 @@
                 <span><?php echo $this->__('If you want, you can edit your informations.'); ?></span>
             </div>
             <div class="box-content">
-                <p>
-                    <?php echo $this->htmlEscape($this->getCustomer()->getName()) ?>
-                </p>
                 <label for="email"><?php echo $this->__('Your email :'); ?></label>
                 <p id="email"><?php echo $this->htmlEscape($this->getCustomer()->getEmail()) ?></p>
                 <label for"password"><?php echo $this->__('Your password :'); ?></label>
@@ -20,5 +17,5 @@
            		</div>
             </div>
         </div>
-    </div>
+    </div>	
 </div>

@@ -10,7 +10,7 @@ class Hr_Customer_Helper_Data extends Mage_Customer_Helper_Data
 {
 
     /**
-     * Retrieve customer logout url
+     * Retrieve customer info url
      *
      * @return string
      */
@@ -18,4 +18,14 @@ class Hr_Customer_Helper_Data extends Mage_Customer_Helper_Data
     {
         return $this->_getUrl('customer/account/info');
     }
+    
+    /**
+     * Retrieve customer order url
+     *
+     * @return string
+     */
+     public function getOrderUrl()
+     {
+     	return $this->_getUrl('sales/order/history');
+     }
 }

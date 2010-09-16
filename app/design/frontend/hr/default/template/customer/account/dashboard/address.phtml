@@ -9,14 +9,12 @@
                 <h4><?php echo $this->__('Default Billing Address') ?></h4>
                 <address>
                     <?php echo $this->getPrimaryBillingAddressHtml() ?><br />
-                    <a href="<?php echo $this->getPrimaryBillingAddressEditUrl() ?>"><?php echo $this->__('Edit Address') ?></a>
                 </address>
             </div>
             <div class="col-1">
                 <h4><?php echo $this->__('Default Shipping Address') ?></h4>
                 <address>
                     <?php echo $this->getPrimaryShippingAddressHtml() ?><br />
-                    <a href="<?php echo $this->getPrimaryShippingAddressEditUrl() ?>"><?php echo $this->__('Edit Address') ?></a>
                 </address>
             </div>
             <div class="buttons-set">
@@ -25,9 +23,25 @@
             		<a href="<?php echo $this->getAddressBookUrl() ?>"><?php echo $this->__('Delete') ?></a>
             	</div>
             	<div class="right-buttons">
-            		<a href="<?php echo $this->getAddressBookUrl() ?>"><?php echo $this->__('Add an address') ?></a>
+            		<a href="" id="add-address-button"><?php echo $this->__('Add an address') ?></a>
             	</div>
             </div>
         </div>
+        <script type="text/javascript">
+        //[!CDATA[
+        	$('add-address-button').observe('click', function(event){
+	        	var reloadurl = '<?php echo $this->getAddressBookUrl(); ?>';
+	        	new Ajax.Request(reloadurl,{
+	        		method:post,
+	        		onComplete:function(transport){
+	        			$('box-content').innerHTML = '';
+	        			$('box-content').innerHTML = transport.responseText;
+	        		}
+	        		alert(reloadurl);
+	        	});
+	        	return false;
+	        })
+	       //]]
+        </script>
     </div>
 </div>

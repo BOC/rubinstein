@@ -49,27 +49,22 @@ class Hr_Customer_AddressController extends Mage_Core_Controller_Front_Action
 
     public function editAction()
     {
-        $this->_forward('form');
+        $this->loadLayout();
+        $this->renderLayout();
     }
 
     public function newAction()
     {
-        $this->_forward('form');
-    }
-
-    /**
-     * Address book form
-     */
-    public function formAction()
-    {
         $this->loadLayout();
-        $this->_initLayoutMessages('customer/session');
-        if ($navigationBlock = $this->getLayout()->getBlock('customer_account_navigation')) {
-            $navigationBlock->setActive('customer/address');
-        }
         $this->renderLayout();
     }
 
+	public function bookAction()
+	{
+		$this->loadLayout();
+		$this->renderLayout();
+	}
+	
     public function formPostAction()
     {
         if (!$this->_validateFormKey()) {
@@ -100,7 +95,7 @@ class Hr_Customer_AddressController extends Mage_Core_Controller_Front_Action
                 if (true === $accressValidation) {
                     $address->save();
                     $this->_getSession()->addSuccess($this->__('The address has been saved.'));
-                    $this->_redirectSuccess(Mage::getUrl('*/*/index', array('_secure'=>true)));
+                    $this->_redirectSuccess(Mage::getUrl('*/account/info', array('_secure'=>true)));
                     return;
                 } else {
                     $this->_getSession()->setAddressFormData($this->getRequest()->getPost());
@@ -147,6 +142,6 @@ class Hr_Customer_AddressController extends Mage_Core_Controller_Front_Action
                 $this->_getSession()->addError($this->__('An error occurred while deleting the address.'));
             }
         }
-        $this->getResponse()->setRedirect(Mage::getUrl('*/*/index'));
+		$this->getResponse()->setRedirect(Mage::getUrl('*/*/book'));
     }
 }

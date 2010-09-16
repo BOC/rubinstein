@@ -258,7 +258,7 @@ Customer account address edit page
         <!-- Mage_Customer -->
         <update handle="customer_account"/>
         <reference name="my.account.wrapper">
-            <block type="customer/address_edit" name="customer_address_edit" template="customer/address/edit.phtml"/>
+        	<block type="customer/address_edit" name="customer_address_edit" template="customer/address/edit.phtml"/>
         </reference>
     </customer_address_form>
 

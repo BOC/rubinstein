@@ -114,8 +114,8 @@ ul,ol         { list-style:none; }
 .col3-layout .col-wrapper .col-main { float:right; }
 
 /* Content Columns */
-.col2-set .col-1 { float:left; width:49%; }
-.col2-set .col-2 { float:right; width:49%; }
+.col2-set .col-1 { float:left; }
+.col2-set .col-2 { float:right; }
 .col2-set .col-narrow { width:33%; }
 .col2-set .col-wide { width:65%; }
 
@@ -1077,6 +1077,7 @@ tr.summary-details-excluded { font-style:italic; }
 .my-account .account-item .account-item-image { top:-35px; right:0; position:absolute; width:73px; height:73px; }
 .my-account .account-item a { float:right; color:#FFF; font-weight:bold; padding:2px 0; background-color:#9a897f; border:none; font-size:13px; margin-right:5px; text-decoration:none; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
 .my-account .account-item a span { margin:6px; }
+.my-account .box .box-title { padding-bottom:50px; }
 
 /* Block: Reviews */
 .dashboard .box-reviews .number { float:left; font-size:10px; font-weight:bold; line-height:1; color:#fff; margin:3px -20px 0 0; padding:2px 3px; background:#ddd; }
@@ -1090,6 +1091,7 @@ tr.summary-details-excluded { font-style:italic; }
 /* Customer Informations */
 .my-account {}
 .my-account .col2-set { position:relative; float:left; margin-bottom:10px; background-color:#ebe7e4; width:480px; height:450px; margin-right:20px; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
+.my-account .col2-set .addresses-additional { float:left; }
 .my-account .col2-set .box .box-title h3 { text-transform:uppercase; }
 .my-account .buttons-set { position:absolute; bottom:30px; right:auto; width:470px; }
 .my-account .buttons-set .left-buttons { float:left; }

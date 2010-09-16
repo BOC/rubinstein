@@ -20,7 +20,7 @@
             	<action method="setItemTitle" translate="title"><title>Your Orders</title></action>
 	            <action method="setItemImage"><image>orders.png</image><alt>orders</alt></action>
     	        <action method="setItemContent" translate="content"><text>Manage your informations and your Helena Rubinstein account password</text></action>
-        	    <action method="setItemLink" translate="link"><link>Your Orders</link></action>
+        	    <action method="setItemLink" translate="link"><link>Your Orders</link><url helper="hr-customer/getOrderUrl"></url></action>
             </block>
             <block type="hr-customer/account_dashboard_item" name="dashboard_diagnostic" template="customer/account/dashboard/item.phtml">
             	<action method="setItemTitle" translate="title"><title>Your Diagnostic</title></action>
@@ -48,9 +48,15 @@
     	<reference name="root">
             <action method="setTemplate"><template>page/1column.phtml</template></action>
         </reference>
-        <reference name="my.account.wrapper">
-			<block type="customer/account_dashboard_address" name="customer_account_dashboard_address" as="address" template="customer/account/dashboard/address.phtml"/>
-        	<block type="customer/account_dashboard_info" name="customer_account_dashboard_info" as="info" template="customer/account/dashboard/info.phtml"/>
+        
+        <reference name="content">
+        	<block type="page/html_wrapper" name="my.account.wrapper">
+                <action method="setElementClass"><value>my-account</value></action>
+				<block type="hr-customer/address_book" name="customer_address_book" as="address_book" template="customer/address/index.phtml">
+					<block type="hr-customer/address_book" name="address_book_list" template="customer/address/book.phtml"/>
+				</block>
+	        	<block type="customer/account_dashboard_info" name="customer_account_dashboard_info" as="info" template="customer/account/dashboard/info.phtml"/>
+	        </block>
         </reference>
     </customer_account_info>
 
@@ -61,7 +67,26 @@
             <action method="setTemplate"><template>page/1column.phtml</template></action>
         </reference>
         <reference name="my.account.wrapper">
-            <block type="customer/address_book" name="address_book" template="customer/address/book.phtml"/>
+            <block type="hr-customer/address_book" name="address_book_index" template="customer/address/index.phtml"/>
+            <block type="hr-customer/address_book" name="address_book_list" template="customer/address/book.phtml"/>
         </reference>
     </customer_address_index>
+    
+    <customer_address_new>
+    	<block type="hr-customer/address_edit" name="root" output="toHtml" template="customer/address/edit.phtml"/>
+    </customer_address_new>
+    
+    <customer_address_book>
+    	<block type="hr-customer/address_book" name="root" output="toHtml" template="customer/address/book.phtml"/>
+    </customer_address_book>
+    
+    <customer_address_edit>
+    	<block type="hr-customer/address_edit" name="root" output="toHtml" template="customer/address/edit.phtml"/>
+    </customer_address_edit>
+    
+    <sales_order_history>
+    	<reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
+    </sales_order_history>
 </layout>

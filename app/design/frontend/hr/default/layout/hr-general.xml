@@ -25,7 +25,12 @@
         <remove name="store_switcher"></remove>
         <remove name="top.links"></remove>
         <remove name="customer_account_dashboard"></remove>
+        <remove name="global_notices"></remove>
+        <remove name="global_messages"></remove>
 
+		<reference name="head">
+			<action method="addJs"><script>boc/ajax.js</script></action>
+		</reference>
         <reference name="header">
         	<action method="unsetChild"><name>store_language</name></action>
         </reference>
