@@ -55,7 +55,9 @@
 				<block type="hr-customer/address_book" name="customer_address_book" as="address_book" template="customer/address/index.phtml">
 					<block type="hr-customer/address_book" name="address_book_list" template="customer/address/book.phtml"/>
 				</block>
-	        	<block type="customer/account_dashboard_info" name="customer_account_dashboard_info" as="info" template="customer/account/dashboard/info.phtml"/>
+				<block type="hr-customer/account_info" name="customer_dashboard_index" template="customer/account/dashboard/index.phtml">
+	        		<block type="customer/account_dashboard_info" name="customer_account_dashboard_info" as="info" template="customer/account/dashboard/info.phtml"/>
+	        	</block>
 	        </block>
         </reference>
     </customer_account_info>
@@ -83,6 +85,14 @@
     <customer_address_edit>
     	<block type="hr-customer/address_edit" name="root" output="toHtml" template="customer/address/edit.phtml"/>
     </customer_address_edit>
+    
+    <customer_account_informations>
+    	<block type="customer/account_dashboard_info" name="root" output="toHtml" template="customer/account/dashboard/info.phtml"/>
+    </customer_account_informations>
+    
+    <customer_account_edit>
+    	<block type="hr-customer/account_edit" name="root" output="toHtml" template="customer/account/dashboard/edit.phtml"/>
+    </customer_account_edit>
     
     <sales_order_history>
     	<reference name="root">

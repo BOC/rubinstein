@@ -110,13 +110,28 @@
     		<button id="back-button" type="button" title="<?php echo $this->__('Back') ?>" class="button"><span><span><?php echo $this->__('Back') ?></span></span></button>
     	</div>
     	<div class="right-buttons">
-        	<button type="submit" title="<?php echo $this->__('Save Address') ?>" class="button"><span><span><?php echo $this->__('Save Address') ?></span></span></button>
+        	<button id="submit-new-address" type="button" title="<?php echo $this->__('Save Address') ?>" class="button"><span><span><?php echo $this->__('Save Address') ?></span></span></button>
         </div>
     </div>
 </form>
 <script type="text/javascript">
 //<![CDATA[
 	new RegionUpdater('country', 'region', 'region_id', <?php echo $this->helper('directory')->getRegionJson() ?>, undefined, 'zip');
+	function formSubmit(event)
+	{
+		var loadurl = '<?php echo $this->getSaveUrl() ?>';
+		var params = Form.serialize($('form-validate'));
+		new Ajax.Request(loadurl, {
+			method: 'post',
+			parameters: params,
+			onSuccess: function(transport) {
+				$('customer-address-book').innerHTML = '';
+				$('customer-address-book').innerHTML = transport.responseText;
+				transport.responseText.evalScripts();
+			}
+		});
+		event.stop();
+	}
 	$('back-button').observe('click', function(event){
 		var reloadurl = '/customer/address/book';
 		new Ajax.Request(reloadurl, {
@@ -128,5 +143,7 @@
 			}
 		});
 	});
+	$('submit-new-address').observe('click', formSubmit);
+	$('form-validate').observe('submit', formSubmit);
 //]]>
 </script>

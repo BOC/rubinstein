@@ -1,0 +1,73 @@
+<form action="<?php echo $this->getUrl('customer/account/editPost') ?>" method="post" id="form-validate">
+	<div class="page-title">
+    	<h1><?php echo $this->__('Edit Account Information') ?></h1>
+	</div>
+        <?php echo $this->getBlockHtml('formkey')?>
+        <h2 class="legend"><?php echo $this->__('Account Information') ?></h2>
+        <ul class="form-list">
+            <li>
+                <label for="email" class="required"><em>*</em><?php echo $this->__('Email Address') ?></label>
+                <div class="input-box">
+                    <input type="text" name="email" id="email" value="<?php echo $this->htmlEscape($this->getCustomer()->getEmail()) ?>" title="<?php echo $this->__('Email Address') ?>" class="input-text required-entry validate-email" />
+                </div>
+            </li>
+            <li>
+                <label for="current_password" class="required"><em>*</em><?php echo $this->__('Current Password') ?></label>
+                <div class="input-box">
+                    <input type="password" title="<?php echo $this->__('Current Password') ?>" class="input-text" name="current_password" id="current_password" />
+                </div>
+            </li>
+            <li>
+                <label for="password" class="required"><em>*</em><?php echo $this->__('New Password') ?></label>
+                <div class="input-box">
+                    <input type="password" title="<?php echo $this->__('New Password') ?>" class="input-text validate-password" name="password" id="password" />
+                </div>
+			</li>
+			<li>
+                <label for="confirmation" class="required"><em>*</em><?php echo $this->__('Confirm New Password') ?></label>
+                <div class="input-box">
+                    <input type="password" title="<?php echo $this->__('Confirm New Password') ?>" class="input-text validate-cpassword" name="confirmation" id="confirmation" />
+                </div>
+            </li>
+        </ul>
+        <p><?php echo $this->getMessagesBlock()->getGroupedHtml() ?></p>
+        <p class="required"><?php echo $this->__('* Required Fields') ?></p>
+    <div class="buttons-set">
+    	<div class="left-buttons">
+    		<button id="back-button" type="button" title="<?php echo $this->__('Back'); ?>"><span><span><?php echo $this->__('Back'); ?></span></span></button>
+    	</div>
+		<div class="right-buttons">
+			<button id="submit-infos-button" type="button" title="<?php echo $this->__('Update') ?>"><span><span><?php echo $this->__('Update') ?></span></span></button>
+		</div>
+    </div>
+</form>
+<script type="text/javascript">
+//<![CDATA[
+	var dataForm = new VarienForm('form-validate', true);
+	function formSubmit(event){
+		var loadurl = '<?php echo $this->getUrl('customer/account/editPost') ?>';
+		var params = Form.serialize($('form-validate'));
+		new Ajax.Request(loadurl, {
+			method: 'post',
+			parameters: params,
+			onSuccess: function(transport) {
+				$('customer-account-info').innerHTML = '';
+				$('customer-account-info').innerHTML = transport.responseText;
+				transport.responseText.evalScripts();
+			}
+		});
+	}
+	$('back-button').observe('click', function(event){
+		var reloadurl = '/customer/account/informations';
+		new Ajax.Request(reloadurl, {
+			method: 'post',
+			onSuccess: function(transport) {
+				$('customer-account-info').innerHTML = '';
+				$('customer-account-info').innerHTML = transport.responseText;
+				transport.responseText.evalScripts();
+			}
+		});
+	});
+	$('submit-infos-button').observe('click', formSubmit);
+//]]>
+</script>

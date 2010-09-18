@@ -163,7 +163,7 @@ p.control input.radio { margin-right:6px; }
 /* Form lists */
 /* Grouped fields */
 /*.form-list { width:535px; margin:0 auto; overflow:hidden; }*/
-.form-list li { width:392px; }
+.form-list li { width:430px; }
 .form-list label { float:left; color:#111; font-weight:bold; position:relative; z-index:0; text-transform:uppercase; }
 .form-list label.required {}
 .form-list label.required em { float:right; font-style:normal; position:absolute; top:0; right:-13px; }
@@ -1097,6 +1097,7 @@ tr.summary-details-excluded { font-style:italic; }
 .my-account .buttons-set .left-buttons { float:left; }
 .my-account .buttons-set a { color:#FFF; text-decoration:none; padding:3px 12px; font-weight:bold; background:#978980; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
 .my-account .buttons-set .right-buttons { float:right; }
+.my-account .buttons-set button { background: #978980; border: none; color: #FFF; font-weight:bold; cursor:pointer; padding:3px 12px; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
 /********** Customer Informations > */
 
 /* Address Book */

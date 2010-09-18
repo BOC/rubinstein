@@ -95,7 +95,7 @@ class Hr_Customer_AddressController extends Mage_Core_Controller_Front_Action
                 if (true === $accressValidation) {
                     $address->save();
                     $this->_getSession()->addSuccess($this->__('The address has been saved.'));
-                    $this->_redirectSuccess(Mage::getUrl('*/account/info', array('_secure'=>true)));
+                   	$this->getResponse()->setRedirect(Mage::getUrl('*/*/book'));
                     return;
                 } else {
                     $this->_getSession()->setAddressFormData($this->getRequest()->getPost());
@@ -117,7 +117,7 @@ class Hr_Customer_AddressController extends Mage_Core_Controller_Front_Action
                     ->addException($e, $this->__('Cannot save address.'));
             }
         }
-        $this->_redirectError(Mage::getUrl('*/*/edit', array('id'=>$address->getId())));
+        $this->getResponse()->setRedirect(Mage::getUrl('*/*/edit'));
     }
 
     public function deleteAction()
