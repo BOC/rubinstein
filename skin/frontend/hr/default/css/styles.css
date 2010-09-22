@@ -845,6 +845,12 @@ tr.summary-details-excluded { font-style:italic; }
 /* Block: Additional */
 .product-view .box-additional {}
 
+/* Block: Collateral */
+.product-view .product-collateral {}
+.product-view .product-collateral-column { width:300px; margin-right:50px; float:left; }
+.product-view .product-collateral-column .right { margin:0; }
+.product-view .product-collateral {}
+
 /* Block: Upsell */
 .product-view .box-up-sell {}
 .product-view .box-up-sell .products-grid td { width:25%; }

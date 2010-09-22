@@ -9,6 +9,10 @@
             <active>true</active>
             <codePool>local</codePool>
         </Hr_Page>
+        <Hr_Catalog>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Hr_Catalog>
         <Hr_Customer>
             <active>true</active>
             <codePool>local</codePool>

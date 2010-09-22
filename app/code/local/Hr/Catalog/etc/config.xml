@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<Hr_Catalog>
+			<version>0.1.0</version>
+		</Hr_Catalog>
+	</modules>
+	<global>
+        <resources>
+            <hr-catalog_setup>
+                <setup>
+                    <module>Hr_Catalog</module>
+                </setup>
+            </hr-catalog_setup>
+        </resources>
+        <blocks>
+        	<hr-catalog>
+        		<class>Hr_Catalog_Block</class>
+        	</hr-catalog>
+        </blocks>
+	</global>
+	<frontend>
+        <layout>
+			<updates>
+				<hr-catalog>
+					<file>hr-catalog.xml</file>
+				</hr-catalog>
+			</updates>
+		</layout>
+	</frontend>
+</config>
