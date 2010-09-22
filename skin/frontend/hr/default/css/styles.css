@@ -26,7 +26,7 @@
 /* Reset ================================================================================= */
 * { margin:0; padding:0; }
 
-body          { background:#000; font:12px/1.35 Arial, Helvetica, sans-serif; color:#000; text-align:center; }
+body          { background:#000; font:12px/1.35 Arial, Helvetica, sans-serif; color:#FFF; text-align:center; }
 
 img           { border:0; vertical-align:top; }
 
@@ -767,9 +767,9 @@ tr.summary-details-excluded { font-style:italic; }
 .add-to-links .separator { display:none; }
 
 /* Add to Cart */
-.add-to-cart label { float:left; margin-right:5px; }
+.add-to-cart label { float:left; margin-right:5px; text-transform:uppercase; }
 .add-to-cart .qty { float:left; }
-.add-to-cart button.button { float:left; margin-left:5px; }
+.add-to-cart button.button { float:left; margin-left:5px; width:184px; height:44px; background: url("../images/bkg_add_cart_btn.png") repeat scroll 0 0 transparent; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
 .add-to-cart .paypal-logo { clear:left; }
 
 /* Add to Links + Add to Cart */

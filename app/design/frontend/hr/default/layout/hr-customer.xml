@@ -32,13 +32,13 @@
             	<action method="setItemTitle" translate="title"><title>Your Newsletter</title></action>
             	<action method="setItemImage"><image>newsletter.png</image><alt>newsletter</alt></action>
             	<action method="setItemContent" translate="text"><text>Manage your informations and your Helena Rubinstein account password</text></action>
-            	<action method="setItemLink" translate="link"><link>Your Newsletter</link></action>
+            	<action method="setItemLink" translate="link"><link>Your Newsletter</link><url>/newsletter/manage</url></action>
 	        </block>
     	    <block type="hr-customer/account_dashboard_item" name="dashboard_community" template="customer/account/dashboard/item.phtml">
         	    <action method="setItemTitle" translate="title"><title>The HR Community</title></action>
             	<action method="setItemImage"><image>community.png</image><alt>community</alt></action>
             	<action method="setItemContent" translate="text"><text>Manage your informations and your Helena Rubinstein account password</text></action>
-	        	<action method="setItemLink" translate="link"><link>Discover</link></action>
+	        	<action method="setItemLink" translate="link"><link>Discover</link><url helper="hr-customer/getCommunityUrl"></url></action>
     		</block>
         </reference>
     </customer_account_index>
@@ -80,6 +80,7 @@
     
     <customer_address_book>
     	<block type="hr-customer/address_book" name="root" output="toHtml" template="customer/address/book.phtml"/>
+    	<block type="core/messages" name="messages" as="messages"/>
     </customer_address_book>
     
     <customer_address_edit>
@@ -93,6 +94,37 @@
     <customer_account_edit>
     	<block type="hr-customer/account_edit" name="root" output="toHtml" template="customer/account/dashboard/edit.phtml"/>
     </customer_account_edit>
+    
+    <customer_account_community>
+    	<label>Customer My Account Address Book</label>
+        <!-- Mage_Customer -->
+        <reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
+        <reference name="content">
+        	<block type="page/html_wrapper" name="my.account.wrapper">
+        		<action method="setElementClass"><value>my-account</value></action>
+	            <block type="hr-customer/account_dashboard_item" name="community_facebook" template="customer/account/dashboard/item.phtml">
+	            	<action method="setItemTitle" translate="title"><title>Facebook</title></action>
+	            	<action method="setItemImage"><image>facebook.png</image><alt>facebook</alt></action>
+	            	<action method="setItemContent" translate="text"><text>TEXTE À REMPLIR</text></action>
+	            	<action method="setItemLink" translate="link"><link>Discover the facebook fanpage</link></action>
+		        </block>
+		        <block type="hr-customer/account_dashboard_item" name="community_twitter" template="customer/account/dashboard/item.phtml">
+	            	<action method="setItemTitle" translate="title"><title>Twitter</title></action>
+	            	<action method="setItemImage"><image>twitter.png</image><alt>twitter</alt></action>
+	            	<action method="setItemContent" translate="text"><text>TEXTE À REMPLIR</text></action>
+	            	<action method="setItemLink" translate="link"><link>Follow Helena Rubinstein</link></action>
+		        </block>
+		        <block type="hr-customer/account_dashboard_item" name="community_news" template="customer/account/dashboard/item.phtml">
+	            	<action method="setItemTitle" translate="title"><title>News</title></action>
+	            	<action method="setItemImage"><image>news.png</image><alt>news</alt></action>
+	            	<action method="setItemContent" translate="text"><text>TEXTE À REMPLIR</text></action>
+	            	<action method="setItemLink" translate="link"><link>Découvrir le blog</link></action>
+		        </block>
+		    </block>
+        </reference>
+    </customer_account_community>
     
     <sales_order_history>
     	<reference name="root">

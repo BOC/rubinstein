@@ -27,6 +27,7 @@
         <remove name="customer_account_dashboard"></remove>
         <remove name="global_notices"></remove>
         <remove name="global_messages"></remove>
+        <remove name="messages"></remove>
 
 		<reference name="head">
 			<action method="addJs"><script>boc/ajax.js</script></action>

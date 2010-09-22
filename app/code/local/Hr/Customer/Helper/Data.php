@@ -28,4 +28,14 @@ class Hr_Customer_Helper_Data extends Mage_Customer_Helper_Data
      {
      	return $this->_getUrl('sales/order/history');
      }
+     
+     /**
+      * Retrieve customer community url
+      * 
+      * @return string
+      */
+      public function getCommunityUrl()
+      {
+      	return $this->_getUrl('customer/account/community');
+      }
 }

@@ -610,9 +610,7 @@ class Hr_Customer_AccountController extends Mage_Core_Controller_Front_Action {
 			try {
 				$customer->save();
 				$this->_getSession()->setCustomer($customer)->addSuccess($this->__('The account information has been saved.'));
-
-				$this->_redirect('customer/account');
-				return;
+				$this->getResponse()->setRedirect(Mage::getUrl('customer/account'));
 			} catch (Mage_Core_Exception $e) {
 				$this->_getSession()->setCustomerFormData($this->getRequest()->getPost())->addError($e->getMessage());
 			} catch (Exception $e) {
@@ -635,4 +633,14 @@ class Hr_Customer_AccountController extends Mage_Core_Controller_Front_Action {
 		));
 		return $data;
 	}
+	
+	/**
+	 * Customer Community page
+	 */
+	 
+	 public function communityAction()
+	 {
+	 	$this->loadLayout();
+		$this->renderLayout();
+	 }
 }
