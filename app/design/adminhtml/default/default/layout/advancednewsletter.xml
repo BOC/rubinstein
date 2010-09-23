@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <adminhtml_system_config_edit>
+        <reference name="js">
+            <block type="advancednewsletter/js" template="advancednewsletter/js.phtml" name="formconfiguration" />
+        </reference>
+    </adminhtml_system_config_edit>
+    <advancednewsletter_admin_adminhtml_formconfiguration_index>
+        <reference name="content">
+            <block type="advancednewsletter/adminhtml_formconfiguration" name="formconfiguration" />
+        </reference>
+    </advancednewsletter_admin_adminhtml_formconfiguration_index>
+    <advancednewsletter_admin_adminhtml_segmentsmanagment_index>
+        <reference name="content">
+            <block type="advancednewsletter/adminhtml_segmentsmanagment" name="segmentsmanagment" />
+        </reference>
+    </advancednewsletter_admin_adminhtml_segmentsmanagment_index>
+    <advancednewsletter_admin_adminhtml_smtpconfiguration_index>
+        <reference name="content">
+            <block type="advancednewsletter/adminhtml_smtpconfiguration" name="smtpconfiguration" />
+        </reference>
+    </advancednewsletter_admin_adminhtml_smtpconfiguration_index>
+	<advancednewsletter_admin_adminhtml_automanagement_index>
+        <reference name="content">
+            <block type="advancednewsletter/adminhtml_automanagement" name="automanagement" />
+        </reference>
+    </advancednewsletter_admin_adminhtml_automanagement_index>
+	<advancednewsletter_admin_adminhtml_customer_index>
+        <reference name="content">
+            <block type="advancednewsletter/adminhtml_customer" name="exportCustomers" />
+        </reference>
+    </advancednewsletter_admin_adminhtml_customer_index>
+</layout>

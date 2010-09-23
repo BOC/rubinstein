@@ -1,0 +1,33 @@
+<?php
+/**
+ * aheadWorks Co.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://ecommerce.aheadworks.com/LICENSE-M1.txt
+ *
+ * @category   AW
+ * @package    AW_Advancednewsletter
+ * @copyright  Copyright (c) 2008-2010 aheadWorks Co. (http://www.aheadworks.com)
+ * @license    http://ecommerce.aheadworks.com/LICENSE-M1.txt
+ */
+?>
+<?php if (!sizeof($this->getSegments())&&Mage::getStoreConfig('advancednewsletter/formconfiguration/segmentsstyle')!='none') return false;?>
+
+<div class="form-subscribe">
+    <div>
+        <?php $rnd = rand(0, 1000) ?>
+        <button id="advancednewsletter-button-<?php echo $rnd ?>" class="button">
+            <span><span><?php echo $this->__('Subscribe') ?></span></span>
+        </button>
+    </div>
+</div>
+
+<script type="text/javascript">
+    <!--
+    document.observe('dom:loaded', function () { new Advancednewsletter($('advancednewsletter-button-<?php echo $rnd ?>'), '<?php echo $this->getUrl("advancednewsletter/index/subscribeajax/id/".$this->getCategoryId(), array('_secure'=>Mage::app()->getStore(true)->isCurrentlySecure())) ?>'); });
+    //-->
+</script>

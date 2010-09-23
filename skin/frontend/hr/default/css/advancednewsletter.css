@@ -1,0 +1,83 @@
+#advancednewsletter{
+    display:none;
+    position: absolute;
+    top:30%;
+    left:50%;
+    z-index:9999;
+    width:400px;
+    margin:-150px 0 0 -150px;
+    text-align:left;
+    /*background-color: #fff;*/
+}
+#advancednewsletter[id]{ /* IE6 and below Can't See This */
+    position:fixed;
+}
+
+#advancednewsletter h4 {padding: 4px 0;}
+
+#advancednewsletter .group-select {margin: 0;}
+
+#advancednewsletter-overlay{
+    display:none;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:5000;   
+    background-color:#000;
+    -moz-opacity: 0.3;
+    opacity:.30;
+    filter: alpha(opacity=30);
+}
+#advancednewsletter-overlay[id]{ /* IE6 and below Can't See This */
+    position:fixed;
+}
+
+#advancednewsletter.done #anLoadMessage{
+	display:none;
+}
+#advancednewsletter.done #anContent{
+	display:block;
+}
+#advancednewsletter.loading #anContent{
+	display:none;
+}
+#advancednewsletter.loading #anLoadMessage{
+	font-size: 1.1em;
+	font-weight: bold;
+	color: #000;
+	display:block;
+	background-color: #fff;
+	width: 100px;
+	padding: 10px;
+	margin: 250px 0 0 120px;
+}
+
+.advancednewsletter-please-wait {
+	padding-right:7px;
+}
+
+#an-subscribe .group-select {
+    margin:5px 0;
+    border:1px solid #bbafa0;
+    padding:5px 5px 5px 5px;
+    background:#fbfaf6;
+}
+
+#an-subscribe .button-set{
+border-top:1px solid #E4E4E4; 
+clear:both; 
+margin:4px 0 4px 8px;
+padding-top:8px;
+text-align:left;
+}
+
+#an-subscribe .group-select li .input-box .input-text
+{
+width:275px;
+}
+
+.an-right{
+	text-align: right;
+}

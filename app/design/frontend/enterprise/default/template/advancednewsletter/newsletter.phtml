@@ -1,0 +1,45 @@
+<?php
+/**
+ * aheadWorks Co.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://ecommerce.aheadworks.com/LICENSE-M1.txt
+ *
+ * @category   AW
+ * @package    AW_Advancednewsletter
+ * @copyright  Copyright (c) 2008-2010 aheadWorks Co. (http://www.aheadworks.com)
+ * @license    http://ecommerce.aheadworks.com/LICENSE-M1.txt
+ */
+?>
+<?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
+<div class="page-head">
+    <h3><?php echo $this->__('Newsletter Subscription') ?></h3>
+</div>
+
+<?php if (Mage::getStoreConfig('advancednewsletter/formconfiguration/formstyle')=='in_block'):
+endif; ?>
+<?php if (Mage::getStoreConfig('advancednewsletter/formconfiguration/formstyle')=='ajax_layer'):
+endif; ?>
+
+<?php if($this->hasSubscriptions()): ?>
+<p><?php echo $this->__('Your subscriptions:') ?></p>
+<table class="data-table">
+    <thead>
+        <tr class="first last">
+            <th><?php echo $this->__('Segment') ?></th>
+            <th><?php echo $this->__('Unsubscribe link') ?></th>
+        </tr>
+    </thead>
+    <?php foreach($this->getCustomerSegments() as $key => $segment): ?>
+    <tr>
+        <td><?php echo $segment['title']; ?></td>
+        <td><a href="<?php echo $this->getUnsubscribeLink($segment['code']); ?>"><?php echo $this->__('Unsubscribe') ?></a></td>
+    </tr>
+    <?php endforeach; ?>
+</table>
+<br /><a href="<?php echo $this->getUnsubscribeAllLink(); ?>"><?php echo $this->__('Unsubscribe from all') ?></a>
+<?php endif; ?>

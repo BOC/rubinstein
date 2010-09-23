@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<config>
+    
+		<translate>
+			<modules>
+				<AW_Advancednewsletter>
+					<files>
+						<default>AW_Advancednewsletter.csv</default>
+					</files>
+				</AW_Advancednewsletter>
+			</modules>
+		</translate>
+		<menu>
+			<newsletter>
+				<children>
+					<advancednewsletter module="advancednewsletter">
+						<title>Advanced Newsletter Configuration</title>
+						<sort_order>200</sort_order>
+						<children>
+							<segmentsmanagment>
+								<title>Segments Management</title>
+								<sort_order>1</sort_order>
+								<action>advancednewsletter_admin/adminhtml_segmentsmanagment</action>
+							</segmentsmanagment>
+							<formconfiguration>
+								<title>Form Configuration</title>
+								<sort_order>2</sort_order>
+								<action>adminhtml/system_config/edit/section/advancednewsletter</action>
+							</formconfiguration>
+							<smtpconfiguration>
+								<title>SMTP Configuration</title>
+								<sort_order>3</sort_order>
+								<action>advancednewsletter_admin/adminhtml_smtpconfiguration</action>
+							</smtpconfiguration>
+							<automanagement>
+								<title>Auto-management rules</title>
+								<sort_order>4</sort_order>
+								<action>advancednewsletter_admin/adminhtml_automanagement</action>
+							</automanagement>
+							<exportcustomers>
+								<title>Export Customers</title>
+								<sort_order>5</sort_order>
+								<action>advancednewsletter_admin/adminhtml_customer</action>
+							</exportcustomers>
+						</children>
+					</advancednewsletter>
+				</children>
+			</newsletter>
+		</menu>
+		<acl>
+			<resources>
+				<all>
+					<title>Allow Everything</title>
+				</all>
+				<admin>
+					<children>
+						<system>
+							<children>
+								<config>
+									<children>
+										<advancednewsletter>
+											<title>aheadWorks - Advanced Newsletter Configuration</title>
+										</advancednewsletter>
+									</children>
+								</config>
+							</children>
+						</system>
+						<newsletter>
+							<children>
+								<advancednewsletter module="advancednewsletter">
+									<title>aheadWorks - Advanced Newsletter</title>
+									<sort_order>200</sort_order>
+									<children>
+										<segmentsmanagment>
+											<title>Segments Management</title>
+											<sort_order>1</sort_order>
+											<action>advancednewsletter_admin/adminhtml_segmentsmanagment</action>
+										</segmentsmanagment>
+										<formconfiguration>
+											<title>Form Configuration</title>
+											<sort_order>2</sort_order>
+											<action>adminhtml/system_config/edit/section/advancednewsletter</action>
+										</formconfiguration>
+										<smtpconfiguration>
+											<title>SMTP Configuration</title>
+											<sort_order>3</sort_order>
+											<action>advancednewsletter_admin/adminhtml_smtpconfiguration</action>
+										</smtpconfiguration>
+										<automanagement>
+											<title>Auto-management rules</title>
+											<sort_order>4</sort_order>
+											<action>advancednewsletter_admin/adminhtml_automanagement</action>
+										</automanagement>
+										<exportcustomers>
+											<title>Export Customers</title>
+											<sort_order>5</sort_order>
+											<action>advancednewsletter_admin/adminhtml_customer</action>
+										</exportcustomers>
+									</children>
+								</advancednewsletter>
+							</children>
+						</newsletter>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+		<layout>
+			<updates>
+				<advancednewsletter>
+					<file>advancednewsletter.xml</file>
+				</advancednewsletter>
+			</updates>
+		</layout>
+	
+
+</config>

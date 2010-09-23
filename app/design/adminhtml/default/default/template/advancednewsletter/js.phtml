@@ -1,0 +1,71 @@
+<?php
+/**
+ * aheadWorks Co.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://ecommerce.aheadworks.com/LICENSE-M1.txt
+ *
+ * @category   AW
+ * @package    AW_Advancednewsletter
+ * @copyright  Copyright (c) 2008-2010 aheadWorks Co. (http://www.aheadworks.com)
+ * @license    http://ecommerce.aheadworks.com/LICENSE-M1.txt
+ */
+?>
+<script type="text/javascript">
+//<![CDATA[
+
+var AN = Class.create();
+
+AN.prototype = {
+    initialize : function()
+    {
+        this.segmentstyle = $('advancednewsletter_formconfiguration_segmentsstyle');
+        this.salutation = $('advancednewsletter_formconfiguration_displaysalutation');
+
+        if (this.segmentstyle) {
+            this.defaultsubscription = $('advancednewsletter_formconfiguration_defaultsubscription');
+
+            this.refreshSegmentstyle();
+            this.bindListModeChange();
+        }
+
+        if (this.salutation) {
+            this.salutation1 = $('advancednewsletter_formconfiguration_salutation1');
+            this.salutation2 = $('advancednewsletter_formconfiguration_salutation2');
+
+            this.refreshSalutation();
+            this.bindListModeChange();
+        }
+    },
+    bindListModeChange : function()
+    {
+        Event.observe(this.segmentstyle, 'change', this.refreshSegmentstyle.bind(this));
+        Event.observe(this.salutation, 'change', this.refreshSalutation.bind(this));
+    },
+    refreshSegmentstyle : function()
+    {
+        this.defaultsubscription.up(1).hide();
+
+        if (this.segmentstyle.value == 'none')
+                this.defaultsubscription.up(1).show();
+    },
+    refreshSalutation : function()
+    {
+        this.salutation1.up(1).hide();
+        this.salutation2.up(1).hide();
+
+        if (this.salutation.value == "1")
+                {
+                     this.salutation1.up(1).show();
+                     this.salutation2.up(1).show();
+                }
+    }
+}
+
+ANSelect = new AN();
+//]]>
+</script>

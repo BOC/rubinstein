@@ -1,0 +1,111 @@
+<?php
+/**
+ * aheadWorks Co.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://ecommerce.aheadworks.com/LICENSE-M1.txt
+ *
+ * @category   AW
+ * @package    AW_Advancednewsletter
+ * @copyright  Copyright (c) 2008-2010 aheadWorks Co. (http://www.aheadworks.com)
+ * @license    http://ecommerce.aheadworks.com/LICENSE-M1.txt
+ */
+?>
+<?php if (!sizeof($this->getSegments())&&Mage::getStoreConfig('advancednewsletter/formconfiguration/segmentsstyle')!='none') return false;?>
+
+<div class="box base-mini mini-newsletter">
+    <div class="head">
+        <h4><?php echo $this->__('Newsletter') ?><a name="newsletter-box"></a></h4>
+    </div>
+    <form action="<?php echo $this->getUrl('advancednewsletter/index/subscribe') ?>" method="post" id="newsletter-validate-detail">
+        <fieldset class="content">
+            <legend><?php echo $this->__('Newsletter') ?></legend>
+            <!--
+            <?php if( $message = $this->getErrorMessage() ): ?>
+                <p class="error"><?php echo $message ?></p>
+            <?php endif; ?>
+            <?php if( $message = $this->getSuccessMessage() ): ?>
+                <p class="success"><?php echo $message ?></p>
+            <?php endif; ?>
+            -->
+            <?php if(Mage::getStoreConfig('advancednewsletter/formconfiguration/segmentsstyle')=='none'): ?>
+
+            <?php else:?>
+            <label for="segments_select="><?php echo $this->__('Select lists') ?><span class="required">*</span></label><br />
+
+                <?php if(Mage::getStoreConfig('advancednewsletter/formconfiguration/segmentsstyle')=='select'): ?>
+            <select class="required-entry" name="segments_select" id="segments_select" style="width:90%">
+                        <?php foreach($this->getSegments() as $key => $segment): ?>
+                            <?php if($this->checkSegmentforSelection($segment['value'])||$key==0) $selected='selected="selected"'; else $selected='';?>
+                <option <?php echo $selected; ?> value="<?php echo $segment['value']; ?>"><?php echo $segment['label']; ?></option>
+                        <?php endforeach; ?>
+            </select>
+                <?php endif; ?>
+
+                <?php if(Mage::getStoreConfig('advancednewsletter/formconfiguration/segmentsstyle')=='multiselect'): ?>
+            <select class="required-entry" name="segments_select[]" multiple="" size=5 id="segments_select" style="width:90%">
+                        <?php foreach($this->getSegments() as $key => $segment): ?>
+                            <?php if(!$this->checkSegmentforSelection($segment['value'])) $selected=''; else $selected='selected="selected"';?>
+                <option <?php echo $selected; ?> value="<?php echo $segment['value']; ?>"><?php echo $segment['label']; ?></option>
+                        <?php endforeach; ?>
+            </select>
+                <?php endif; ?>
+
+                <?php if(Mage::getStoreConfig('advancednewsletter/formconfiguration/segmentsstyle')=='radio'): ?>
+                    <?php foreach($this->getSegments() as $key => $segment): ?>
+                        <?php if($this->checkSegmentforSelection($segment['value'])||$key==0) $checked='checked="checked"'; else $checked='';?>
+            <input <?php echo $checked;?> type="radio" name="segments_select" value="<?php echo $segment['value']; ?>"> <?php echo $segment['label']; ?><br />
+                    <?php endforeach; ?>
+                <?php endif; ?>
+
+                <?php if(Mage::getStoreConfig('advancednewsletter/formconfiguration/segmentsstyle')=='checkboxes'): ?>
+                    <?php foreach($this->getSegments() as $key => $segment): ?>
+                        <?php if(!$this->checkSegmentforSelection($segment['value'])) $checked=''; else $checked='checked="checked"';?>
+            <input <?php echo $checked;?> type="checkbox" name="segments_select[]" value="<?php echo $segment['value']; ?>"> <?php echo $segment['label']; ?><br />
+                    <?php endforeach; ?>
+                <?php endif; ?>
+
+            <br />
+            <?php endif; ?>
+
+            <?php if(!Mage::getStoreConfig('advancednewsletter/formconfiguration/displaynamecustomers')&&Mage::getSingleton('customer/session')->isLoggedIn()):?>
+            <?php elseif(Mage::getStoreConfig('advancednewsletter/formconfiguration/displayname')): ?>
+                <?php if(Mage::getStoreConfig('advancednewsletter/formconfiguration/displaysalutation')): ?>
+            <label><?php echo $this->__('Salutation') ?></label>
+            <br />
+            <select name="salutation_an" id="salutation_an" style="width:90%">
+                <option value="0"><?php echo Mage::getStoreConfig('advancednewsletter/formconfiguration/salutation1') ?></option>
+                <option value="1"><?php echo Mage::getStoreConfig('advancednewsletter/formconfiguration/salutation2') ?></option>
+            </select>
+            <br />
+                <?php endif; ?>
+            <label for="firstname_an"><?php echo $this->__('First name') ?></label><br />
+            <input name="firstname_an" type="text" id="firstname_an" style="width:90%"/><br />
+            <label for="lastname_an"><?php echo $this->__('Last name') ?></label><br />
+            <input name="lastname_an" type="text" id="lastname_an" style="width:90%"/><br />
+            <?php endif; ?>
+            <?php if((Mage::getStoreConfig('advancednewsletter/formconfiguration/displayemailcustomers')&&Mage::getSingleton('customer/session')->isLoggedIn())||!Mage::getSingleton('customer/session')->isLoggedIn()): ?>
+            <label for="email_an"><?php echo $this->__('Email') ?><span class="required">*</span></label><br />
+            <input name="email_an" type="text" id="email_an" class="validate-email required-entry" style="width:90%"/><br />
+            <?php endif; ?>
+            <?php if(Mage::getStoreConfig('advancednewsletter/formconfiguration/displayphone')): ?>
+            <label for="phone_an"><?php echo $this->__('Phone') ?></label><br />
+            <input name="phone_an" type="text" id="phone_an" style="width:90%"/><br />
+            <?php endif; ?>
+            <div style="margin-top:5px">
+                <button type="submit" class="form-button-alt"><span><?php echo $this->__('Subscribe') ?></span></button>
+                <input type="hidden" name="category" value="<?php echo $this->getCategoryId(); ?>">
+            </div>
+        </fieldset>
+    </form>
+
+    <script type="text/javascript">
+        //<![CDATA[
+        var newsletterSubscriberFormDetail = new VarienForm('newsletter-validate-detail');
+        //]]>
+    </script>
+</div>
