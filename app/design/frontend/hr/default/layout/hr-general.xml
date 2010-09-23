@@ -14,7 +14,6 @@
         <remove name="product_tag_list"></remove>
         <remove name="catalog.product.related"></remove>
         <remove name="product.info.addto"></remove>
-        <remove name="product.attributes"></remove>
         <remove name="product.info.simple"></remove>
         <remove name="checkout.cart.coupon"></remove>
         <remove name="checkout.cart.crosssell"></remove>

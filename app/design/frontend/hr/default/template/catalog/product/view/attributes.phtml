@@ -1,0 +1,19 @@
+<?php
+/**
+ * Product additional attributes template
+ *
+ * @see Mage_Catalog_Block_Product_View_Attributes
+ */
+?>
+<?php
+    $_helper = $this->helper('catalog/output');
+    $_product = $this->getProduct()
+?>
+<?php if($_additional = $this->getAdditionalData()): ?>
+        <?php foreach ($_additional as $_data): ?>
+            <div class="accordion-toggle"><?php echo $this->htmlEscape($this->__($_data['label'])) ?></div>
+            <div class="std accordion-content">
+            	<?php echo $_helper->productAttribute($_product, $_data['value'], $_data['code']) ?>
+            </div>
+        <?php endforeach; ?>
+<?php endif;?>

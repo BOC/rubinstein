@@ -98,16 +98,21 @@
     	<div class="product-collateral-column left">
     		&nbsp;
     	</div>
-    	<div class="product-collateral-column middle">
+    	<div class="product-collateral-column middle accordion" id="info-accordion">
 			<?php foreach ($this->getChildGroup('detailed_info', 'getChildHtml') as $alias => $html):?>
-	        <div class="box-collateral <?php echo "box-{$alias}"?>">
+	        
 	            <?php if ($title = $this->getChildData($alias, 'title')):?>
 	            <h2><?php echo $this->escapeHtml($title); ?></h2>
 	            <?php endif;?>
 	            <?php echo $html; ?>
-	        </div>
+	        
 			<?php endforeach;?>
 		</div>
+		<script type="text/javascript">
+	    //<![CDATA[
+	            
+	    //]]>
+	    </script>
 		<div class="product-collateral-column right">
 			&nbsp;
 		</div>

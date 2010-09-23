@@ -847,9 +847,10 @@ tr.summary-details-excluded { font-style:italic; }
 
 /* Block: Collateral */
 .product-view .product-collateral {}
-.product-view .product-collateral-column { width:300px; margin-right:50px; float:left; }
-.product-view .product-collateral-column .right { margin:0; }
-.product-view .product-collateral {}
+.product-view .product-collateral-column { width:300px; margin-right:50px; float:left; color:#554b49; }
+.product-view .product-collateral-column.right { margin:0; }
+.product-view .product-collateral-column.middle { background:#fffafa; }
+.product-view .product-collateral-column.middle h2 { background:#d3cbc9; text-transform:uppercase; margin-bottom:2px; padding:2px 0px; }
 
 /* Block: Upsell */
 .product-view .box-up-sell {}
