@@ -76,7 +76,7 @@ var Accordion = Class.create({
             sync: true,
             scaleFrom: 0,
             scaleContent: false,
-            transition: Effect.Transitions.sinoidal,
+            transition: Effect.Transitions.linear,
             scaleMode: {
                 originalHeight: this.maxHeight,
                 originalWidth: this.accordion.getWidth()
@@ -85,17 +85,17 @@ var Accordion = Class.create({
             scaleY: true
         };
 
-        effects.push(new Effect.Scale(this.toExpand, 100, options));
+        effects.push(new Effect.BlindDown(this.toExpand, 100, options));
 
         options = {
             sync: true,
             scaleContent: false,
-            transition: Effect.Transitions.sinoidal,
+            transition: Effect.Transitions.linear,
             scaleX: false,
             scaleY: true
         };
 
-        effects.push(new Effect.Scale(this.current, 0, options));
+        effects.push(new Effect.BlindUp(this.current, 0, options));
 
         var myDuration = 0.75;
 

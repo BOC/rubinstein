@@ -43,7 +43,7 @@
         <reference name="before_body_end">
 			<block type="page/html_footer_menu" name="footer.menu" template="page/html/footer/menu.phtml">
 				<block type="page/html_footer_box" name="footerbox" template="page/template/footerbox.phtml"/>
-				<block type="newsletter/subscribe" name="left.newsletter" template="newsletter/subscribe.phtml" />
+				<!-- <block type="newsletter/subscribe" name="left.newsletter" template="newsletter/subscribe.phtml" />-->
 			</block>
         </reference>
     </default>
@@ -87,4 +87,5 @@
        	<remove name="product.info.additional"></remove>
        	<remove name="product_tag_list"></remove>
 	</catalog_product_view>
+
 </layout>

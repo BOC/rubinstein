@@ -26,7 +26,7 @@
 /* Reset ================================================================================= */
 * { margin:0; padding:0; }
 
-body          { background:#000; font:12px/1.35 Arial, Helvetica, sans-serif; color:#FFF; text-align:center; }
+body          { background:#000; font:12px/1.35 Helvetica, Arial, sans-serif; color:#FFF; text-align:center; }
 
 img           { border:0; vertical-align:top; }
 
@@ -146,7 +146,7 @@ input.qty { width:2.5em !important; }
 button.button::-moz-focus-inner { padding:0; border:0; } /* FF Fix */
 button.button { -webkit-border-fit:lines; } /* <- Safari & Google Chrome Fix */
 button.button { overflow:visible; width:auto; border:0; padding:0; margin:0; background:transparent; cursor:pointer; }
-button.button span { float:left; height:21px; padding:0 0 0 8px; font:bold 12px/21px Arial, Helvetica, sans-serif; text-align:center; white-space:nowrap; color:#fff; }
+button.button span { float:left; padding:0 0 0 8px; text-align:center; white-space:nowrap; color:#fff; }
 button.button span span { background-position:100% 0; padding:0 12px 0 4px; }
 button.disabled {}
 button.disabled span {}
@@ -770,6 +770,7 @@ tr.summary-details-excluded { font-style:italic; }
 .add-to-cart label { float:left; margin-right:5px; text-transform:uppercase; }
 .add-to-cart .qty { float:left; }
 .add-to-cart button.button { float:left; margin-left:5px; width:184px; height:44px; background: url("../images/bkg_add_cart_btn.png") repeat scroll 0 0 transparent; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
+.add-to-cart button.button span { width:160px; margin:auto; float:left; text-transform:uppercase; color:#4f4343; font-size:14px; }
 .add-to-cart .paypal-logo { clear:left; }
 
 /* Add to Links + Add to Cart */
@@ -786,9 +787,9 @@ tr.summary-details-excluded { font-style:italic; }
 .product-collateral .box-collateral { margin:0 0 15px; }
 
 /* Product Images */
-.product-view .product-img-box { float:left; width:267px; }
+.product-view .product-img-box { float:left; width:390px; }
 .col3-layout .product-view .product-img-box { float:none; margin:0 auto; }
-.product-view .product-img-box .product-image { border:1px solid #ddd; }
+.product-view .product-img-box .product-image {}
 .product-view .product-img-box .product-image-zoom { position:relative; width:265px; height:265px; overflow:hidden; z-index:9; }
 .product-view .product-img-box .product-image-zoom img { position:absolute; left:0; top:0; cursor:move; }
 .product-view .product-img-box .zoom-notice { text-align:center; }
@@ -808,10 +809,13 @@ tr.summary-details-excluded { font-style:italic; }
 
 /* Product Shop */
 .product-view .product-shop { float:right; width:445px; }
-.col1-layout .product-view .product-shop { float:right; width:700px; }
+.col1-layout .product-view .product-shop { float:right; width:610px; }
 .col3-layout .product-view .product-shop { float:none; width:auto; }
 .product-view .product-name {}
+.product-view .product-name h1 { font-size:40px; }
 .product-view .short-description {}
+.product-view .product_segment { font-size:20px; }
+.product-view .product_subdefinition { font-size:20px; color:#CCC; padding:5px; }
 
 /* Product Options */
 .product-options { padding:10px; margin:10px 0 0; border:1px solid #ddd; background-color:#f6f6f6; }
@@ -850,7 +854,10 @@ tr.summary-details-excluded { font-style:italic; }
 .product-view .product-collateral-column { width:300px; margin-right:50px; float:left; color:#554b49; }
 .product-view .product-collateral-column.right { margin:0; }
 .product-view .product-collateral-column.middle { background:#fffafa; }
-.product-view .product-collateral-column.middle h2 { background:#d3cbc9; text-transform:uppercase; margin-bottom:2px; padding:2px 0px; }
+.product-view .product-collateral-column.middle .accordion-toggle { height:39px; background:#d3cbc9; text-transform:uppercase; margin-bottom:2px; padding:2px 0px; }
+.product-view .product-collateral-column.middle .accordion-content { opacity:0%; }
+.product-view .product-collateral-column.middle .accordion-toggle span { padding:12px 10px; font-weight:bold; }
+.product-view .product-collateral-column.middle .accordion-toggle-active { height:39px; background:#d3cbc9; text-transform:uppercase; margin-bottom:2px; padding:2px 0px; }
 
 /* Block: Upsell */
 .product-view .box-up-sell {}
