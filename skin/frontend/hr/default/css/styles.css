@@ -132,7 +132,7 @@ ul,ol         { list-style:none; }
 
 /* Global Styles ========================================================================= */
 /* Form Elements */
-input,select,textarea,button { font:12px Arial, Helvetica, sans-serif; vertical-align:middle; color:#000; }
+input,select,textarea,button { font:14px Arial, Helvetica, sans-serif; vertical-align:middle; color:#000; }
 input.input-text,select,textarea { background:#fff; border:1px solid #ddd; }
 input.input-text,textarea { padding:2px; -moz-border-radius:4px; -webkit-border-radius:4px; border-radius:4px; }
 select { padding:1px; }
@@ -145,7 +145,7 @@ input.checkbox { margin-right:3px; }
 input.qty { width:2.5em !important; }
 button.button::-moz-focus-inner { padding:0; border:0; } /* FF Fix */
 button.button { -webkit-border-fit:lines; } /* <- Safari & Google Chrome Fix */
-button.button { overflow:visible; width:auto; border:0; padding:0; margin:0; background:transparent; cursor:pointer; }
+button.button { overflow:visible; width:auto; border:0; padding-bottom:2px; margin:0; background:transparent; cursor:pointer; }
 button.button span { float:left; padding:0 0 0 8px; text-align:center; white-space:nowrap; color:#fff; }
 button.button span span { background-position:100% 0; padding:0 12px 0 4px; }
 button.disabled {}
@@ -330,15 +330,17 @@ p.error-message { position:absolute; bottom:40px; color:#f00; }
 
 /* Data Table */
 .data-table { width:100%; }
-.data-table th { padding:5px; border:1px solid #ddd; font-weight:bold; white-space:nowrap; }
-.data-table td { padding:5px; border:1px solid #ddd; }
+.data-table th { padding:5px; font-weight:bold; white-space:nowrap; background-color:#000000; }
+.data-table th.a-right { padding-right:20px; }
+.data-table td { padding:5px; vertical-align:middle; }
+.data-table td.a-right { padding-right:10px; }
 .data-table thead { background-color:#f2f2f2; }
 .data-table tbody {}
 .data-table tfoot {}
 .data-table tr.first {}
 .data-table tr.last {}
-.data-table tr.odd {}
-.data-table tr.even { background-color:#f6f6f6; }
+.data-table tr.odd { border:1px solid #555555; background-color:#1a1512; }
+.data-table tr.even { border:1px solid #555555; background-color:#1a1512; }
 .data-table tbody.odd {}
 .data-table tbody.odd td { border-width:0 1px; }
 .data-table tbody.even { background-color:#f6f6f6; }
@@ -417,7 +419,9 @@ tr.summary-details-excluded { font-style:italic; }
 .link-print { background:url(../images/i_print.gif) 0 2px no-repeat; padding:2px 0 2px 25px; }
 .link-rss { background:url(../images/i_rss.gif) 0 1px no-repeat; padding-left:18px; white-space:nowrap; }
 .btn-remove { display:block; width:11px; height:11px; font-size:0; line-height:0; background:url(../images/btn_remove.gif) 0 0 no-repeat; text-indent:-999em; overflow:hidden; }
-.btn-remove2 { display:block; width:16px; height:16px; font-size:0; line-height:0; background:url(../images/btn_trash.gif) 0 0 no-repeat; text-indent:-999em; overflow:hidden; }
+.btn-remove2 { font-size:14px; text-decoration:none; color:#dcd9d4; }
+.btn-remove2 span { text-transform:uppercase; }
+.btn-remove2 img { padding-top:6px; padding-left:10px; }
 
 .separator { margin:0 3px; }
 
@@ -688,7 +692,7 @@ tr.summary-details-excluded { font-style:italic; }
 .alert-stock {}
 
 /********** < Product Prices */
-.price { white-space:nowrap !important; }
+.price { white-space:nowrap !important; font-size:1.3em; }
 
 .price-box {}
 .price-box .price { font-weight:bold; }
@@ -778,7 +782,7 @@ tr.summary-details-excluded { font-style:italic; }
 .add-to-box .add-to-cart { float:left; }
 .add-to-box .or { float:left; margin:0 10px; }
 .add-to-box .add-to-links { float:left; }
-
+.add-to-box .add-to-cart button { clear:left; margin-top:5px; }
 
 .product-view {}
 
@@ -881,7 +885,7 @@ tr.summary-details-excluded { font-style:italic; }
 
 /* Content Styles ================================================================= */
 .product-name { font-size:1em; font-weight:normal; }
-.product-name a {}
+.product-name a { text-decoration:none; color:#FFFFFF; }
 
 /* Product Tags */
 .tags-list li { display:inline; }
@@ -913,6 +917,7 @@ tr.summary-details-excluded { font-style:italic; }
 
 /* Shopping Cart ========================================================================= */
 .cart {}
+.cart .title-buttons h1 { text-transform:uppercase; }
 .header-cart { width:163px; position:absolute; right:0; top:39px; background-color:#e6e6e6; -moz-border-radius:0 0 4px 4px; -webkit-border-radius:0 0 4px 4px; border-radius:0 0 4px 4px; }
 .header-cart .cart { color:#4f4641; background:#d4cfcb; }
 .header-cart .cart-url .cart { float:left; padding:10px; width:125px; padding:13px 5px 13px 5px; text-align:center; }
@@ -920,13 +925,18 @@ tr.summary-details-excluded { font-style:italic; }
 .header-cart .items .item-image { height:83px; width:56px; }
 .header-cart .items .item-description { width:91px; }
 .header-cart .items .item-delete { width:15px; background-image: url('../images/delete.png'); }
+
 /* Checkout Types */
 .cart .checkout-types { float:right; text-align:right; }
 .cart .title-buttons .checkout-types li { float:left; margin:0 0 5px 5px; }
-
+.cart .checkout-types button.button { float:left; margin-left:5px; height:44px; background: url("../images/bkg_add_cart_btn.png") repeat scroll 0 0 transparent; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
+.cart .checkout-types button.button span { margin:auto; float:left; text-transform:uppercase; color:#4f4343; font-size:14px; }
 /* Shopping Cart Table */
 .cart-table .item-msg { font-size:10px; }
 
+.cart .cart-buttons-set { padding-top:5px; border-top:1px solid #555; }
+.cart .continue-button { padding:13px 0; float:left; }
+.cart .continue-button button { background-color:#9C9080; float:left; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
 /* Shopping Cart Collateral boxes */
 .cart .cart-collaterals { padding:25px 0 0; }
 .cart .cart-collaterals .col2-set { float:left; width:700px; }
@@ -942,7 +952,7 @@ tr.summary-details-excluded { font-style:italic; }
 .cart .shipping {}
 
 /* Shopping Cart Totals */
-.cart .totals { float:right; }
+.cart .totals { clear:right; }
 .cart .totals table { width:100%; }
 .cart .totals table th,
 .cart .totals table td { padding:5px; }

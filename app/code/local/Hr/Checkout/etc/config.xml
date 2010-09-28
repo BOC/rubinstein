@@ -19,4 +19,13 @@
         	</hr-checkout>
         </blocks>
 	</global>
+	<frontend>
+        <layout>
+			<updates>
+				<hr-checkout>
+					<file>hr-checkout.xml</file>
+				</hr-checkout>
+			</updates>
+		</layout>
+	</frontend>
 </config>

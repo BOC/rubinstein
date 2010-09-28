@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+	<checkout_cart_index>
+		<remove name="checkout.cart.shipping"></remove>
+		<remove name="messages"></remove>
+	</checkout_cart_index>
+</layout>
