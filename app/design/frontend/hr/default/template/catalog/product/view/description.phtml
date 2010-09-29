@@ -7,7 +7,7 @@
 ?>
 <?php $_description = $this->getProduct()->getDescription(); ?>
 <?php if ($_description): ?>
-    <div class="accordion-toggle"><span><?php echo $this->__('Details') ?></span></div>
+    <h3 class="accordion-head"><a href="#"><?php echo $this->__('Details') ?></a></h3>
     <div class="std accordion-content">
         <?php echo $this->helper('catalog/output')->productAttribute($this->getProduct(), $_description, 'description') ?>
     </div>

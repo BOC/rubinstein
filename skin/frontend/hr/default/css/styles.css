@@ -862,7 +862,8 @@ tr.summary-details-excluded { font-style:italic; }
 .product-view .product-collateral-column.middle .accordion-content { opacity:0%; }
 .product-view .product-collateral-column.middle .accordion-toggle span { padding:12px 10px; font-weight:bold; }
 .product-view .product-collateral-column.middle .accordion-toggle-active { height:39px; background:#d3cbc9; text-transform:uppercase; margin-bottom:2px; padding:2px 0px; }
-
+.product-view .product-collateral-column h3 { height:39px; background:#d3cbc9; text-transform:uppercase; margin-bottom:2px; padding:2px 0px; }
+.product-view .product-collateral-column a { display:block; text-decoration:none; padding:10px 10px; font-weight:normal; color:#564943; }
 /* Block: Upsell */
 .product-view .box-up-sell {}
 .product-view .box-up-sell .products-grid td { width:25%; }
@@ -994,6 +995,13 @@ tr.summary-details-excluded { font-style:italic; }
 .please-wait img { vertical-align:middle; }
 .cvv-what-is-this { cursor:help; margin-left:5px; }
 
+.checkout-login { background:#d3cbc9; width:47%; height:230px; padding:10px; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
+.checkout-login h3 { text-transform:uppercase; }
+.checkout-login .form-list li { width:auto; }
+.checkout-login .form-list input.input-text { width:250px; }
+.checkout-login .buttons-set { width:45%; }
+.checkout-login .buttons-set p { float:left; }
+.checkout-register { background:#d3cbc9; width:47%; height:230px; padding:10px; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
 /* Tooltip */
 .tool-tip { border:1px solid #ddd; background-color:#f6f6f6; padding:5px; position:absolute; z-index:9999; }
 .tool-tip .btn-close { text-align:right; }

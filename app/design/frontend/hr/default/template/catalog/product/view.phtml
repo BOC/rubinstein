@@ -100,7 +100,6 @@
 	            <h2><?php echo $this->escapeHtml($title); ?></h2>
 	            <?php endif;?>
 	            <?php echo $html; ?>
-	        
 			<?php endforeach;?>
 		</div>
 		<div class="product-collateral-column right">
@@ -110,3 +109,10 @@
         <?php echo $this->getChildHtml('product_additional_data') ?>
     </div>
 </div>
+    <script type="text/javascript">
+    //<![CDATA[
+		$j(function() {
+			$j( "#info-accordion" ).accordion();
+		});
+    //]]>
+    </script>
