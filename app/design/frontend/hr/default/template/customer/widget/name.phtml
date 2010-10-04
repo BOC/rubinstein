@@ -19,7 +19,7 @@ For checkout/onepage/shipping.phtml:
 */
 ?>
 <?php if ($this->showPrefix()): ?>
-	<li>
+	<li class="wide">
 	    <label for="<?php echo $this->getFieldId('prefix')?>"<?php if ($this->isPrefixRequired()) echo ' class="required"' ?>><?php if ($this->isPrefixRequired()) echo '<em>*</em>' ?><?php echo $this->__('Prefix') ?></label>
 	    <div class="input-box">
 	        <?php if ($this->getPrefixOptions()===false): ?>
@@ -34,14 +34,14 @@ For checkout/onepage/shipping.phtml:
 	    </div>
 	</li>
 <?php endif; ?>
-	<li>
+	<li class="wide">
     	<label for="<?php echo $this->getFieldId('firstname')?>" class="required"><em>*</em><?php echo $this->__('First Name') ?></label>
     	<div class="input-box">
         	<input type="text" id="<?php echo $this->getFieldId('firstname')?>" name="<?php echo $this->getFieldName('firstname')?>" value="<?php echo $this->htmlEscape($this->getObject()->getFirstname()) ?>" title="<?php echo $this->__('First Name') ?>" class="input-text required-entry" <?php echo $this->getFieldParams() ?> />
     	</div>
     </li>
 <?php if ($this->showMiddlename()): ?>
-	<li>
+	<li class="wide">
 	    <div class="field name-middlename">
 	        <label for="<?php echo $this->getFieldId('middlename')?>"><?php echo $this->__('M.I.') ?></label>
 	        <div class="input-box">
@@ -50,7 +50,7 @@ For checkout/onepage/shipping.phtml:
 	    </div>
 	</li>
 <?php endif; ?>
-	<li>
+	<li class="wide">
 	    <label for="<?php echo $this->getFieldId('lastname')?>" class="required"><em>*</em><?php echo $this->__('Last Name') ?></label>
 	    <div class="input-box">
 	        <input type="text" id="<?php echo $this->getFieldId('lastname')?>" name="<?php echo $this->getFieldName('lastname')?>" value="<?php echo $this->htmlEscape($this->getObject()->getLastname()) ?>" title="<?php echo $this->__('Last Name') ?>" class="input-text required-entry" <?php echo $this->getFieldParams() ?> />

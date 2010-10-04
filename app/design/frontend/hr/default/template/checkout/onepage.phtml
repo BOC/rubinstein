@@ -1,31 +1,26 @@
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/opcheckout.js') ?>"></script>
 <script type="text/javascript">countryRegions = <?php echo $this->helper('directory')->getRegionJson() ?></script>
-<div class="chekout-onepage-steps">
+<div id="checkoutSteps">
+	<ul class="opc">
 	<?php $i=0; foreach($this->getSteps() as $_stepId => $_stepInfo): ?>
-		<div><?php echo "0".++$i." ".$_stepInfo['label'] ?></div>
+	<?php if (!$this->getChild($_stepId) || !$this->getChild($_stepId)->isShow()): continue; endif; $i++ ?>
+	    <li><a href="#checkout-step-<?php echo $_stepId ?>"><span class="number">0<?php echo $i ?></span><br /><?php echo $_stepInfo['label'] ?></a></li>
+	<?php endforeach ?>
+	</ul>
+	<?php foreach($this->getSteps() as $_stepId => $_stepInfo): ?>
+	<?php if (!$this->getChild($_stepId) || !$this->getChild($_stepId)->isShow()): continue; endif; $i++ ?>
+	<div id="checkout-step-<?php echo $_stepId ?>">
+		<?php echo $this->getChildHtml($_stepId) ?>
+	</div>
 	<?php endforeach ?>
 </div>
-<ol class="opc" id="checkoutSteps">
-<?php $i=0; foreach($this->getSteps() as $_stepId => $_stepInfo): ?>
-<?php if (!$this->getChild($_stepId) || !$this->getChild($_stepId)->isShow()): continue; endif; $i++ ?>
-    <li id="opc-<?php echo $_stepId ?>" class="section<?php echo !empty($_stepInfo['allow'])?' allow':'' ?><?php echo !empty($_stepInfo['complete'])?' saved':'' ?>">
-        <div class="step-title">
-            <span class="number"><?php echo $i ?></span>
-            <h2><?php echo $_stepInfo['label'] ?></h2>
-            <a href="#"><?php echo $this->__('Edit') ?></a>
-        </div>
-        <div id="checkout-step-<?php echo $_stepId ?>" class="step a-item" style="display:none;">
-            <?php echo $this->getChildHtml($_stepId) ?>
-        </div>
-    </li>
-<?php endforeach ?>
-</ol>
 <script type="text/javascript">
 //<![CDATA[
-    var accordion = new Accordion('checkoutSteps', '.step-title', true);
-    <?php if($this->getActiveStep()): ?>
-    accordion.openSection('opc-<?php echo $this->getActiveStep() ?>');
-    <?php endif ?>
-    var checkout = new Checkout(accordion,{
+    $j(function() {
+		$j("#checkoutSteps").tabs();
+	});
+	var accordion = $j("#checkoutSteps");
+	var checkout = new Checkout(accordion,{
         progress: '<?php echo $this->getUrl('checkout/onepage/progress') ?>',
         review: '<?php echo $this->getUrl('checkout/onepage/review') ?>',
         saveMethod: '<?php echo $this->getUrl('checkout/onepage/saveMethod') ?>',

@@ -8,5 +8,37 @@
 		<reference name="root">
             <action method="setTemplate"><template>page/1column.phtml</template></action>
         </reference>
+        <reference name="head">
+            <action method="addJs"><script>boc/jquery-1.4.2.min.js</script></action>
+            <action method="addJs"><script>boc/jquery-ui-1.8.5.custom.min.js</script></action>
+            <action method="addJs"><script>boc/jquery-fix.js</script></action>
+            <action method="addCss"><stylesheet>css/jquery-ui.css</stylesheet></action>
+		</reference>
+        <reference name="content">
+        	<action method="unsetChild"><name>checkout.onepage</name></action>
+            <block type="hr-checkout/onepage" name="checkout.onepage" template="checkout/onepage.phtml">
+                <block type="hr-checkout/onepage_login" name="checkout.onepage.login" as="login" template="checkout/onepage/login.phtml">
+                    <block type="page/html_wrapper" name="checkout.onepage.login.before" as="login_before">
+                        <action method="setMayBeInvisible"><value>1</value></action>
+                    </block>
+                </block>
+                <block type="checkout/onepage_billing" name="checkout.onepage.billing" as="billing" template="checkout/onepage/billing.phtml">
+                	<block type="newsletter/subscribe" name="newsletter.subscribe" template="newsletter/subscribe.phtml" />
+                </block>
+                <block type="checkout/onepage_shipping" name="checkout.onepage.shipping" as="shipping" template="checkout/onepage/shipping.phtml"/>
+                <!-- <block type="checkout/onepage_shipping_method" name="checkout.onepage.shipping_method" as="shipping_method" template="checkout/onepage/shipping_method.phtml">
+                    <block type="checkout/onepage_shipping_method_available" name="checkout.onepage.shipping_method.available" as="available" template="checkout/onepage/shipping_method/available.phtml"/>
+                    <block type="checkout/onepage_shipping_method_additional" name="checkout.onepage.shipping_method.additional" as="additional" template="checkout/onepage/shipping_method/additional.phtml"/>
+                </block>
+                <block type="checkout/onepage_payment" name="checkout.onepage.payment" as="payment" template="checkout/onepage/payment.phtml">
+                    <block type="checkout/onepage_payment_methods" name="checkout.payment.methods" as="methods" template="checkout/onepage/payment/methods.phtml">
+                        <action method="setMethodFormTemplate"><method>purchaseorder</method><template>payment/form/purchaseorder.phtml</template></action>
+                    </block>
+                </block>
+                <block type="checkout/onepage_review" name="checkout.onepage.review" as="review" template="checkout/onepage/review.phtml">
+                    <block type="checkout/agreements" name="checkout.onepage.agreements" as="agreements" template="checkout/onepage/agreements.phtml"/>
+                </block>-->
+            </block>
+        </reference>
 	</checkout_onepage_index>
 </layout>

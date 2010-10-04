@@ -7,15 +7,15 @@
 <div class="col2-set">
     <?php echo $this->getChildHtml('login_before')?>
     <div class="col-1 checkout-register">
-        <h3><?php if( $this->getQuote()->isAllowedGuestCheckout() ): ?><?php echo $this->__('Checkout as a Guest or Register') ?><?php else: ?><?php echo $this->__('Register to Create an Account') ?><?php endif; ?></h3>
+        <h3><?php if( $this->getQuote()->isAllowedGuestCheckout() ): ?><?php echo $this->__('New customer?') ?><?php else: ?><?php echo $this->__('Register to Create an Account') ?><?php endif; ?></h3>
         <?php if( $this->getQuote()->isAllowedGuestCheckout() ): ?>
-            <p><?php echo $this->__('Register with us for future convenience:') ?></p>
+            <p><?php echo $this->__('Register now to finalize your order and receive exclusive benefits:') ?></p>
         <?php else: ?>
-            <p><strong><?php echo $this->__('Register and save time!') ?></strong><br />
-            <?php echo $this->__('Register with us for future convenience:') ?></p>
+            <p><?php echo $this->__('Register now to finalize your order and receive exclusive benefits:') ?></p>
             <ul>
                 <li><?php echo $this->__('Fast and easy check out') ?></li>
-                <li><?php echo $this->__('Easy access to your order history and status') ?></li>
+                <li><?php echo $this->__('Access to your order history') ?></li>
+                <li><?php echo $this->__('Access to your personalized diagnosis') ?></li>
             </ul>
         <?php endif; ?>
         <?php if( $this->getQuote()->isAllowedGuestCheckout() ): ?>
@@ -37,6 +37,10 @@
             </ul>
         <?php else: ?>
             <input type="hidden" name="checkout_method" id="login:register" value="register" checked="checked" />
+            <div class="buttons-set">
+				<p class="required">&nbsp;</p>
+				<button type="button" class="button" onclick="setLocation('')"><span><span><?php echo ($this->getQuote()->isAllowedGuestCheckout() ? $this->__('Continue') : $this->__('Register')) ?></span></span></button>
+			</div>
         <?php endif; ?>
     </div>
     <div class="col-2 checkout-login">
