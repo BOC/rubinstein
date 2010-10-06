@@ -1,5 +1,5 @@
 <form id="co-billing-form" action="">
-<fieldset class="billing-content">
+<fieldset class="block-content-left" id="co-billing-fieldset">
     <ul class="form-list">
     <?php if ($this->customerHasAddresses()): ?>
         <li class="wide">
@@ -154,13 +154,13 @@
     </div>
     <?php endif; ?>
 </fieldset>
-<fieldset class="billing-newsletter">
+<fieldset class="block-content-right" id="co-newsletter-fieldset">
 	<div>
 	<?php echo $this->getChildHtml('newsletter.subscribe'); ?>
 	</div>
 	<div class="buttons-set" id="billing-buttons-container">
         <p class="required"><?php echo $this->__('* Required Fields') ?></p>
-        <button type="button" title="<?php echo $this->__('Continue') ?>" class="button" onclick="billing.save()"><span><span><?php echo $this->__('Continue') ?></span></span></button>
+        <button type="button" title="<?php echo $this->__('Continue') ?>" class="button" onclick="billing_save()"><span><span><?php echo $this->__('Continue') ?></span></span></button>
         <span class="please-wait" id="billing-please-wait" style="display:none;">
             <img src="<?php echo $this->getSkinUrl('images/opc-ajax-loader.gif') ?>" alt="<?php echo $this->__('Loading next step...') ?>" title="<?php echo $this->__('Loading next step...') ?>" class="v-middle" /> <?php echo $this->__('Loading next step...') ?>
         </span>
@@ -169,12 +169,33 @@
 </form>
 <script type="text/javascript">
 //<![CDATA[
+	function billing_save() {
+		var data = $j('#co-billing-form').serialize();
+		$j.ajax({
+			beforeSend: function(){ $j('#billing-please-wait').show(); },
+			url: '<?php echo $this->getUrl('checkout/onepage/saveBilling')?>',
+			data: data,
+			dataType: 'json',
+			type: 'post',
+			success: function(response){
+				var newsletter = $j('#co-newsletter-fieldset').serialize();
+				$j.ajax({
+					url: '<?php echo $this->getUrl('advancednewsletter/index/subscribe') ?>',
+					data: data,
+					type: 'post',
+					success: function(){
+						var next_step = (response['goto_section']) == 'shipping' ? 1 : 0;
+						$j('#billing-please-wait').hide();
+						$j('#checkoutSteps').tabs('select', next_step);
+					}
+				});
+			}
+		});
+	}
     var billing = new Billing('co-billing-form', '<?php echo $this->getUrl('checkout/onepage/getAddress') ?>address/', '<?php echo $this->getUrl('checkout/onepage/saveBilling') ?>');
     var billingForm = new VarienForm('co-billing-form');
-
-    //billingForm.setElementsRelation('billing:country_id', 'billing:region', '<?php echo $this->getUrl('directory/json/childRegion') ?>', '<?php echo $this->__('Select State/Province...') ?>');
+	billingForm.setElementsRelation('billing:country_id', 'billing:region', '<?php echo $this->getUrl('directory/json/childRegion') ?>', '<?php echo $this->__('Select State/Province...') ?>');
     $('billing-address-select') && billing.newAddress(!$('billing-address-select').value);
-
     var billingRegionUpdater = new RegionUpdater('billing:country_id', 'billing:region', 'billing:region_id', countryRegions, undefined, 'billing:postcode');
 //]]>
 </script>

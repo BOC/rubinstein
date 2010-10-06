@@ -1053,15 +1053,15 @@ tr.summary-details-excluded { font-style:italic; }
 .checkout-onepage-steps ol { float:left; }
 .checkout-onepage-steps li { float:left; font-size:19px; margin-left:10px; }
 
-.opc { border-bottom:1px solid #ddd; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
-.opc li.section { border:1px solid #ddd; border-bottom:0; }
+.opc { -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
+.opc li.section { border-bottom:0; }
 
-#checkoutSteps .billing-content { float:left; position:relative; width:47%; background-color:#ebe7e4; width:440px; height:450px; margin-right:20px; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
-#checkoutSteps .billing-content fieldset { float:left; }
-#checkoutSteps .billing-content li { list-style-type:none; }
-#checkoutSteps .billing-newsletter { float:left; position:relative; width:47%; background-color:#ebe7e4; width:440px; height:450px; margin-right:20px; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
-#checkoutSteps .shipping-content { color:#2b211f; float:left; position:absolute; bottom:10px; }
-#checkoutSteps .shipping-content li { float:left; padding-left:15px; }
+#checkoutSteps .block-content-left { float:left; position:relative; width:47%; background-color:#ebe7e4; width:490px; height:450px; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
+#checkoutSteps .block-content-left fieldset { float:left; }
+#checkoutSteps .block-content-left li { list-style-type:none; }
+#checkoutSteps .block-content-right { float:right; position:relative; width:47%; background-color:#ebe7e4; color:#2B211F; width:490px; height:450px; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
+#checkoutSteps .block-content-right textarea { width:422px; margin:0 30px; }
+	
 .opc .section { display:none; position:relative; height:500px; background:#d3cbc9; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
 .opc h3 { float:left; }
 .opc .buttons-set.disabled button.button { display:none; }

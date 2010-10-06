@@ -21,8 +21,7 @@
     <div class="block-title">
         <strong><span><?php echo $this->__('Newsletter') ?></span></strong>
     </div>
-    <form action="<?php echo $this->getUrl('advancednewsletter/index/subscribe') ?>" method="post" id="newsletter-validate-detail">
-        <fieldset class="block-content">
+        <fieldset class="block-content" id="newsletter-validate-detail">
             <legend><?php echo $this->__('Newsletter') ?></legend>
             <!--
             <?php if( $message = $this->getErrorMessage() ): ?>
@@ -96,10 +95,6 @@
             <label for="phone_an"><?php echo $this->__('Phone') ?></label><br />
             <input name="phone_an" type="text" id="phone_an" style="width:90%"/><br />
             <?php endif; ?>
-            <div class="actions" style="margin-top:5px">
-                <button type="submit" class="button"><span><?php echo $this->__('Subscribe') ?></span></button>
-                <input type="hidden" name="category" value="<?php echo $this->getCategoryId(); ?>">
-            </div>
         </fieldset>
     </form>
 
