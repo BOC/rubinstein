@@ -1061,7 +1061,11 @@ tr.summary-details-excluded { font-style:italic; }
 #checkoutSteps .block-content-left li { list-style-type:none; }
 #checkoutSteps .block-content-right { float:right; position:relative; width:47%; background-color:#ebe7e4; color:#2B211F; width:490px; height:450px; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
 #checkoutSteps .block-content-right textarea { width:422px; margin:0 30px; }
-	
+#checkout-review-load { float:left; }
+.review { float:left; }
+.review-left { float:left; }
+.review-right { float:right; }
+.payment-form { width:100%; float:left; }
 .opc .section { display:none; position:relative; height:500px; background:#d3cbc9; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
 .opc h3 { float:left; }
 .opc .buttons-set.disabled button.button { display:none; }

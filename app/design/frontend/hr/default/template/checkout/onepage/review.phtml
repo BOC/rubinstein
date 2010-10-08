@@ -1,0 +1,11 @@
+<div id="checkout-review-load">
+    <?php echo $this->getChildHtml('info') ?>
+</div>
+<div id="checkout-review-submit">
+    <?php echo $this->getChildHtml('agreements') ?>
+    <script type="text/javascript">
+    //<![CDATA[
+        var review = new Review('<?php echo $this->getUrl('checkout/onepage/saveOrder') ?>', '<?php echo $this->getUrl('checkout/onepage/success') ?>', $('checkout-agreements'));
+    //]]>
+    </script>
+</div>
