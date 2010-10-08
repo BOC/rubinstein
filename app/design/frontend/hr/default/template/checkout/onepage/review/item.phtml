@@ -20,6 +20,7 @@
         </dl>
         <?php endif;?>
     </td>
+    <td class="a-center"><?php echo $_item->getQty() ?></td>
     <?php if ($this->helper('tax')->displayCartPriceExclTax() || $this->helper('tax')->displayCartBothPrices()): ?>
     <td class="a-right">
         <?php if (Mage::helper('weee')->typeOfDisplay($_item, array(1, 4), 'sales') && $_item->getWeeeTaxAppliedAmount()): ?>
@@ -113,7 +114,6 @@
         <?php endif; ?>
     </td>
     <?php endif; ?>
-    <td class="a-center"><?php echo $_item->getQty() ?></td>
     <?php if ($this->helper('tax')->displayCartPriceExclTax() || $this->helper('tax')->displayCartBothPrices()): ?>
     <td class="a-right">
         <?php if (Mage::helper('weee')->typeOfDisplay($_item, array(1, 4), 'sales') && $_item->getWeeeTaxAppliedAmount()): ?>

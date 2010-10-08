@@ -4,10 +4,10 @@
 if test "x$PHP_PEAR_PHP_BIN" != "x"; then
   PHP="$PHP_PEAR_PHP_BIN"
 else
-  if test "/usr/local/php4/bin/php" = '@'php_bin'@'; then
+  if test "/usr/bin/php" = '@'php_bin'@'; then
     PHP=php 
   else
-    PHP="/usr/local/php4/bin/php"
+    PHP="/usr/bin/php"
   fi
 fi
 
@@ -16,12 +16,12 @@ if test "x$PHP_PEAR_INSTALL_DIR" != "x"; then
   INCDIR=$PHP_PEAR_INSTALL_DIR
   INCARG="-d include_path=$PHP_PEAR_INSTALL_DIR"
 else
-  if test "/home/moshe/dev/magento/downloader/pearlib/php" = '@'php_dir'@'; then
+  if test "/home/xavier/boulot/rubinstein/downloader/pearlib/php" = '@'php_dir'@'; then
     INCDIR=`dirname $0`
     INCARG=""  
   else
-    INCDIR="/home/moshe/dev/magento/downloader/pearlib/php"
-    INCARG="-d include_path=/home/moshe/dev/magento/downloader/pearlib/php"
+    INCDIR="/home/xavier/boulot/rubinstein/downloader/pearlib/php"
+    INCARG="-d include_path=/home/xavier/boulot/rubinstein/downloader/pearlib/php"
   fi
 fi
 

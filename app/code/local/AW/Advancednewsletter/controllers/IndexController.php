@@ -63,23 +63,21 @@ class AW_Advancednewsletter_IndexController extends Mage_Core_Controller_Front_A
 
     public function subscribeAction() {
         
-        if (preg_match('/^1.8/', Mage::getVersion())) {
-        	$customerSession = Mage::getSingleton('customer/session');
-            if (Mage::getStoreConfig(Mage_Newsletter_Model_Subscriber::XML_PATH_ALLOW_GUEST_SUBSCRIBE_FLAG) != 1 && !$customerSession->isLoggedIn()) {
-				Mage::getSingleton('catalog/session')->addError($this->__('Sorry, but administrator denied subscription for guests. Please <a href="%s">register</a>.', Mage::getUrl('customer/account/create/')));
-				$this->getResponse()->setRedirect($this->_getRefererUrl());
-				return;
-			}
+        if (preg_match('/^1.8/', Mage::getVersion()))
+        {
+        $customerSession    = Mage::getSingleton('customer/session');
+            if (Mage::getStoreConfig(Mage_Newsletter_Model_Subscriber::XML_PATH_ALLOW_GUEST_SUBSCRIBE_FLAG) != 1 &&
+                        !$customerSession->isLoggedIn()) {
+                       Mage::getSingleton('catalog/session')->addError($this->__('Sorry, but administrator denied subscription for guests. Please <a href="%s">register</a>.', Mage::getUrl('customer/account/create/')));
+                       $this->getResponse()->setRedirect($this->_getRefererUrl());
+                       return;
+                    }
         }
 
-        if (Mage::getStoreConfig('advancednewsletter/formconfiguration/segmentsstyle')=="none") {
-        	$this->default_subscribe();
-    	}
-        else {
-        	$this->segment_subscribe();
-        }
+        if (Mage::getStoreConfig('advancednewsletter/formconfiguration/segmentsstyle')=="none") $this->default_subscribe();
+        else $this->segment_subscribe();
 
-        //$this->getResponse()->setRedirect($this->_getRefererUrl());
+        $this->getResponse()->setRedirect($this->_getRefererUrl());
 	}
     
     protected function default_subscribe()

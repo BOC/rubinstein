@@ -274,12 +274,12 @@ Object.extend(Validation, {
         try {
         if(Validation.isVisible(elm) && !v.test($F(elm), elm)) {
             //if(!elm[prop]) {
-            /*    var advice = Validation.getAdvice(name, elm);
+                var advice = Validation.getAdvice(name, elm);
                 if (advice == null) {
                     advice = this.createAdvice(name, elm, useTitle);
                 }
                 this.showAdvice(elm, advice, name);
-                this.updateCallback(elm, 'failed');*/
+                this.updateCallback(elm, 'failed');
             //}
             elm[prop] = 1;
             if (!elm.advaiceContainer) {
@@ -294,7 +294,6 @@ Object.extend(Validation, {
                     container.addClassName('validation-error');
                 }
             }
-           $('validation-error').show();
             return false;
         } else {
             var advice = Validation.getAdvice(name, elm);
