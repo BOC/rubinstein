@@ -13,7 +13,7 @@
         <fieldset class="form-billing-new-address"	>
             <input type="hidden" name="billing[address_id]" value="<?php echo $this->getAddress()->getId() ?>" id="billing:address_id" />
             <ul>
-                <li class="fields"><?php echo $this->getLayout()->createBlock('customer/widget_name')->setObject($this->getAddress())->setFieldIdFormat('billing:%s')->setFieldNameFormat('billing[%s]')->toHtml() ?></li>
+                <li class="fields"><ul><?php echo $this->getLayout()->createBlock('customer/widget_name')->setObject($this->getAddress())->setFieldIdFormat('billing:%s')->setFieldNameFormat('billing[%s]')->toHtml() ?></ul></li>
                 <li class="fields">
                     <div class="field">
                         <label for="billing:company"><?php echo $this->__('Company') ?></label>
@@ -145,19 +145,19 @@
     <?php if ($this->canShip()): ?>
     <div class="shipping-content">
     	<p><?php echo $this->__('Ship at the same address?') ?></p>
-        <li class="control">
-            <input type="radio" name="billing[use_for_shipping]" id="billing:use_for_shipping_yes" value="1"<?php if ($this->isUseBillingAddressForShipping()) {?> checked="checked"<?php }?> title="<?php echo  $this->__('Ship to this address') ?>" onclick="$('shipping:same_as_billing').checked = true;" class="radio" /><label for="billing:use_for_shipping_yes"><?php echo  $this->__('Yes') ?></label>
-        </li>
-        <li class="control">
-            <input type="radio" name="billing[use_for_shipping]" id="billing:use_for_shipping_no" value="0"<?php if (!$this->isUseBillingAddressForShipping()) {?> checked="checked"<?php }?> title="<?php echo $this->__('Ship to different address') ?>" onclick="$('shipping:same_as_billing').checked = false;" class="radio" /><label for="billing:use_for_shipping_no"><?php echo $this->__('No') ?></label>
-        </li>
+    	<ul>
+	        <li class="control">
+	            <input type="radio" name="billing[use_for_shipping]" id="billing:use_for_shipping_yes" value="1"<?php if ($this->isUseBillingAddressForShipping()) {?> checked="checked"<?php }?> title="<?php echo  $this->__('Ship to this address') ?>" onclick="$('shipping:same_as_billing').checked = true;" class="radio" /><label for="billing:use_for_shipping_yes"><?php echo  $this->__('Yes') ?></label>
+	        </li>
+	        <li class="control">
+	            <input type="radio" name="billing[use_for_shipping]" id="billing:use_for_shipping_no" value="0"<?php if (!$this->isUseBillingAddressForShipping()) {?> checked="checked"<?php }?> title="<?php echo $this->__('Ship to different address') ?>" onclick="$('shipping:same_as_billing').checked = false;" class="radio" /><label for="billing:use_for_shipping_no"><?php echo $this->__('No') ?></label>
+	        </li>
+	    </ul>
     </div>
     <?php endif; ?>
 </fieldset>
 <fieldset class="block-content-right" id="co-newsletter-fieldset">
-	<div>
 	<?php echo $this->getChildHtml('newsletter.subscribe'); ?>
-	</div>
 	<div class="buttons-set" id="billing-buttons-container">
         <p class="required"><?php echo $this->__('* Required Fields') ?></p>
         <button type="button" title="<?php echo $this->__('Continue') ?>" class="button" onclick="billing_save()"><span><span><?php echo $this->__('Continue') ?></span></span></button>
@@ -178,20 +178,19 @@
 			dataType: 'json',
 			type: 'post',
 			success: function(response){
-				var newsletter = $j('#co-newsletter-fieldset').serialize();
 				$j.ajax({
 					url: '<?php echo $this->getUrl('advancednewsletter/index/subscribe') ?>',
 					data: data,
 					type: 'post',
 					success: function(){
-						var next_step = (response['goto_section']) == 'shipping' ? 1 : 0;
+						var next_step = (response['goto_section']) == 'shipping_method' ? 1 : 0;
 						$j('#billing-please-wait').hide();
 						$j('#checkoutSteps').tabs('select', next_step);
 					}
 				});
 			}
 		});
-	}
+	};
     var billing = new Billing('co-billing-form', '<?php echo $this->getUrl('checkout/onepage/getAddress') ?>address/', '<?php echo $this->getUrl('checkout/onepage/saveBilling') ?>');
     var billingForm = new VarienForm('co-billing-form');
 	billingForm.setElementsRelation('billing:country_id', 'billing:region', '<?php echo $this->getUrl('directory/json/childRegion') ?>', '<?php echo $this->__('Select State/Province...') ?>');

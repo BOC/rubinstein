@@ -1062,6 +1062,8 @@ tr.summary-details-excluded { font-style:italic; }
 #checkoutSteps .block-content-right { float:right; position:relative; width:47%; background-color:#ebe7e4; color:#2B211F; width:490px; height:450px; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
 #checkoutSteps .block-content-right textarea { width:422px; margin:0 30px; }
 #checkout-review-load { float:left; }
+#checkout-payment-method-load { width:360px; margin:auto; }
+.co-payment-method { float:left}
 .review { float:left; }
 .review-left { float:left; }
 .review-right { float:right; }

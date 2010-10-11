@@ -7,9 +7,11 @@
 ?>
 <div class="header-cart">
     <div class="items">
+    	<table>
     	<?php foreach($this->getItems() as $_item): ?>
 			<?php echo $this->getItemHtml($_item) ?>
 		<?php endforeach ?>
+		</table>
     </div>
     <div class="cart-url">
     	<div class="cart"><?php echo $this->__('My Cart'); ?></div>

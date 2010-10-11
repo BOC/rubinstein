@@ -1,5 +1,6 @@
 <?php $_item = $this->getItem()?>
 <tr>
+	<td><img src="<?php echo $this->getProductThumbnail()->resize(75); ?>" width="75" height="75" alt="<?php echo $this->htmlEscape($this->getProductName()) ?>" /></td>
     <td><h3 class="product-name"><?php echo $this->htmlEscape($this->getProductName()) ?></h3>
         <?php if ($_options = $this->getOptionList()):?>
         <dl class="item-options">
