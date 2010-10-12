@@ -1,5 +1,6 @@
 <form action="" id="co-shipping-form">
 <fieldset class="block-content-left" id="co-shipping-fieldset">
+	<h2><?php echo $this->__('Your Shipping address')?></h2>
     <ul class="form-list">
     <?php if ($this->customerHasAddresses()): ?>
        <li class="wide">
@@ -98,7 +99,7 @@
                 </ul>
             </fieldset>
         </li>
-        <li class="control shipping-content">
+        <li class="control same-for-shipping">
             <input type="checkbox" name="shipping[same_as_billing]" id="shipping:same_as_billing" value="1"<?php if($this->getAddress()->getSameAsBilling()): ?> checked="checked"<?php endif; ?> title="<?php echo $this->__('Use Billing Address') ?>" onclick="shipping.setSameAsBilling(this.checked)" class="checkbox" /><label for="shipping:same_as_billing"><?php echo $this->__('Use Billing Address') ?></label>
         </li>
     </ul>

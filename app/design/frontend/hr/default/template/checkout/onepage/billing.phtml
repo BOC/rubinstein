@@ -1,5 +1,6 @@
 <form id="co-billing-form" action="">
 <fieldset class="block-content-left" id="co-billing-fieldset">
+	<h2><?php echo $this->__('Your Billing address')?></h2>
     <ul class="form-list">
     <?php if ($this->customerHasAddresses()): ?>
         <li class="wide">
@@ -143,7 +144,7 @@
         <input type="hidden" name="billing[use_for_shipping]" value="1" />
     <?php endif; ?>
     <?php if ($this->canShip()): ?>
-    <div class="shipping-content">
+    <div class="same-for-shipping">
     	<p><?php echo $this->__('Ship at the same address?') ?></p>
     	<ul>
 	        <li class="control">
