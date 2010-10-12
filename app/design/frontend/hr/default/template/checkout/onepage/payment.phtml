@@ -1,5 +1,6 @@
 <div class="review">
 	<fieldset class="review-left">
+		<h3><?php echo $this->__('Your Order') ?></h3>
 		<?php echo $this->getChildHtml('review'); ?>
 	</fieldset>
 	<fieldset class="review-right">
@@ -21,6 +22,9 @@
 <div class="tool-tip" id="payment-tool-tip" style="display:none;">
     <div class="btn-close"><a href="#" id="payment-tool-tip-close" title="<?php echo $this->__('Close') ?>"><?php echo $this->__('Close') ?></a></div>
     <div class="tool-tip-content"><img src="<?php echo $this->getSkinUrl('images/cvv.gif') ?>" alt="<?php echo $this->__('Card Verification Number Visual Reference') ?>" title="<?php echo $this->__('Card Verification Number Visual Reference') ?>" /></div>
+</div>
+<div id="checkout-agreements-form">
+	<?php echo $this->getChildHtml('agreements') ?>
 </div>
 <div class="buttons-set" id="review-buttons-container">
         <p class="f-left"><a href="<?php echo $this->getUrl('checkout/cart') ?>"><?php echo $this->__('Edit Your Cart') ?></a></p>
