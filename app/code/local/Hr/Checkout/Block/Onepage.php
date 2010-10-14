@@ -41,7 +41,7 @@ class Hr_Checkout_Block_Onepage extends Mage_Checkout_Block_Onepage
             $steps['login'] = $this->getCheckout()->getStepData('login');
         }
 
-        $stepCodes = array('billing', 'shipping', 'payment', 'review');
+        $stepCodes = array('login', 'billing', 'shipping', 'payment', 'review');
 
         foreach ($stepCodes as $step) {
             $steps[$step] = $this->getCheckout()->getStepData($step);
@@ -51,6 +51,6 @@ class Hr_Checkout_Block_Onepage extends Mage_Checkout_Block_Onepage
 
     public function getActiveStep()
     {
-        return $this->isCustomerLoggedIn() ? 'billing' : 'login';
+        return $this->isCustomerLoggedIn() ? 1 : 0;
     }
 }

@@ -4,9 +4,30 @@
 	<ul class="opc">
 	<?php $i=0; foreach($this->getSteps() as $_stepId => $_stepInfo): ?>
 	<?php if (!$this->getChild($_stepId) || !$this->getChild($_stepId)->isShow()): continue; endif; $i++ ?>
-	    <li><a href="#checkout-step-<?php echo $_stepId ?>"><span class="number">0<?php echo $i ?></span><br /><?php echo $_stepInfo['label'] ?></a></li>
+	    <li><a href="#checkout-step-<?php echo $_stepId ?>" title="<?php echo $_stepId ?>"><span class="number">0<?php echo $i ?></span><br /><?php echo $_stepInfo['label'] ?></a></li>
 	<?php endforeach ?>
 	</ul>
+	<script type="text/javascript">
+	//<![CDATA[
+	    $j(function() {
+			$j("#checkoutSteps").tabs({
+				disabled: [0, 1, 2, 3],
+				selected: <?php echo $this->getActiveStep(); ?>,
+				select: function(event, ui){
+					alert(ui);
+				}
+			});
+			$j("#checkoutSteps").tabs({enabled: <?php echo $this->getActiveStep(); ?>});
+		});
+		var accordion = $j("#checkoutSteps");
+		var checkout = new Checkout(accordion,{
+	        progress: '<?php echo $this->getUrl('checkout/onepage/progress') ?>',
+	        review: '<?php echo $this->getUrl('checkout/onepage/review') ?>',
+	        saveMethod: '<?php echo $this->getUrl('checkout/onepage/saveMethod') ?>',
+	        failure: '<?php echo $this->getUrl('checkout/cart') ?>'}
+	    );
+	//]]>
+	</script>
 	<?php foreach($this->getSteps() as $_stepId => $_stepInfo): ?>
 	<?php if (!$this->getChild($_stepId) || !$this->getChild($_stepId)->isShow()): continue; endif; $i++ ?>
 	<div id="checkout-step-<?php echo $_stepId ?>">
@@ -14,18 +35,3 @@
 	</div>
 	<?php endforeach ?>
 </div>
-<script type="text/javascript">
-//<![CDATA[
-    $j(function() {
-		$j("#checkoutSteps").tabs();
-		$j("#checkoutSteps").tabs("disable");
-	});
-	var accordion = $j("#checkoutSteps");
-	var checkout = new Checkout(accordion,{
-        progress: '<?php echo $this->getUrl('checkout/onepage/progress') ?>',
-        review: '<?php echo $this->getUrl('checkout/onepage/review') ?>',
-        saveMethod: '<?php echo $this->getUrl('checkout/onepage/saveMethod') ?>',
-        failure: '<?php echo $this->getUrl('checkout/cart') ?>'}
-    );
-//]]>
-</script>

@@ -12,15 +12,16 @@
             <action method="addJs"><script>boc/jquery-1.4.2.min.js</script></action>
             <action method="addJs"><script>boc/jquery-ui-1.8.5.custom.min.js</script></action>
             <action method="addJs"><script>boc/jquery-fix.js</script></action>
+            <action method="addJs"><script>boc/checkout.js</script></action>
             <action method="addCss"><stylesheet>css/jquery-ui.css</stylesheet></action>
 		</reference>
         <reference name="content">
         	<action method="unsetChild"><name>checkout.onepage</name></action>
             <block type="hr-checkout/onepage" name="checkout.onepage" template="checkout/onepage.phtml">
                 <block type="hr-checkout/onepage_login" name="checkout.onepage.login" as="login" template="checkout/onepage/login.phtml">
-                    <block type="page/html_wrapper" name="checkout.onepage.login.before" as="login_before">
+                    <!-- <block type="page/html_wrapper" name="checkout.onepage.login.before" as="login_before">
                         <action method="setMayBeInvisible"><value>1</value></action>
-                    </block>
+                    </block>-->
                 </block>
                 <block type="checkout/onepage_billing" name="checkout.onepage.billing" as="billing" template="checkout/onepage/billing.phtml">
                 	<block type="newsletter/subscribe" name="newsletter.subscribe" template="newsletter/subscribe.phtml" />

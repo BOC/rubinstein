@@ -464,6 +464,7 @@ tr.summary-details-excluded { font-style:italic; }
 /********** < Navigation */
 .nav-container { float:left; position:absolute; left:400px; background-color:#291f1d; } /*left:224px pour la HP*/
 #nav { padding:5px 0; font-size:13px; float:left; border-right:1px solid #000; }
+.cms-index-index .nav-container { left:224px; }
 
 /* All Levels */
 #nav .test { height:150px; width:500px; }
@@ -1075,7 +1076,7 @@ tr.summary-details-excluded { font-style:italic; }
 .review-right { border:1px solid #555555; background-color:#1A1512; width:480px; padding:5px; float:right; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
 .payment-form { width:100%; float:left; }
 
-#review-buttons-container { position:relative; bottom:0; right:0; float:left; width:100%; }
+#review-buttons-container { position:relative; bottom:0; right:0; padding:0; float:left; width:100%; }
 #review-buttons-container button.button { margin-left:5px; height:44px; background: url("../images/bkg_add_cart_btn.png") repeat scroll 0 0 transparent; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
 #review-buttons-container button.button span { color:#2b201e; }
 #review-buttons-container p { background-color:#9C9080; padding:5px; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px;}

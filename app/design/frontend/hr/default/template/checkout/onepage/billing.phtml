@@ -170,28 +170,8 @@
 </form>
 <script type="text/javascript">
 //<![CDATA[
-	function billing_save() {
-		var data = $j('#co-billing-form').serialize();
-		$j.ajax({
-			beforeSend: function(){ $j('#billing-please-wait').show(); },
-			url: '<?php echo $this->getUrl('checkout/onepage/saveBilling')?>',
-			data: data,
-			dataType: 'json',
-			type: 'post',
-			success: function(response){
-				$j.ajax({
-					url: '<?php echo $this->getUrl('advancednewsletter/index/subscribe') ?>',
-					data: data,
-					type: 'post',
-					success: function(){
-						var next_step = (response['goto_section']) == 'shipping_method' ? 1 : 0;
-						$j('#billing-please-wait').hide();
-						$j('#checkoutSteps').tabs('select', next_step);
-					}
-				});
-			}
-		});
-	};
+	var saveBilling = '<?php echo $this->getUrl('checkout/onepage/saveBilling')?>';
+	var subscribe = '<?php echo $this->getUrl('advancednewsletter/index/subscribe') ?>';
     var billing = new Billing('co-billing-form', '<?php echo $this->getUrl('checkout/onepage/getAddress') ?>address/', '<?php echo $this->getUrl('checkout/onepage/saveBilling') ?>');
     var billingForm = new VarienForm('co-billing-form');
 	billingForm.setElementsRelation('billing:country_id', 'billing:region', '<?php echo $this->getUrl('directory/json/childRegion') ?>', '<?php echo $this->__('Select State/Province...') ?>');
