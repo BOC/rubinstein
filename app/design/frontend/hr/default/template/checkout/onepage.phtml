@@ -13,11 +13,16 @@
 			$j("#checkoutSteps").tabs({
 				disabled: [0, 1, 2, 3],
 				selected: <?php echo $this->getActiveStep(); ?>,
-				select: function(event, ui){
-					alert(ui);
+				show: function(event, ui){
+					var tab = new Array();
+					for(i = ui.index; i < $j(this).tabs('length'); i++)
+						tab.push(i);
+					tab.push(0);
+					$j(this).tabs({
+						disabled: tab,
+					});
 				}
 			});
-			$j("#checkoutSteps").tabs({enabled: <?php echo $this->getActiveStep(); ?>});
 		});
 		var accordion = $j("#checkoutSteps");
 		var checkout = new Checkout(accordion,{

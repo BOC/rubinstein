@@ -1037,6 +1037,7 @@ tr.summary-details-excluded { font-style:italic; }
 .checkout-agreements li { margin:10px 0; }
 .checkout-agreements .agreement-content { border:1px solid #ddd; background-color:#f6f6f6; padding:5px; height:10em; overflow:auto; }
 .checkout-agreements .agree { padding:6px; color:#948f8c; }
+.checkout-agreements .agree span { text-decoration:underline; cursor:pointer; }
 #agreement-dialog { color:#2c2220; background-color:#ecebe7; }
 
 /* Centinel */
