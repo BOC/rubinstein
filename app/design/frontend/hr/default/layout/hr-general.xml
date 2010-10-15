@@ -15,7 +15,7 @@
         <remove name="catalog.product.related"></remove>
         <remove name="product.info.addto"></remove>
         <remove name="product.info.simple"></remove>
-        <remove name="checkout.cart.coupon"></remove>
+        <!-- <remove name="checkout.cart.coupon"></remove>-->
         <remove name="checkout.cart.crosssell"></remove>
         <remove name="checkout.cart.methods.multishipping"></remove>
         <remove name="footer"></remove>

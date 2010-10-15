@@ -412,6 +412,7 @@ tr.summary-details-excluded { font-style:italic; }
 .footer-account .my-customer:hover { background-color:#302722; }
 .footer-account .my-customer p { float:left; margin:0px;}
 .footer-account .my-customer p:hover { cursor:pointer; padding:2px; margin:0px; border:1px solid #000; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
+
 .link-cart { font-weight:bold; color:#f00; }
 .link-wishlist { font-weight:bold; }
 .link-reorder { font-weight:bold; }
@@ -936,12 +937,12 @@ tr.summary-details-excluded { font-style:italic; }
 /* Shopping Cart Table */
 .cart-table .item-msg { font-size:10px; }
 
-.cart .cart-buttons-set { padding-top:5px; border-top:1px solid #555; }
+.cart .cart-buttons-set { margin-top:15px; padding-top:5px; border-top:1px solid #555; float:left; width:100%; }
 .cart .continue-button { padding:13px 0; float:left; }
 .cart .continue-button button { background-color:#9C9080; float:left; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
 /* Shopping Cart Collateral boxes */
-.cart .cart-collaterals { padding:25px 0 0; }
-.cart .cart-collaterals .col2-set { float:left; width:700px; }
+.cart .cart-collaterals { padding:15px 0 0; }
+.cart .cart-collaterals .col2-set { float:left; padding-top:8px; }
 
 .cart .crosssell {}
 .cart .crosssell h2 { font-size:13px; font-weight:bold; }
@@ -952,14 +953,19 @@ tr.summary-details-excluded { font-style:italic; }
 /* Discount Codes & Estimate Shipping and Tax Boxes */
 .cart .discount,
 .cart .shipping {}
+.discount-form { float:left; }
+.discount-form label { float:left; }
+.discount-form .input-box { float:left; }
+.cart .discount .cart-buttons-set { border: none; float:left; width:auto; margin:0; padding:0; }
 
 /* Shopping Cart Totals */
-.cart .totals { clear:right; }
-.cart .totals table { width:100%; }
+.cart .totals { float:right; }
+.cart .totals table {}
 .cart .totals table th,
-.cart .totals table td { padding:5px; }
+.cart .totals table td { padding:5px; font-size:20px; vertical-align:middle;  }
 .cart .totals table th { font-weight:bold; }
 .cart .totals table tfoot th {}
+.cart .totals table td .price { font-size:20px; }
 
 /* Options Tool Tip */
 .item-options dt { font-weight:bold; font-style:italic; }
@@ -1237,9 +1243,9 @@ tr.summary-details-excluded { font-style:italic; }
 .footer-menu { position:fixed; bottom:0; width:1000px; background-color:#291F1D; float:left; color:#c6b89d; font-size:10pt; }
 .footer-menu a { text-decoration:none; color:#c6b89d; text-transform:uppercase; }
 .footer-menu ul { float:left; padding:10px; }
-.footer-menu ul:hover { background-color:#302722; border-right:1px solid #000; }
+/*.footer-menu ul:hover { background-color:#302722; border-right:1px solid #000; }*/
 .footer-menu ul li { display:inline; padding:6px; }
-#account-box { background-color:#FFFFFF; bottom:37px; left:0; position:absolute; width:212px; opacity:0.8; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
+#account-box { background-color:#FFFFFF; bottom:37px; left:0; position:absolute; width:212px; opacity:0.9; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
 #account-box .block-login .block-content { margin:auto; width:200px; padding:5px; }
 #account-box .block-login .block-content label { text-transform:uppercase; font-size:12px; }
 #account-box .block-login .block-content .actions button { text-transform:uppercase; font-size:12px; background-color:#97897e; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
@@ -1247,6 +1253,9 @@ tr.summary-details-excluded { font-style:italic; }
 #account-box .block-register .block-content { padding:5px; color:#FFF; }
 #account-box .block-register button { background-color:#dcc8a7; font-size:14px; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
 #account-box .block-register button span span { font-size:14px; color:#574342; }
+#footer-menu ul { list-style:disc inside none; }
+#footer-menu li { display:list-item; color:#000; text-transform:none; }
+#footer-menu .footer-menu-top { padding-bottom:15px; border-bottom:1px solid #CCC; }
 /* ======================================================================================= */
 
 
