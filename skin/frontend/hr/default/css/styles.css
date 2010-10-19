@@ -26,7 +26,7 @@
 /* Reset ================================================================================= */
 * { margin:0; padding:0; }
 
-body          { background:#000; font:12px/1.35 Helvetica, Arial, sans-serif; color:#FFF; text-align:center; }
+body          { background:#1A1416; font:12px/1.35 Helvetica, Arial, sans-serif; color:#FFF; text-align:center; }
 
 img           { border:0; vertical-align:top; }
 
@@ -89,15 +89,15 @@ ul,ol         { list-style:none; }
 
 /* Layout ================================================================================ */
 .wrapper {}
-.page { width:1000px; margin:0 auto; text-align:left; }
+.page { width:1000px; margin:0 auto; text-align:left; position:relative; }
 .page-print { background:#fff; padding:20px; text-align:left; }
 .page-empty { background:#fff; padding:20px; text-align:left; }
 .page-popup { padding:20px; text-align:left; }
 .main-container { min-height:300px; margin-bottom:35px; }
-.main { margin:10px 0; }
+.main { margin:0; }
 
 /* Base Columns */
-.col-left { float:left; width:230px; border:1px solid #ddd; padding:5px 5px 0; }
+.col-left { float:left; width:230px;padding:5px 5px 0; }
 .col-main { float:left; width:736px; }
 .col-right { float:right; width:230px; border:1px solid #ddd; padding:5px 5px 0; }
 
@@ -440,7 +440,7 @@ tr.summary-details-excluded { font-style:italic; }
 
 /* Header ================================================================================ */
 .logo { float:left; }
-.header-container {}
+.header-container { position:absolute; width:100%; z-index:10; }
 .header {}
 .header .logo { float:left; text-decoration:none !important; margin-top:15px; }
 .header .logo strong { position:absolute; top:-999em; left:-999em; width:0; height:0; font-size:0; line-height:0; text-indent:-999em; overflow:hidden; }
@@ -462,50 +462,77 @@ tr.summary-details-excluded { font-style:italic; }
 .header .form-language { clear:both; text-align:right; }
 .header-container .top-container { clear:both; text-align:right; }
 .header .header-box { float:left; cursor:pointer; color:#C6B89D; font-weight:bold; text-transform:uppercase; padding:5px 10px; text-align:center; width:143px; }
+
 /********** < Navigation */
-.nav-container { float:left; position:absolute; left:400px; background-color:#291f1d; } /*left:224px pour la HP*/
-#nav { padding:5px 0; font-size:13px; float:left; border-right:1px solid #000; }
-.cms-index-index .nav-container { left:224px; }
+.nav-container { height:36px; float:left; position:absolute; left:178px; background-color:#291f1d; } /*left:224px pour la HP*/
+#nav { float:left; border-right:1px solid #000; }
+.cms-index-index .nav-container { left:178px; }
 
 /* All Levels */
-#nav .test { height:150px; width:500px; }
+#nav .test { height:304px; width:500px; }
 #nav li { text-align:left; }
-#nav li.over { z-index:998; }
-#nav li.parent { list}
+#nav li.over { z-index:998; background:url('../images/bg-menu0.png') repeat-x 0 0; }
+#nav li.parent { list; }
 #nav li a { display:block; text-decoration:none; }
-#nav li a:hover { text-decoration:none; }
-#nav li a span { display:block; white-space:nowrap; cursor:pointer; }
+#nav li a:hover { text-decoration:none;  }
+#nav li a span { font-size:11pt; display:block; white-space:nowrap; cursor:pointer; }
 #nav li ul a span { white-space:normal; }
 
 /* 1st Level */
 #nav li { float:left; }
-#nav li a { float:left; padding:5px 10px; font-weight:bold; color:#8a807e; }
+#nav li a { float:left; padding:8px 10px; font-weight:bold; color:#877e7a; background-color: }
 #nav li a:hover { color:#000; }
 #nav li.over a,
-#nav li.active a { color:#000; }
+#nav li.active a { color:#d8cec5; }
 
 /* 2nd Level */
 #nav ul,
-#nav div { position:absolute; width:150px; top:38px; left:-10000px; background:#fafafa; }
-#nav div ul { position:static; width:auto; border:none; }
-#nav li ul .parent { background:url('../images/puce.gif') no-repeat right center; }
+#nav div { position:absolute; width:150px; top:36px; left:-10000px; background:#fafafa; }
+#nav div ul { position:absolute; width:150px; border:none; left:0; top:50%; margin-top:-77px; }
+#nav div ul li a span { font-size:13pt; color:#ce9926; }
+#nav div ul li.over a span { color:#FFF; }
+#nav div ul .over { width:auto; color:#FFF; background:url('../images/bg-menu1bis.png') repeat-x 0 0; }
 
 /* 3rd+ leven */
 #nav ul ul,
-#nav ul div { top:0px; }
+#nav ul div { top:0px; background:#FFF url('../images/bg-menu2.png') repeat-y; }
 
-#nav ul li { float:none; }
+#nav ul li { float:none; height:38px; }
 #nav ul li.last { border-bottom:0; }
-#nav ul li a { float:none; padding:3px 9px; font-weight:normal; color:#888 !important; }
+#nav ul li a { float:none; padding:6px 9px; font-weight:normal; color:#888 !important; }
 #nav ul li a:hover { color:#000 !important; }
 #nav ul li.active > a,
 #nav ul li.over > a { color:#000 !important; }
-
+#nav ul ul .over { background-image:none; }
+#nav ul ul li a span { font-size:11pt; }
 /* Show menu */
 #nav li ul.shown-sub,
 #nav li div.shown-sub { left:0; z-index:999; }
 #nav li .shown-sub ul.shown-sub,
-#nav li .shown-sub li div.shown-sub { left:150px; width:200px; }
+#nav li .shown-sub li div.shown-sub { left:219px; width:200px; }
+
+#nav .level0 .level0 { position:absolute; top:50%; width:219px; }
+#nav .level0 .level0 .over { background:url('../images/bg-menu1bis.png') repeat; }
+#nav .level0 .level0 .parent { background-image:url('../images/bg-menu1.png'); }
+#nav .level0 .level0 .parent.over { width:219px; background:url('../images/bg-menu1-over.png') no-repeat; }
+#nav .level0 .level0 .parent.over a { background:url('../images/bg-menu1-over.png') no-repeat; }
+#nav .level1 .level1 { width:190px; }
+#nav .level1.parent.over .level1 .over { background:none; }
+#nav .level1.parent.over .level1 a { background:none; }
+#nav .nav-1 .level0 { margin-top:-95px; }
+#nav .test { width:822px; }
+#nav .nav-1 .level1 .test { height:209px; }
+#nav .nav-1 .level1 .level1 { top:20px; height:304px; }
+#nav .nav-1 .level1 .level1 li a span {color:#000; }
+#nav .nav-2 .level0 { margin-top:-114px; }
+#nav .nav-2 .level1 .test { height:223px; }
+#nav .nav-2 .level1 .level1 { top:39px; height:304px; }
+#nav .nav-2 .level1 .level1 li a span {color:#000; }
+#nav .nav-3 .level0 { margin-top:-152px; }
+#nav .nav-3 .level1 .test { height:253px; }
+#nav .nav-3 .level1 .level1 { top:77px; height:304px; }
+#nav .nav-3 .level1 .level1 .first { margin-top:20px; }
+#nav .nav-3 .level1 .level1 li a span {color:#000; }
 
 /********** Navigation > */
 /* ======================================================================================= */
@@ -618,6 +645,16 @@ tr.summary-details-excluded { font-style:italic; }
 .category-description { margin:0 0 10px; }
 .category-products {}
 
+.category-menu {}
+.category-menu .title { font-size: 26pt; color:#a99282; text-transform:uppercase; }
+.category-menu li { display:block; padding-top:10px; }
+.category-menu li a { padding-bottom:5px; display:block; font-size:12pt; color:#d8cec5; text-decoration:none; text-transform:uppercase; }
+.category-menu li li { padding:0; }
+.category-menu li li a { padding:0; font-size:10pt; color:#726c64; text-decoration:none; text-transform:uppercase; }
+.catalog-category-view .main { padding-top:374px; }
+/* Category page : Tablettes:*/
+#flashcontent { top:0; left:-12px; position: absolute; width: 1024px; height: 374px; z-index:0 }
+	
 /* View Type: Grid */
 .products-grid { border-bottom:1px solid #ddd; position:relative; }
 .products-grid.last { border-bottom:0; }
@@ -1144,7 +1181,7 @@ tr.summary-details-excluded { font-style:italic; }
 
 /* Block: Account Information */
 .my-account  {}
-.my-account .account-item { float:left; margin:0 10px 65px 0; width:480px; height:172px; position:relative; background:#ebe7e4; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
+.my-account .account-item { color:#000; float:left; margin:0 10px 65px 0; width:480px; height:172px; position:relative; background:#ebe7e4; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
 .my-account .account-item .account-item-image { top:-35px; right:0; position:absolute; width:73px; height:73px; }
 .my-account .account-item a { float:right; color:#FFF; font-weight:bold; padding:2px 0; background-color:#9a897f; border:none; font-size:13px; margin-right:5px; text-decoration:none; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
 .my-account .account-item a span { margin:6px; }

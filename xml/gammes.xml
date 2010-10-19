@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<gammes nbDisplayedItems="5" marge="70">
+	<back>Retour aux gammes</back>
+	<gamme id="highdefinitionpeel">
+		<titre>PRODIGY Re-PLASTY HD PEEL</titre>
+		<item>
+			<titre>produit numéro 1</titre>
+			<url>http://www.helenarubinstein.com</url>
+		</item>
+		<item>
+			<titre>produit numéro 2</titre>
+			<url>http://www.helenarubinstein.com</url>
+		</item>
+		<item>
+			<titre>produit numéro 3</titre>
+			<url>http://www.helenarubinstein.com</url>
+		</item>
+	</gamme>
+	
+	<gamme id="mesolift">
+		<titre>PRODIGY Re-PLASTY MESOLIFT COSMETIC</titre>
+		<item>
+			<titre>produit numéro 1</titre>
+			<url>http://www.helenarubinstein.com</url>
+		</item>
+		<item>
+			<titre>produit numéro 2</titre>
+			<url>http://www.helenarubinstein.com</url>
+		</item>
+		<item>
+			<titre>produit numéro 3</titre>
+			<url>http://www.helenarubinstein.com</url>
+		</item>
+		<item>
+			<titre>produit numéro 1</titre>
+			<url>http://www.helenarubinstein.com</url>
+		</item>
+		<item>
+			<titre>produit numéro 2</titre>
+			<url>http://www.helenarubinstein.com</url>
+		</item>
+		<item>
+			<titre>produit numéro 3</titre>
+			<url>http://www.helenarubinstein.com</url>
+		</item>
+		<item>
+			<titre>produit numéro 1</titre>
+			<url>http://www.helenarubinstein.com</url>
+		</item>
+		<item>
+			<titre>produit numéro 2</titre>
+			<url>http://www.helenarubinstein.com</url>
+		</item>
+		<item>
+			<titre>produit numéro 3</titre>
+			<url>http://www.helenarubinstein.com</url>
+		</item>
+	</gamme>
+	
+	<gamme id="extreme">
+		<titre>PRODIGY EXTREME</titre>
+		<item>
+			<titre>produit numéro 1</titre>
+			<url>http://www.helenarubinstein.com</url>
+		</item>
+		<item>
+			<titre>produit numéro 2</titre>
+			<url>http://www.helenarubinstein.com</url>
+		</item>
+		<item>
+			<titre>produit numéro 3</titre>
+			<url>http://www.helenarubinstein.com</url>
+		</item>
+	</gamme>
+	
+	<gamme id="prodigy">
+		<titre>PRODIGY</titre>
+		<item>
+			<titre>PRODIGY</titre>
+			<url>http://www.helenarubinstein.com</url>
+		</item>
+		<item>
+			<titre>PRODIGY EYES</titre>
+			<url>http://www.helenarubinstein.com</url>
+		</item>
+		<item>
+			<titre>PRODIGY NIGHT TISSULAR</titre>
+			<url>http://www.helenarubinstein.com</url>
+		</item>
+		<item>
+			<titre>PRODIGY AGE SPOT REDUCER</titre>
+			<url>http://www.helenarubinstein.com</url>
+		</item>
+		<item>
+			<titre>PRODIGY TISSULAR</titre>
+			<url>http://www.helenarubinstein.com</url>
+		</item>
+	</gamme>
+	
+	<gamme id="powercell">
+		<titre>PRODIGY POWERCELL</titre>
+		<item>
+			<titre>produit numéro 1</titre>
+			<url>http://www.helenarubinstein.com</url>
+		</item>
+		<item>
+			<titre>produit numéro 2</titre>
+			<url>http://www.helenarubinstein.com</url>
+		</item>
+		<item>
+			<titre>produit numéro 3</titre>
+			<url>http://www.helenarubinstein.com</url>
+		</item>
+	</gamme>
+	
+	<gamme id="lifepearlcellular">
+		<titre>LIFE PEARL CELLULAR</titre>
+		<item>
+			<titre>produit numéro 1</titre>
+			<url>http://www.helenarubinstein.com</url>
+		</item>
+		<item>
+			<titre>produit numéro 2</titre>
+			<url>http://www.helenarubinstein.com</url>
+		</item>
+		<item>
+			<titre>produit numéro 3</titre>
+			<url>http://www.helenarubinstein.com</url>
+		</item>
+	</gamme>
+	
+	<gamme id="proxfill">
+		<titre>COLLAGENIST WITH pro-Xfill</titre>
+		<item>
+			<titre>produit numéro 1</titre>
+			<url>http://www.helenarubinstein.com</url>
+		</item>
+		<item>
+			<titre>produit numéro 2</titre>
+			<url>http://www.helenarubinstein.com</url>
+		</item>
+		<item>
+			<titre>produit numéro 3</titre>
+			<url>http://www.helenarubinstein.com</url>
+		</item>
+	</gamme>
+	
+	<gamme id="vlift">
+		<titre>COLLAGENIST V LIFT</titre>
+		<item>
+			<titre>produit numéro 1</titre>
+			<url>http://www.helenarubinstein.com</url>
+		</item>
+		<item>
+			<titre>produit numéro 2</titre>
+			<url>http://www.helenarubinstein.com</url>
+		</item>
+		<item>
+			<titre>produit numéro 3</titre>
+			<url>http://www.helenarubinstein.com</url>
+		</item>
+	</gamme>
+	
+	<gamme id="facesculptor">
+		<titre>FACE SCULPTOR</titre>
+		<item>
+			<titre>produit numéro 1</titre>
+			<url>http://www.helenarubinstein.com</url>
+		</item>
+		<item>
+			<titre>produit numéro 2</titre>
+			<url>http://www.helenarubinstein.com</url>
+		</item>
+		<item>
+			<titre>produit numéro 3</titre>
+			<url>http://www.helenarubinstein.com</url>
+		</item>
+	</gamme>
+	
+	<gamme id="soinssos">
+		<titre>SOINS INTENSIFS SOS</titre>
+		<item>
+			<titre>produit numéro 1</titre>
+			<url>http://www.helenarubinstein.com</url>
+		</item>
+		<item>
+			<titre>produit numéro 2</titre>
+			<url>http://www.helenarubinstein.com</url>
+		</item>
+		<item>
+			<titre>produit numéro 3</titre>
+			<url>http://www.helenarubinstein.com</url>
+		</item>
+	</gamme>	
+	
+	<gamme id="soinsspecifiques">
+		<titre>SOINS SPECIFIQUES</titre>
+		<item>
+			<titre>produit numéro 1</titre>
+			<url>http://www.helenarubinstein.com</url>
+		</item>
+		<item>
+			<titre>produit numéro 2</titre>
+			<url>http://www.helenarubinstein.com</url>
+		</item>
+		<item>
+			<titre>produit numéro 3</titre>
+			<url>http://www.helenarubinstein.com</url>
+		</item>
+	</gamme>
+	
+	<gamme id="tonique">
+		<titre>TONIQUE, NETTOYANT, DEMAQUILLANT</titre>
+		<item>
+			<titre>produit numéro 1</titre>
+			<url>http://www.helenarubinstein.com</url>
+		</item>
+		<item>
+			<titre>produit numéro 2</titre>
+			<url>http://www.helenarubinstein.com</url>
+		</item>
+		<item>
+			<titre>produit numéro 3</titre>
+			<url>http://www.helenarubinstein.com</url>
+		</item>
+	</gamme>
+</gammes>

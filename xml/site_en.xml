@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<site title="HR : %PAGE%" menu="false" preloader="datas/preload.swf">
+    <page id="index" src="datas/index.swf">
+		<!--<asset id="myFonts" src="datas/fonts/fontChanel.swf" fonts="ABChanelCouture"/>-->
+		<!--  Les langues sont passées en flashvars et stockées en static dans la page MAIN -->
+        <page id="nav" src="datas/nav.swf" depth="top">
+            <!-- GAMMES-->
+			<page id="gammes" src="datas/gammes.swf" title="gammes" route="gammes" landing ="true">
+				 <!-- xml contenant les produits / urls / infos  de chaque gamme, permettant le chargement dynamique des assets de chaque page -->
+				 <!-- l'intégralité de ces infos sera stockées dans un dictionnaire de la classe nav ou index -->
+				<asset id="gammesXML" src="xml/gammes_en.xml"/>
+				
+				<page id="highdefinitionpeel" src="datas/gamme.swf" route="highdefinitionpeel" title="highdefinitionpeel"/>
+				<page id="mesolift" src="datas/gamme.swf" route="mesolift"title="mesolift" />
+				<page id="extreme" src="datas/gamme.swf" route="extreme" title="extreme"/>
+				<page id="prodigy" src="datas/gamme.swf" route="prodigy" title="prodigy"/>
+				<page id="powercell" src="datas/gamme.swf" route="powercell" title="powercell"/>
+				<page id="lifepearlcellular" src="datas/gamme.swf" route="lifepearlcellular"title="lifepearlcellular" />
+				<page id="proxfill" src="datas/gamme.swf" route="proxfill" title="proxfill"/>
+				<page id="vlift" src="datas/gamme.swf" route="vlift" title="vlift"/>
+				<page id="facesculptor" src="datas/gamme.swf" route="facesculptor" title="facesculptor"/>
+				<page id="soinssos" src="datas/gamme.swf" route="soinssos" title="soinssos"/>
+				<page id="soinsspecifiques" src="datas/gamme.swf" route="soinsspecifiques" title="soinsspecifiques"/>
+				<page id="tonique" src="datas/gamme.swf" route="tonique" title="tonique"/>
+			</page>
+        </page>
+    </page>
+</site>

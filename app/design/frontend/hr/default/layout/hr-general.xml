@@ -15,7 +15,6 @@
         <remove name="catalog.product.related"></remove>
         <remove name="product.info.addto"></remove>
         <remove name="product.info.simple"></remove>
-        <!-- <remove name="checkout.cart.coupon"></remove>-->
         <remove name="checkout.cart.crosssell"></remove>
         <remove name="checkout.cart.methods.multishipping"></remove>
         <remove name="footer"></remove>
@@ -27,6 +26,8 @@
         <remove name="global_notices"></remove>
         <remove name="global_messages"></remove>
         <remove name="messages"></remove>
+        <remove name="currency"></remove>
+        <remove name="optional_zip_countries"></remove>
 
 		<reference name="head">
 			<action method="addJs"><script>boc/ajax.js</script></action>

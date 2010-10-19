@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <layout version="0.1.0">
     <default>
-		<reference name="head">
+		<!-- <reference name="head">
 			<action method="addCss"><stylesheet>css/advancednewsletter.css</stylesheet></action>
             <action method="addJs"><script>advancednewsletter/advancednewsletter.js</script></action>
 		</reference>
         <reference name="before_body_end">
 			<block type="core/template" name="advancednewsletter.subscribe.wrapper" after="-" template="advancednewsletter/subscribe_wrapper.phtml" />
-		</reference>
+		</reference>-->
     </default>
 </layout>

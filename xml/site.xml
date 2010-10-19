@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<site title="HR : %PAGE%" menu="false" preloader="datas/preload.swf">
+    <page id="index" src="datas/index.swf">
+		<asset id="myFonts" src="fonts/FontsHR.swf"  />
+		
+        <page id="nav" src="datas/nav.swf" depth="top">
+            <!-- GAMMES-->
+			<page id="gammes" src="datas/gammes.swf" title="gammes" route="gammes" landing ="true">
+				
+				<asset id="gammesXML" src="xml/gammes.xml"/>
+				
+				<asset id="visuel_highdefinitionpeel" src="imgs/highdefinitionpeel/gamme.png"/>
+				<asset id="visuel_mesolift" src="imgs/mesolift/gamme.png"/>
+				<asset id="visuel_extreme" src="imgs/extreme/gamme.png"/>
+				<asset id="visuel_prodigy" src="imgs/prodigy/gamme.png"/>
+				<asset id="visuel_powercell" src="imgs/powercell/gamme.png"/>
+				<asset id="visuel_lifepearlcellular" src="imgs/lifepearlcellular/gamme.png"/>
+				<asset id="visuel_proxfill" src="imgs/proxfill/gamme.png"/>
+				<asset id="visuel_vlift" src="imgs/vlift/gamme.png"/>
+				<asset id="visuel_facesculptor" src="imgs/facesculptor/gamme.png"/>
+				<asset id="visuel_soinssos" src="imgs/soinssos/gamme.png"/>
+				<asset id="visuel_soinsspecifiques" src="imgs/soinsspecifiques/gamme.png"/>
+				<asset id="visuel_tonique" src="imgs/tonique/gamme.png"/>
+							
+				<page id="highdefinitionpeel" src="datas/gamme.swf" route="highdefinitionpeel" title="highdefinitionpeel" >
+					<asset id="highdefinitionpeel0" src="imgs/highdefinitionpeel/01.png" />
+					<asset id="highdefinitionpeel1" src="imgs/highdefinitionpeel/02.png" />
+					<asset id="highdefinitionpeel2" src="imgs/highdefinitionpeel/03.png" />
+				</page>
+				<page id="mesolift" src="datas/gamme.swf" route="mesolift"title="mesolift" >
+					<asset id="mesolift0" src="imgs/highdefinitionpeel/01.png" />
+					<asset id="mesolift1" src="imgs/highdefinitionpeel/02.png" />
+					<asset id="mesolift2" src="imgs/highdefinitionpeel/03.png" />
+					<asset id="mesolift3" src="imgs/highdefinitionpeel/01.png" />
+					<asset id="mesolift4" src="imgs/highdefinitionpeel/02.png" />
+					<asset id="mesolift5" src="imgs/highdefinitionpeel/03.png" />
+					<asset id="mesolift6" src="imgs/highdefinitionpeel/01.png" />
+					<asset id="mesolift7" src="imgs/highdefinitionpeel/02.png" />
+					<asset id="mesolift8" src="imgs/highdefinitionpeel/03.png" />
+				</page>
+				<page id="extreme" src="datas/gamme.swf" route="extreme" title="extreme">
+				
+				</page>
+				<page id="prodigy" src="datas/gamme.swf" route="prodigy" title="prodigy">
+					<asset id="prodigy0" src="imgs/highdefinitionpeel/01.png" />
+					<asset id="prodigy1" src="imgs/highdefinitionpeel/02.png" />
+					<asset id="prodigy2" src="imgs/highdefinitionpeel/03.png" />
+					<asset id="prodigy3" src="imgs/highdefinitionpeel/01.png" />
+					<asset id="prodigy4" src="imgs/highdefinitionpeel/02.png" />
+		
+				</page>
+				<page id="powercell" src="datas/gamme.swf" route="powercell" title="powercell">
+				
+				</page>
+				<page id="lifepearlcellular" src="datas/gamme.swf" route="lifepearlcellular"title="lifepearlcellular" >
+				
+				</page>
+				<page id="proxfill" src="datas/gamme.swf" route="proxfill" title="proxfill">
+				
+				</page>
+				<page id="vlift" src="datas/gamme.swf" route="vlift" title="vlift">
+				
+				</page>
+				<page id="facesculptor" src="datas/gamme.swf" route="facesculptor" title="facesculptor">
+				
+				</page>
+				<page id="soinssos" src="datas/gamme.swf" route="soinssos" title="soinssos">
+				
+				</page>
+				<page id="soinsspecifiques" src="datas/gamme.swf" route="soinsspecifiques" title="soinsspecifiques">
+				
+				</page>
+				<page id="tonique" src="datas/gamme.swf" route="tonique" title="tonique">
+				
+				</page>
+			</page>
+        </page>
+    </page>
+</site>

@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<gammes>
+	<gamme id="highdefinitionpeel">
+		<titre>caca PRODIGY Re-PLASTY  HIGH <br />DEFINITION PEEL</titre>
+		<img>imgs/highdefinitionpeel/gamme.png</img>
+		<item>
+			<titre>produit numéro 1</titre>
+			<img>imgs/highdefinitionpeel/01.png</img>
+			<url>http://www.hr.com/ficheproduit</url>
+		</item>
+		<item>
+			<titre>produit numéro 2</titre>
+			<img>imgs/highdefinitionpeel/02.png</img>
+			<url>http://www.hr.com/ficheproduit</url>
+		</item>
+		<item>
+			<titre>produit numéro 3</titre>
+			<img>imgs/highdefinitionpeel/03.png</img>
+			<url>http://www.hr.com/ficheproduit</url>
+		</item>
+	</gamme>
+	
+	<gamme id="mesolift">
+		<titre>PRODIGY Re-PLASTY  HIGH <br />DEFINITION PEEL</titre>
+		<img>imgs/mesolift/gamme.png</img>
+		<item>
+			<titre>produit numéro 1</titre>
+			<img>imgs/mesolift/01.png</img>
+			<url>http://www.hr.com/ficheproduit</url>
+		</item>
+		<item>
+			<titre>produit numéro 2</titre>
+			<img>imgs/mesolift/02.png</img>
+			<url>http://www.hr.com/ficheproduit</url>
+		</item>
+		<item>
+			<titre>produit numéro 3</titre>
+			<img>imgs/mesolift/03.png</img>
+			<url>http://www.hr.com/ficheproduit</url>
+		</item>
+	</gamme>
+	
+	<gamme id="extreme">
+		<titre>PRODIGY Re-PLASTY  HIGH <br />DEFINITION PEEL</titre>
+		<img>imgs/extreme/gamme.png</img>
+		<item>
+			<titre>produit numéro 1</titre>
+			<img>imgs/extreme/01.png</img>
+			<url>http://www.hr.com/ficheproduit</url>
+		</item>
+		<item>
+			<titre>produit numéro 2</titre>
+			<img>imgs/extreme/02.png</img>
+			<url>http://www.hr.com/ficheproduit</url>
+		</item>
+		<item>
+			<titre>produit numéro 3</titre>
+			<img>imgs/extreme/03.png</img>
+			<url>http://www.hr.com/ficheproduit</url>
+		</item>
+	</gamme>
+	
+	<gamme id="prodigy">
+		<titre>PRODIGY Re-PLASTY  HIGH <br />DEFINITION PEEL</titre>
+		<img>imgs/prodigy/gamme.png</img>
+		<item>
+			<titre>produit numéro 1</titre>
+			<img>imgs/prodigy/01.png</img>
+			<url>http://www.hr.com/ficheproduit</url>
+		</item>
+		<item>
+			<titre>produit numéro 2</titre>
+			<img>imgs/prodigy/02.png</img>
+			<url>http://www.hr.com/ficheproduit</url>
+		</item>
+		<item>
+			<titre>produit numéro 3</titre>
+			<img>imgs/prodigy/03.png</img>
+			<url>http://www.hr.com/ficheproduit</url>
+		</item>
+	</gamme>
+	
+	<gamme id="powercell">
+		<titre>PRODIGY Re-PLASTY  HIGH <br />DEFINITION PEEL</titre>
+		<img>imgs/powercell/gamme.png</img>
+		<item>
+			<titre>produit numéro 1</titre>
+			<img>imgs/powercell/01.png</img>
+			<url>http://www.hr.com/ficheproduit</url>
+		</item>
+		<item>
+			<titre>produit numéro 2</titre>
+			<img>imgs/powercell/02.png</img>
+			<url>http://www.hr.com/ficheproduit</url>
+		</item>
+		<item>
+			<titre>produit numéro 3</titre>
+			<img>imgs/powercell/03.png</img>
+			<url>http://www.hr.com/ficheproduit</url>
+		</item>
+	</gamme>
+	
+	<gamme id="lifepearlcellular">
+		<titre>PRODIGY Re-PLASTY  HIGH <br />DEFINITION PEEL</titre>
+		<img>imgs/lifepearlcellular/gamme.png</img>
+		<item>
+			<titre>produit numéro 1</titre>
+			<img>imgs/lifepearlcellular/01.png</img>
+			<url>http://www.hr.com/ficheproduit</url>
+		</item>
+		<item>
+			<titre>produit numéro 2</titre>
+			<img>imgs/lifepearlcellular/02.png</img>
+			<url>http://www.hr.com/ficheproduit</url>
+		</item>
+		<item>
+			<titre>produit numéro 3</titre>
+			<img>imgs/lifepearlcellular/03.png</img>
+			<url>http://www.hr.com/ficheproduit</url>
+		</item>
+	</gamme>
+	
+	<gamme id="proxfill">
+		<titre>PRODIGY Re-PLASTY  HIGH <br />DEFINITION PEEL</titre>
+		<img>imgs/proxfill/gamme.png</img>
+		<item>
+			<titre>produit numéro 1</titre>
+			<img>imgs/proxfill/01.png</img>
+			<url>http://www.hr.com/ficheproduit</url>
+		</item>
+		<item>
+			<titre>produit numéro 2</titre>
+			<img>imgs/proxfill/02.png</img>
+			<url>http://www.hr.com/ficheproduit</url>
+		</item>
+		<item>
+			<titre>produit numéro 3</titre>
+			<img>imgs/proxfill/03.png</img>
+			<url>http://www.hr.com/ficheproduit</url>
+		</item>
+	</gamme>
+	
+	<gamme id="vlift">
+		<titre>PRODIGY Re-PLASTY  HIGH <br />DEFINITION PEEL</titre>
+		<img>imgs/vlift/gamme.png</img>
+		<item>
+			<titre>produit numéro 1</titre>
+			<img>imgs/vlift/01.png</img>
+			<url>http://www.hr.com/ficheproduit</url>
+		</item>
+		<item>
+			<titre>produit numéro 2</titre>
+			<img>imgs/vlift/02.png</img>
+			<url>http://www.hr.com/ficheproduit</url>
+		</item>
+		<item>
+			<titre>produit numéro 3</titre>
+			<img>imgs/vlift/03.png</img>
+			<url>http://www.hr.com/ficheproduit</url>
+		</item>
+	</gamme>
+	
+	<gamme id="facesculptor">
+		<titre>PRODIGY Re-PLASTY  HIGH <br />DEFINITION PEEL</titre>
+		<img>imgs/facesculptor/gamme.png</img>
+		<item>
+			<titre>produit numéro 1</titre>
+			<img>imgs/facesculptor/01.png</img>
+			<url>http://www.hr.com/ficheproduit</url>
+		</item>
+		<item>
+			<titre>produit numéro 2</titre>
+			<img>imgs/facesculptor/02.png</img>
+			<url>http://www.hr.com/ficheproduit</url>
+		</item>
+		<item>
+			<titre>produit numéro 3</titre>
+			<img>imgs/facesculptor/03.png</img>
+			<url>http://www.hr.com/ficheproduit</url>
+		</item>
+	</gamme>
+	
+	<gamme id="soinssos">
+		<titre>PRODIGY Re-PLASTY  HIGH <br />DEFINITION PEEL</titre>
+		<img>imgs/soinssos/gamme.png</img>
+		<item>
+			<titre>produit numéro 1</titre>
+			<img>imgs/soinssos/01.png</img>
+			<url>http://www.hr.com/ficheproduit</url>
+		</item>
+		<item>
+			<titre>produit numéro 2</titre>
+			<img>imgs/soinssos/02.png</img>
+			<url>http://www.hr.com/ficheproduit</url>
+		</item>
+		<item>
+			<titre>produit numéro 3</titre>
+			<img>imgs/soinssos/03.png</img>
+			<url>http://www.hr.com/ficheproduit</url>
+		</item>
+	</gamme>
+	
+	<gamme id="soinssos">
+		<titre>PRODIGY Re-PLASTY  HIGH <br />DEFINITION PEEL</titre>
+		<img>imgs/soinssos/gamme.png</img>
+		<item>
+			<titre>produit numéro 1</titre>
+			<img>imgs/soinssos/01.png</img>
+			<url>http://www.hr.com/ficheproduit</url>
+		</item>
+		<item>
+			<titre>produit numéro 2</titre>
+			<img>imgs/soinssos/02.png</img>
+			<url>http://www.hr.com/ficheproduit</url>
+		</item>
+		<item>
+			<titre>produit numéro 3</titre>
+			<img>imgs/soinssos/03.png</img>
+			<url>http://www.hr.com/ficheproduit</url>
+		</item>
+	</gamme>
+	
+	<gamme id="soinssos">
+		<titre>PRODIGY Re-PLASTY  HIGH <br />DEFINITION PEEL</titre>
+		<img>imgs/soinssos/gamme.png</img>
+		<item>
+			<titre>produit numéro 1</titre>
+			<img>imgs/soinssos/01.png</img>
+			<url>http://www.hr.com/ficheproduit</url>
+		</item>
+		<item>
+			<titre>produit numéro 2</titre>
+			<img>imgs/soinssos/02.png</img>
+			<url>http://www.hr.com/ficheproduit</url>
+		</item>
+		<item>
+			<titre>produit numéro 3</titre>
+			<img>imgs/soinssos/03.png</img>
+			<url>http://www.hr.com/ficheproduit</url>
+		</item>
+	</gamme>
+	
+	<gamme id="soinsspecifiques">
+		<titre>PRODIGY Re-PLASTY  HIGH <br />DEFINITION PEEL</titre>
+		<img>imgs/soinsspecifiques/gamme.png</img>
+		<item>
+			<titre>produit numéro 1</titre>
+			<img>imgs/soinsspecifiques/01.png</img>
+			<url>http://www.hr.com/ficheproduit</url>
+		</item>
+		<item>
+			<titre>produit numéro 2</titre>
+			<img>imgs/soinsspecifiques/02.png</img>
+			<url>http://www.hr.com/ficheproduit</url>
+		</item>
+		<item>
+			<titre>produit numéro 3</titre>
+			<img>imgs/soinsspecifiques/03.png</img>
+			<url>http://www.hr.com/ficheproduit</url>
+		</item>
+	</gamme>
+	
+	<gamme id="tonique">
+		<titre>en anglais dans le texte PRODIGY Re-PLASTY  HIGH <br />DEFINITION PEEL</titre>
+		<img>imgs/tonique/gamme.png</img>
+		<item>
+			<titre>produit numéro 1</titre>
+			<img>imgs/tonique/01.png</img>
+			<url>http://www.hr.com/ficheproduit</url>
+		</item>
+		<item>
+			<titre>produit numéro 2</titre>
+			<img>imgs/tonique/02.png</img>
+			<url>http://www.hr.com/ficheproduit</url>
+		</item>
+		<item>
+			<titre>produit numéro 3</titre>
+			<img>imgs/tonique/03.png</img>
+			<url>http://www.hr.com/ficheproduit</url>
+		</item>
+	</gamme>
+
+	
+
+
+</gammes>

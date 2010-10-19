@@ -1,0 +1,35 @@
+<?php
+/**
+ * Category left navigation
+ *
+ * @see Mage_Catalog_Block_Navigation
+ */
+?>
+<?php if (!Mage::registry('current_category')) return ?>
+<?php $_categories = $this->getCurrentChildCategories() ?>
+<?php $_count = is_array($_categories)?count($_categories):$_categories->count(); ?>
+<?php if($_count): ?>
+<div class="category-menu">
+	<h1 class="title"><?php echo $this->getCurrentCategory()->getName() ?></h1>
+    <ol>
+    <?php foreach ($_categories as $_category): ?>
+        <?php if($_category->getIsActive()): ?>
+        <?php $_subcategories = $_category->getChildrenCategories() ?>
+        <?php $_subcount = is_array($_subcategories)?count($_subcategories):$_subcategories->count(); ?>
+        <li>
+            <a href="<?php echo $this->getCategoryUrl($_category) ?>"<?php if ($this->isCategoryActive($_category)): ?> class="current"<?php endif; ?>><?php echo $this->htmlEscape($_category->getName()) ?></a>
+            <?php if($_subcount): ?>
+            <ul>
+            	<?php foreach ($_subcategories as $_subcategory): ?>
+            	<li>
+            		<a href="<?php echo $this->getCategoryUrl($_subcategory) ?>"<?php if ($this->isCategoryActive($_subcategory)): ?> class="current"<?php endif; ?>><?php echo $this->htmlEscape($_subcategory->getName()) ?></a>
+            	</li>
+            	<?php endforeach ?>
+            </ul>
+            <?php endif; ?>
+        </li>
+        <?php endif; ?>
+    <?php endforeach ?>
+    </ol>
+</div>
+<?php endif; ?>
