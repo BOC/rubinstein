@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Lengow_Export>
+			<version>1.0.0</version>
+            <depends>
+            <!-- no dependencies -->
+            </depends>
+        </Lengow_Export>
+    </modules>
+
+	<global>
+		<helpers>
+			<export>
+				<class>Lengow_Export_Helper</class>
+			</export>
+		</helpers>   
+	</global>
+
+    <frontend>
+        <routers>
+            <export>
+                <use>standard</use>
+                <args>
+                    <module>Lengow_Export</module>
+                    <frontName>export</frontName>
+                </args>
+            </export>
+        </routers>
+    </frontend> 
+	 <adminhtml>
+		<acl>
+			<resources>
+				<all>
+					<title>Allow Everything</title>
+				</all>
+				<admin>
+					<children>
+						<system>
+							<children>
+								<config>
+									<children>
+										<export>
+											<title>LENGOW - Export Catalogue produit</title>
+										</export>
+									</children>
+								</config>
+							</children>
+						</system>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+	</adminhtml> 
+</config>

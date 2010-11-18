@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Lengow_Export>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Lengow_Export>
+    </modules>    
+	<modules>
+        <Lengow_Information>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Lengow_Information>
+    </modules>		
+</config>

@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <lengow translate="label" module="information">
+            <label>Solution Lengow</label>
+            <sort_order>100</sort_order>
+        </lengow>
+    </tabs>
+ 
+    <sections>
+    	<information translate="label" module="information">
+            <label>Informations Lengow</label>
+            <tab>lengow</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>110</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>  	
+            <groups>	
+                <info translate="label">
+                    <label>Informations :</label>
+                    <comment>
+					<![CDATA[<b>Lengow</b> est une solution SaaS permettant &agrave; un e-commer&ccedil;ant d'optimiser ses catalogues produits vers les comparateurs de prix, r&eacute;gies d'affiliation mais aussi marketplaces et sites de Cashback.<br>	
+							<br>Le principe est que la solution r&eacute;cup&egrave;re le catalogue produits du marchand, configure, optimise et tracke les informations des campagnes marchandes afin de restituer &agrave; l'e-commer&ccedil;ant les statistiques sous forme de tableaux de bords et graphiques. 
+							<br>Ce processus permet aux e-commer&ccedil;ants d'optimiser leurs flux et leurs co&ucirc;ts d'acquisition sur chaque support de diffusion.
+							<br clear="all">
+							<br clear="all">
+							<a href="http://www.lengow.com" target="_blank"><img src="http://www.lengow.com/view/images/logo_transparant.png" alt="Solution Lengow" border="0"></a>	
+						]]>
+					</comment>
+                    <sort_order>200</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                </info>
+            </groups>  
+    	</information>
+	</sections> 
+</config>

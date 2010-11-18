@@ -2,17 +2,37 @@
 <config>
 	<modules>
 		<Hr_Catalog>
-			<version>0.1.0</version>
+			<version>0.1.1</version>
 		</Hr_Catalog>
 	</modules>
 	<global>
+        <models>
+            <hr-catalog>
+                <class>Hr_Catalog_Model</class>
+                <resourceModel>hr-catalog_resource_eav_mysql4</resourceModel>
+            </hr-catalog>
+        </models>
         <resources>
-            <hr-catalog_setup>
-                <setup>
-                    <module>Hr_Catalog</module>
-                </setup>
-            </hr-catalog_setup>
-        </resources>
+			<hr-catalog_setup>
+				<setup>
+					<module>Hr_Catalog</module>
+					<class>Hr_Catalog_Model_Setup</class>
+				</setup>
+				<connection>
+					<use>core_setup</use>
+				</connection>
+			</hr-catalog_setup>
+			<hr-catalog_write>
+				<connection>
+					<use>core_write</use>
+				</connection>
+			</hr-catalog_write>
+			<hr-catalog_read>
+				<connection>
+					<use>core_read</use>
+				</connection>
+			</hr-catalog_read>
+		</resources>
         <blocks>
         	<hr-catalog>
         		<class>Hr_Catalog_Block</class>

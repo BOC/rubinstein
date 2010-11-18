@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <lengow translate="label" module="export">
+            <label>Solution Lengow</label>
+            <sort_order>100</sort_order>
+        </lengow>
+    </tabs>
+ 
+    <sections>
+    	<export translate="label" module="export">
+            <label>Exportez votre Catalogue</label>
+            <tab>lengow</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>910</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <url translate="label">
+                    <label>Exportez votre catalogue produits :</label>
+                    <comment>
+					<![CDATA[<b>URL de votre catalogue produit :</b> <br /><br />
+							&bull; Format CSV : <span style="font-family:Courier;font-size:11px">http://www.votre-boutique.com/index.php/export/index?format=csv</span><br />
+							&bull; Format XML : <span style="font-family:Courier;font-size:11px">http://www.votre-boutique.com/index.php/export/index?format=xml</span><br />
+							<br />
+							<br />
+							<b>Multi Store :</b>
+							<br />
+							<br />
+							Dans le cas d'un multi store, vous pouvez exporter s&eacute;parement les catalogues en ajoutant la variable storeID &agrave; la fin de l'url catalogue, storeID correspondant &agrave; l'identifiant de votre store.
+							<br />exemple : <span style="font-family:Courier;font-size:11px">http://www.votre-boutique.com/index.php/export/index?format=csv<span style="color:red">&storeID=2</span></span>]]>
+					</comment>
+                    <sort_order>200</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                </url>
+            </groups> 
+    	</export>
+	</sections>
+</config>
