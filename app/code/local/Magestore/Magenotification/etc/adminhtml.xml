@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<config>
+	<acl>
+		<resources>
+			<all>
+				<title>Allow Everything</title>
+			</all>
+			<admin>
+				<children>
+					<system>
+						<children>
+							<config>
+								<children>
+									<magenotification translate="title">
+										<title>MageNotification</title>
+										<sort_order>50</sort_order>
+									</magenotification>								
+								</children>
+							</config>
+						</children>
+					</system>
+				</children>
+			</admin>
+		</resources>
+	</acl>		
+	<acl>
+		<resources>
+			<all>
+				<title>Allow Everything</title>
+			</all>
+			<admin>
+				<children>
+					<Magestore_Magenotification>
+						<title>Magenotification Module</title>
+						<sort_order>10</sort_order>
+					</Magestore_Magenotification>
+				</children>
+			</admin>
+		</resources>
+	</acl>
+	<events>
+		<controller_action_predispatch>
+			<observers>
+			  <magestore_magenotification_observer>
+				<type>singleton</type>
+				<class>magenotification/observer</class>
+				<method>controllerActionPredispatch</method>
+			  </magestore_magenotification_observer>
+		   </observers>					
+		</controller_action_predispatch>		
+	</events>		
+</config>

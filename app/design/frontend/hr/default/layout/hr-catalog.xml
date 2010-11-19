@@ -9,9 +9,10 @@
 		</reference>
 		<reference name="content">
 			<remove name="product.info.upsell"></remove>
-			<block type="catalog/product_list_related" name="prodduct.related" template="catalog/product/list/related.phtml"/>
+			<block type="catalog/product_list_related" name="product.related" template="catalog/product/list/related.phtml"></block>
 		</reference>
 	</catalog_product_view>
+	
 	
 	<catalog_category_default translate="label">
         <label>Catalog Category (Non-Anchor)</label>
