@@ -103,7 +103,10 @@
 			<?php endforeach;?>
 		</div>
 		<div class="product-collateral-column right">
-			&nbsp;
+			<script src="http://static.ak.connect.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php" type="text/javascript"></script>
+			<fb:comments></fb:comments>
+			<script type="text/javascript">FB.init("f08aa404472b480009983908c488bf1a", "/xd_receiver.htm");</script>
+
 		</div>
         <?php echo $this->getChildHtml('upsell_products') ?>
         <?php echo $this->getChildHtml('product_additional_data') ?>
