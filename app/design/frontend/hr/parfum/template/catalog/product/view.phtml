@@ -1,0 +1,240 @@
+﻿<?php
+/**
+ * Product view template
+ *
+ * @see Mage_Catalog_Block_Product_View
+ * @see Mage_Review_Block_Product_View
+ */
+?>
+<?php
+    $_helper = $this->helper('catalog/output');
+    $_product = $this->getProduct();
+?>
+<script type="text/javascript">
+    var optionsPrice = new Product.OptionsPrice(<?php echo $this->getJsonConfig() ?>);
+</script>
+<div id="messages_product_view"><?php echo $this->getMessagesBlock()->getGroupedHtml() ?></div>
+
+<div class="product_main">
+    <form action="<?php echo $this->getAddToCartUrl($_product) ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
+        <div class="product_photo"><div style="text-align: center;">
+            <?php
+                $_img = '<img id="image" src="'.$this->helper('catalog/image')->init($_product, 'image').'" alt="'.$this->htmlEscape($this->getImageLabel()).'" title="'.$this->htmlEscape($this->getImageLabel()).'" />';
+                echo $_helper->productAttribute($_product, $_img, 'image');
+            ?>
+        </div></div>
+        <div class="product_description">
+                <p class="main_slogan"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></p>
+                <p class="product_name">cr&eacute;me</p>
+                <p class="facebook">
+                    
+                </p>
+                <p class="prod_desc">
+                    <span>
+                        <?php echo $_product->getLine() ?>
+                    </span>
+                </br>
+                <?php if ($_product->getShortDescription()):?>
+                    <div class="short-description">
+                        <div class="std"><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
+                    </div>
+                <?php endif;?>
+                <p class="price"><?php echo Mage::helper('core')->currency($_product->getPrice(), true, false); ?></p>
+            
+                <div class="select">
+                    <dl id="sample" class="dropdown">
+                        <dt><a href="#"><span>50ml</span></a></dt>
+                        <dd>
+                            <ul>
+                                <li><a href="#">25ml</a></li>
+                                <li><a href="#">50ml</a></li>
+                                <li><a href="#">70ml</a></li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="select">
+                <span class="quantite">Quantit&eacute;</span>
+                </div>
+                <div class="select">
+                    <input type="hidden" name="qty" id="quantity-value" value="1" />
+                    <dl id="quantity" class="quantityDropDown">
+                        <dt><a href="#"><span>1</span></a></dt>
+                        <dd>
+                            <ul>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </div>
+                
+                <div class="action">
+                    <p><span class="button_bg"><a href="" class="btn" onclick="productAddToCartForm.submit()">ajouter au panier</a></span><span class="selection"><a href="" onclick="productAddToCartForm.submit()">Ajouter a ma Sélection</a></span></p>
+                </div>
+                
+                <div class="info">
+                    <p><span class="infos">Paiement Sécurisé</span>
+                    <span class="infos">Livraison Express en 24h</span></p>
+                </div>
+        </div>
+    </form>
+</div>
+			
+        <div class="main_content">            
+            <div class="column2-b" id="info-accordion">
+                <?php foreach ($this->getChildGroup('detailed_info', 'getChildHtml') as $alias => $html): ?>
+                    <?php if ($title = $this->getChildData($alias, 'title')):?>
+                        <h2><?php echo $this->escapeHtml($title); ?></h2>
+                    <?php endif;?>
+                    <?php echo $html; ?>                                
+                <?php endforeach;?>                    
+            </div>
+            <div class="separator"></div>
+            <div class="column3">
+                <div class="top"></div>
+                <div class="content">
+                    <div class="header"><p>commentaires</p></div>
+                    <div class="comments">
+                        <div class="comment_container">
+                            <div class="comment">
+                                <div class="avatar"><img src="images/avatar.png" border="0"></div>
+                                <div class="comm">
+                                    <p>Lily Ho</p>
+                                    <p>Hope more girls shold try it !</p>
+                                    <p class="date">Il y a 2 mois</p>
+                                </div>
+                            </div>
+                            
+                            <div class="comment">
+                                <div class="avatar"><img src="images/avatar.png" border="0"></div>
+                                <div class="comm">
+                                    <p>Lily Ho</p>
+                                    <p>Hope more girls shold try it !</p>
+                                    <p class="date">Il y a 2 mois</p>
+                                </div>
+                            </div>
+                            
+                            <div class="comment">
+                                <div class="avatar"><img src="images/avatar.png" border="0"></div>
+                                <div class="comm">
+                                    <p>Lily Ho</p>
+                                    <p>Hope more girls shold try it !</p>
+                                    <p class="date">Il y a 2 mois</p>
+                                </div>
+                            </div>
+                            
+                            <div class="comment">
+                                <div class="avatar"><img src="images/avatar.png" border="0"></div>
+                                <div class="comm">
+                                    <p>Lily Ho</p>
+                                    <p>Hope more girls shold try it !</p>
+                                    <p class="date">Il y a 2 mois</p>
+                                </div>
+                            </div>
+                        
+                        
+                        
+                        </div>					
+                    </div>
+                    <div class="add_comment">
+                        <div class="header"><span>Exprimez-vous !</span><span class="fb"><a href=""></a></span></div>
+                        <fieldset>
+                            <form>
+                                <div class="field">
+                                    <input type="text" value="Votre nom" class="text">
+                                </div>
+                                <div class="field_separator"></div>
+                                <div class="field">
+                                    <input type="text" value="E-mail" class="text">
+                                </div>
+                                
+                                <div class="field_area">
+                                    <textarea></textarea>
+                                </div>			
+                                
+                                <div class="buttons">
+                                <div id="fb-root"></div>
+                                    <script src="http://connect.facebook.net/en_US/all.js"></script>
+                                    <script>
+                                      FB.init({appId: 'your app id', status: true, cookie: true, xfbml: true});
+                                      FB.Event.subscribe('auth.sessionChange', function(response) {
+                                        if (response.session) {
+                                          // A user has logged in, and a new cookie has been saved
+                                        } else {
+                                          // The user has logged out, and the cookie has been cleared
+                                        }
+                                      });
+                                    </script>
+                                <div class="fb"><fb:login-button></fb:login-button></div><input type="submit" value="témoigner" class="button">
+                                </div>									
+                            </form>
+                        </fieldset>					
+                    </div>					
+                </div>
+                <div class="bottom"></div>
+            </div>    
+        </div>
+        
+    <script type="text/javascript">
+        //<![CDATA[
+		$j(function() {
+			$j( "#info-accordion" ).accordion();
+            $j( "#info-accordion" ).bind('accordionchange', function(event, ui) {
+                ui.newHeader.find('p').removeClass('closed').addClass('open');
+                ui.oldHeader.find('p').removeClass('open').addClass('closed');                
+            });
+            
+            $j(".dropdown dt a").click(function() {
+                $j(".dropdown dd ul").toggle();
+            });
+                        
+            $j(".dropdown dd ul li a").click(function() {
+                var text = $j(this).html();
+                $j(".dropdown dt a span").html(text);
+                $j(".dropdown dd ul").hide();                
+                $j("#result").html("Selected value is: " + getSelectedValue("quantity"));                
+            });
+
+            $j(document).bind('click', function(e) {
+                var $clicked = $j(e.target);
+                if (! $clicked.parents().hasClass("dropdown"))
+                    $j(".dropdown dd ul").hide();
+            });
+
+            $j(".quantityDropDown dt a").click(function() {
+                $j(".quantityDropDown dd ul").toggle();
+            });
+                        
+            $j(".quantityDropDown dd ul li a").click(function() {
+                var text = $j(this).html();
+                $j(".quantityDropDown dt a span").html(text);
+                $j(".quantityDropDown dd ul").hide();
+                $j('#quantity-value').val(getSelectedValue("quantity"))                
+            });
+                        
+            function getSelectedValue(id) {                
+                return $j("#" + id).find("dt a span").html();
+            }
+
+            $j(document).bind('click', function(e) {
+                var $clicked = $j(e.target);
+                if (! $clicked.parents().hasClass("quantityDropDown"))
+                    $j(".quantityDropDown dd ul").hide();
+            });
+            
+		});
+    //]]>
+    </script>
+    
+    <script type="text/javascript">
+    //<![CDATA[
+            var productAddToCartForm = new VarienForm('product_addtocart_form');
+            productAddToCartForm.submit = function(){
+                    if (this.validator.validate()) {
+                            this.form.submit();
+                    }
+            }.bind(productAddToCartForm);
+    //]]>
+    </script>

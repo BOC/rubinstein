@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<layout version="0.1.0">
+    <default>
+        <remove name="breadcrumbs"></remove>
+        <remove name="catalog.compare.sidebar"></remove>
+        <remove name="right.permanent.callout"></remove>
+        <remove name="right.poll"></remove>
+        <remove name="right.reports.product.viewed"></remove>
+        <remove name="left.reports.product.viewed"></remove>
+        <remove name="right.reports.product.compared"></remove>
+        <remove name="left.permanent.callout"></remove>
+        <remove name="sale.reorder.sidebar"></remove>
+        <remove name="product_tag_list"></remove>
+        <remove name="catalog.product.related"></remove>
+        <remove name="product.info.addto"></remove>
+        <remove name="product.info.simple"></remove>
+        <remove name="checkout.cart.crosssell"></remove>
+        <remove name="checkout.cart.methods.multishipping"></remove>
+        <remove name="footer"></remove>
+        <remove name="cart_sidebar"></remove>
+        <remove name="paypal.partner.right.logo"></remove>
+        <remove name="store_switcher"></remove>
+        <remove name="top.links"></remove>
+        <remove name="customer_account_dashboard"></remove>
+        <remove name="global_notices"></remove>
+        <remove name="global_messages"></remove>
+        <remove name="messages"></remove>
+        <remove name="currency"></remove>
+        <remove name="optional_zip_countries"></remove>
+
+		<reference name="head">
+			<action method="addJs"><script>boc/ajax.js</script></action>            
+		</reference>
+        <reference name="header">
+        	<action method="unsetChild"><name>store_language</name></action>
+        </reference>
+        
+        <reference name="catalog.topnav">
+        	<block type="core/template" name="top.search" as="topSearch" template="catalogsearch/form.mini.phtml"/>
+        	<block type="page/html_header_menu" name="header.menu" template="page/html/header/menu.phtml"/>
+        </reference>
+        
+        <reference name="before_body_end">
+			<block type="page/html_footer_menu" name="footer.menu" template="page/html/footer/menu.phtml">
+				<block type="page/html_footer_box" name="footerbox" template="page/template/footerbox.phtml"/>
+				<!-- <block type="newsletter/subscribe" name="left.newsletter" template="newsletter/subscribe.phtml" />-->
+			</block>
+        </reference>
+    </default>
+    
+    <customer_logged_in>
+		<reference name="footerbox">
+			<block type="hr-customer/footer_menu" name="hr.footer.customer" template="customer/footer/menu.phtml"/>
+		</reference>
+		<reference name="header.menu">
+			<block type="hr-checkout/header_cart" name="header.cart" as="headerCart" template="checkout/header.cart.phtml" />
+		</reference>
+	</customer_logged_in>
+    
+	<customer_logged_out>
+		<reference name="top.links">
+			<action method="removeLinkByUrl"><url helper="customer/getLoginUrl"/></action>
+			<action method="addLink" translate="label"><label>My Cart</label><url helper="checkout/cart/getCartUrl"/></action>
+		</reference>
+		<reference name="footer.menu">
+			<block type="hr-customer/form_login" name="hr.footer.form.login" template="customer/form/mini.login.phtml"/>
+		</reference>
+		<reference name="footerbox">
+			<block type="hr-customer/form_login" name="hr.footer.customer" template="customer/form/mini.login.phtml"/>
+		</reference>
+	</customer_logged_out>
+
+    <contacts_index_index>
+        <reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
+	</contacts_index_index>
+
+	<catalog_product_view>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/parfum-style.css</stylesheet></action>
+            <action method="addItem"><type>skin_css</type><name>css/parfum-ie.css</name><params/><if>lt IE 8</if></action>
+        </reference>
+        <reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
+        <reference name="product.info.upsell">
+        	<action method="setColumnCount"><columns>3</columns></action>
+        	<action method="setItemLimit"><type>upsell</type><limit>2</limit></action>
+        </reference>
+       	<remove name="product.info.additional"></remove>
+       	<remove name="product_tag_list"></remove>
+	</catalog_product_view>
+
+</layout>
