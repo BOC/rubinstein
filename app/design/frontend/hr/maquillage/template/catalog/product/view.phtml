@@ -25,7 +25,7 @@
         </div></div>
         <div class="product_description">
                 <p class="main_slogan"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></p>
-                <p class="product_name">cr&eacute;me</p>
+                <p class="product_name"><?php echo $_helper->productAttribute($_product, $_product->getSegment(), 'segment') ?></p>
                 <p class="facebook">
                     
                 </p>
@@ -87,22 +87,22 @@
     </div>
     <div class="arrow_separator"></div>
     <div class="choix"><div class="colours">
-    <a href="" class="color"><img src="images/colours/color_01a.png"/></a>
-    <a href="" class="color"><img src="images/colours/color_02a.png"/></a>
-    <a href="" class="color"><img src="images/colours/color_03a.png"/></a>
-    <a href="" class="color"><img src="images/colours/color_04a.png"/></a>
-    <a href="" class="color"><img src="images/colours/color_05a.png"/></a>
-    <a href="" class="color"><img src="images/colours/color_06a.png"/></a>
-    <a href="" class="color"><img src="images/colours/color_07a.png"/></a>
-    <a href="" class="color"><img src="images/colours/color_08a.png"/></a>
-    <a href="" class="color"><img src="images/colours/color_09a.png"/></a>
-    <a href="" class="color"><img src="images/colours/color_10b.png"/></a>
+    <a href="" class="color"><img src="/skin/frontend/base/default/images/colours/color_01.png"/></a>
+    <a href="" class="color"><img src="/skin/frontend/base/default/images/colours/color_01.png"/></a>
+    <a href="" class="color"><img src="/skin/frontend/base/default/images/colours/color_01.png"/></a>
+    <a href="" class="color"><img src="/skin/frontend/base/default/images/colours/color_01.png"/></a>
+    <a href="" class="color"><img src="/skin/frontend/base/default/images/colours/color_01.png"/></a>
+    <a href="" class="color"><img src="/skin/frontend/base/default/images/colours/color_01.png"/></a>
+    <a href="" class="color"><img src="/skin/frontend/base/default/images/colours/color_01.png"/></a>
+    <a href="" class="color"><img src="/skin/frontend/base/default/images/colours/color_01.png"/></a>
+    <a href="" class="color"><img src="/skin/frontend/base/default/images/colours/color_01.png"/></a>
+    <a href="" class="color"><img src="/skin/frontend/base/default/images/colours/color_01.png"/></a>
     </div>
         <div class="desc"><span>Cliquer sur une teinte pour la sélectionner</span></div>
     </div>
     <div class="arrow_separator"></div>
     <div class="prod_detail">
-        <div class="photo_cont"><img src="images/colours/col_10.png" width="91" height="91" /></div>
+        <div class="photo_cont"><img src="/skin/frontend/base/default/images/colours/col_10.png" width="91" height="91" /></div>
         <div class="prod_name">
         <p class="name">frenzy<br/>poppy</p>
         <p class="disp">Zoomer sur<br/>la matiere</p>
@@ -196,6 +196,7 @@
                         </div>			
                         
                         <div class="buttons">
+                        <!--
                         <div id="fb-root"></div>
                             <script src="http://connect.facebook.net/en_US/all.js"></script>
                             <script>
@@ -209,6 +210,7 @@
                               });
                             </script>
                         <div class="fb"><fb:login-button></fb:login-button></div><input type="submit" value="témoigner" class="button">
+                        -->
                         </div>									
                     </form>
                 </fieldset>					
@@ -263,6 +265,26 @@
                 var $clicked = $j(e.target);
                 if (! $clicked.parents().hasClass("quantityDropDown"))
                     $j(".quantityDropDown dd ul").hide();
+            });
+            
+            $j('.color').qtip({
+                content: '<div class="tooltip"><div class="content"><div class="image"><img src="images/colours/tooltip_col.png" /></div><div class="product_name"><p>Frenzy Poppy</p></div></div></div>',
+                position: {
+                    corner: {
+                        target: 'bottomMiddle',
+                        tooltip: 'bottomMiddle'
+                    },
+                    adjust: {
+                        y: -10
+                    }
+                },                                 
+                style: {
+                    border: {
+                        width: 0,                        
+                    },
+                    padding: 0,
+                    tip: false
+                }                
             });
             
 		});
